@@ -35,3 +35,106 @@ function s46Render(){
  }catch(e){console.error('S4.6 render error',e)}
 }
 const s46PrevRender=s44sRender;s44sRender=function(){s46PrevRender();setTimeout(s46Render,20)};setTimeout(s46Render,1600);
+
+/* ===== S4.5 + S3 完整生肖映射显示 ===== */
+(function(){
+  function mapZodiac(nums){
+    return nums.map(n => (typeof numToZ!=='undefined' && numToZ[n]) ? numToZ[n] : '—').join('、');
+  }
+
+  function getNums(box){
+    const nums=[];
+    box.querySelectorAll('.ball,.numball,[class*="ball"]').forEach(el=>{
+      const n=parseInt((el.textContent||'').trim(),10);
+      if(n>=1&&n<=49) nums.push(n);
+    });
+    return nums;
+  }
+
+  function addZodiac(box){
+    if(!box) return;
+    const nums=getNums(box);
+    if(!nums.length) return;
+
+    let line=box.querySelector(':scope > .full-zodiac-map');
+    if(!line){
+      line=document.createElement('div');
+      line.className='full-zodiac-map';
+      box.appendChild(line);
+    }
+
+    line.innerHTML='<span>对应生肖：</span><b>'+mapZodiac(nums)+'</b>';
+  }
+
+  function findCardByLabel(root,labels){
+    if(!root) return;
+
+    root.querySelectorAll('*').forEach(el=>{
+      const t=(el.textContent||'').trim();
+
+      if(!labels.includes(t)) return;
+
+      let card=el;
+      for(let i=0;i<5 && card;i++){
+        if(getNums(card).length) break;
+        card=card.parentElement;
+      }
+
+      if(card) addZodiac(card);
+    });
+  }
+
+  function refreshFullZodiac(){
+    /* S4.5 上方：1码 / 3码 / 6码 / 9码 */
+    const s45=document.getElementById('s44s');
+    if(s45){
+      findCardByLabel(s45,[
+        '⭐ 1码 · S3底线',
+        '🎯 3码 · S3底线',
+        '🔥 6码 · S3底线',
+        '🟢 9码 · S3底线'
+      ]);
+    }
+
+    /* S3 第N期模拟结果 */
+    document.querySelectorAll('.card').forEach(card=>{
+      const text=(card.textContent||'');
+      if(
+        text.includes('单挑1码') ||
+        text.includes('核心3码') ||
+        text.includes('核心6码') ||
+        text.includes('正式9码')
+      ){
+        addZodiac(card);
+      }
+    });
+  }
+
+  const st=document.createElement('style');
+  st.textContent=`
+    .full-zodiac-map{
+      margin-top:9px;
+      padding-top:7px;
+      border-top:1px dashed #2c4263;
+      color:#91a6c4;
+      font-size:12px;
+      line-height:1.6;
+    }
+    .full-zodiac-map b{
+      color:#ffd56a;
+      font-size:13px;
+      margin-left:4px;
+    }
+  `;
+  document.head.appendChild(st);
+
+  setTimeout(refreshFullZodiac,1800);
+  setTimeout(refreshFullZodiac,2800);
+
+  const ob=new MutationObserver(()=>{
+    clearTimeout(window.__fullZodiacTimer);
+    window.__fullZodiacTimer=setTimeout(refreshFullZodiac,120);
+  });
+
+  ob.observe(document.body,{childList:true,subtree:true});
+})();
