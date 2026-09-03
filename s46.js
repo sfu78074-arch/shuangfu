@@ -1,0 +1,36 @@
+const S46_VERSION='S4.6 数字增强·盲测层';
+const S46_RULE_ID='NUM-LOCK1-20260903';
+const S46_LEDGER='s46_blind_predictions_v1';
+function s46Fuse(ranks,weights,p){
+ const pos=ranks.map(r=>{const o={};r.forEach((n,i)=>o[n]=i+1);return o}),sc={};
+ for(let n=1;n<=49;n++){let s=0;for(let j=0;j<ranks.length;j++)s+=weights[j]/Math.pow(pos[j][n],p);sc[n]=s}
+ return Array.from({length:49},(_,i)=>i+1).sort((a,b)=>sc[b]-sc[a]||a-b);
+}
+function s46Compute(hist,target){
+ const base=predict(hist,target).rank,r30=linearRank(hist,target,30,new Map()),r60=linearRank(hist,target,60,new Map()),r80=linearRank(hist,target,80,new Map()),r120=linearRank(hist,target,120,new Map());
+ const one=s46Fuse([base,r60,r120],[.30,.10,.60],.80).slice(0,1);
+ const three=s46Fuse([base,r30,r60],[.70,.20,.10],.80).slice(0,3);
+ const sixn=s46Fuse([base,r60,r120],[.70,.05,.25],.40).slice(0,6);
+ const nine=s46Fuse([base,r80,r120],[.70,.10,.20],.40).slice(0,9);
+ return {one,three,sixn,nine};
+}
+function s46LoadLedger(){try{const x=JSON.parse(localStorage.getItem(S46_LEDGER)||'{}');return x&&typeof x==='object'?x:{}}catch(e){return {}}}
+function s46SaveLedger(x){try{localStorage.setItem(S46_LEDGER,JSON.stringify(x))}catch(e){}}
+function s46Record(target,p){const L=s46LoadLedger(),k=String(target);if(!L[k]){L[k]={one:p.one,three:p.three,sixn:p.sixn,nine:p.nine,rule:S46_RULE_ID,created:new Date().toISOString()};s46SaveLedger(L)}return L}
+function s46BlindStats(hist){
+ const actual={};hist.forEach(x=>actual[x.period]=x.special);const L=s46LoadLedger(),S={one:{h:0,n:0},three:{h:0,n:0},sixn:{h:0,n:0},nine:{h:0,n:0}};
+ for(const [t0,p] of Object.entries(L)){const t=+t0;if(t<246||actual[t]==null||!p||p.rule!==S46_RULE_ID)continue;for(const k of Object.keys(S)){if(Array.isArray(p[k])){S[k].n++;if(p[k].includes(actual[t]))S[k].h++}}}
+ return S;
+}
+(function(){
+ const st=document.createElement('style');st.textContent='#s46{max-width:820px;margin:0 auto 24px;padding:0 14px;color:#eef5ff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}#s46 *{box-sizing:border-box}#s46 .hero{background:#0f1a2e;border:1px solid #3b557b;border-radius:18px;padding:16px;box-shadow:0 10px 30px #0004}#s46 h2{margin:0 0 5px;font-size:21px}#s46 .sub{font-size:12px;color:#9fb1ca;line-height:1.55}#s46 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px}@media(max-width:560px){#s46 .grid{grid-template-columns:1fr}}#s46 .card{background:#0c1628;border:1px solid #2b405f;border-radius:13px;padding:12px}#s46 .lab{font-size:13px;color:#a8bad2;margin-bottom:8px}#s46 .vals{font-size:18px;font-weight:800}#s46 .pillrow{display:flex;gap:7px;flex-wrap:wrap;margin-top:11px}#s46 .pill{font-size:11px;padding:5px 8px;border-radius:999px;background:#172640;border:1px solid #31486b}#s46 .ok{color:#89e6a7}#s46 .exp{color:#ffd98e}#s46 table{width:100%;border-collapse:collapse;margin-top:12px;font-size:12px}#s46 th,#s46 td{padding:7px 5px;border-bottom:1px solid #263a59;text-align:center}#s46 th:first-child,#s46 td:first-child{text-align:left}#s46 .note{font-size:11px;color:#91a3bc;line-height:1.55;margin-top:10px}';document.head.appendChild(st);
+})();
+function s46Render(){
+ try{
+  if(typeof s44GetHistory!=='function'||typeof predict!=='function'||typeof linearRank!=='function')return;const hp=s44GetHistory(),hist=hp.hist;if(!hist.length)return;const last=hist[hist.length-1],target=last.period+1,p=s46Compute(hist,target);s46Record(target,p);const BS=s46BlindStats(hist);
+  let root=document.getElementById('s46');if(!root){root=document.createElement('section');root.id='s46';const anchor=document.getElementById('s44s');if(anchor&&anchor.parentNode)anchor.parentNode.insertBefore(root,anchor.nextSibling);else document.body.insertBefore(root,document.body.firstChild)}
+  const refs={one:[4,6,2,3,2,3],three:[15,17,9,10,6,7],sixn:[33,35,21,22,12,13],nine:[49,51,34,35,15,16]},labs={one:'⭐ 1码',three:'🎯 3码',sixn:'🔥 6码',nine:'🟢 9码'},pred={one:p.one,three:p.three,sixn:p.sixn,nine:p.nine};
+  root.innerHTML=`<div class="hero"><h2>🧪 ${S46_VERSION}</h2><div class="sub">从246期开始锁定规则，只做前瞻盲测；不覆盖上方正式S3号码。各层独立增强，不要求1/3/6/9码互相嵌套。历史研究只作参考，未来盲测成绩单独累计。</div><div class="grid">${['one','three','sixn','nine'].map(k=>`<div class="card"><div class="lab">${labs[k]} · 实验候选</div><div class="vals">${s44Balls(pred[k])}</div></div>`).join('')}</div><div class="pillrow"><span class="pill exp">规则已锁定：${S46_RULE_ID}</span><span class="pill ok">起始盲测：246期</span><span class="pill">S4.5六肖保持不变</span></div><table><thead><tr><th>项目</th><th>S3历史</th><th>S4.6研究参考</th><th>开发段31–170</th><th>验证段171–245</th><th>246起盲测</th></tr></thead><tbody>${['one','three','sixn','nine'].map(k=>{const r=refs[k],b=BS[k];return `<tr><td>${labs[k]}</td><td>${r[0]}/215</td><td class="ok">${r[1]}/215 ${(r[1]/215*100).toFixed(2)}%</td><td>${r[2]}→${r[3]}/140</td><td>${r[4]}→${r[5]}/75</td><td>${b.h}/${b.n}${b.n?` ${(b.h/b.n*100).toFixed(2)}%`:''}</td></tr>`}).join('')}</tbody></table><div class="note">固定规则：1码=S3主排名30% + 60期学习10% + 120期学习60%；3码=S3 70% + 30期20% + 60期10%；6码=S3 70% + 60期5% + 120期25%；9码=S3 70% + 80期10% + 120期20%。均采用固定倒数排名融合。研究参考命中率不是未来概率保证；从246期起不根据开奖结果回改规则。</div></div>`;
+ }catch(e){console.error('S4.6 render error',e)}
+}
+const s46PrevRender=s44sRender;s44sRender=function(){s46PrevRender();setTimeout(s46Render,20)};setTimeout(s46Render,1600);
