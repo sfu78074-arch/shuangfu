@@ -64,7 +64,8 @@ function s46ZBlindStats(hist){
 
 function s46Render(){
  try{
-  if(typeof s44GetHistory!=='function'||typeof predict!=='function'||typeof linearRank!=='function')return;const hp=s44GetHistory(),hist=hp.hist;if(!hist.length)return;const last=hist[hist.length-1],target=last.period+1,p=s46Compute(hist,target);s46Record(target,p);const BS=s46BlindStats(hist),zr=s46ZCompute(hist,target),ZB=s46ZBlindStats(hist);s46ZRecord(target,zr.current);
+  if(window.__AUTO_SYNC_GUARD==='pending'){setTimeout(s46Render,300);return;}
+  if(typeof s44GetHistory!=='function'||typeof predict!=='function'||typeof linearRank!=='function')return;const hp=s44GetHistory(),hist=hp.hist;if(!hist.length)return;const last=hist[hist.length-1],target=last.period+1,p=s46Compute(hist,target);if(!window.__AUTO_SYNC_GUARD||window.__AUTO_SYNC_GUARD==='ok')s46Record(target,p);const BS=s46BlindStats(hist),zr=s46ZCompute(hist,target),ZB=s46ZBlindStats(hist);if(!window.__AUTO_SYNC_GUARD||window.__AUTO_SYNC_GUARD==='ok')s46ZRecord(target,zr.current);
   let root=document.getElementById('s46');if(!root){root=document.createElement('section');root.id='s46';const anchor=document.getElementById('s44s');if(anchor&&anchor.parentNode)anchor.parentNode.insertBefore(root,anchor.nextSibling);else document.body.insertBefore(root,document.body.firstChild)}
   const refs={one:[4,6,2,3,2,3],three:[15,17,9,10,6,7],sixn:[33,35,21,22,12,13],nine:[49,51,34,35,15,16]},labs={one:'⭐ 1码',three:'🎯 3码',sixn:'🔥 6码',nine:'🟢 9码'},pred={one:p.one,three:p.three,sixn:p.sixn,nine:p.nine},zs=zr.stats,zc=zr.current||{four:[],six:[]};
   const pct=(h,n)=>n?(h/n*100).toFixed(2)+'%':'—';
