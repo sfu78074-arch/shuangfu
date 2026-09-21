@@ -6,16 +6,17 @@
     try{
       if(typeof draws==='undefined'||!Array.isArray(draws)||!draws.length){alert('没有可导出的历史数据');return}
       const arr=normalize(draws.slice());
-      const payload={format:'S44FULLJSON1',count:arr.length,latest:arr[arr.length-1].period,draws:arr};
+      const payload={format:'S44FULLJSON1',count:arr.length,latest:arr[arr.length-1].period,draws:arr,audit:window.S67Audit?window.S67Audit.backup():null};
       const blob=new Blob([JSON.stringify(payload)],{type:'application/json;charset=utf-8'});
       const url=URL.createObjectURL(blob),a=document.createElement('a');
       a.href=url;a.download=`S44完整历史_${arr[0].period}-${arr[arr.length-1].period}期.json`;document.body.appendChild(a);a.click();a.remove();
       setTimeout(()=>URL.revokeObjectURL(url),3000);
-      alert(`✅ 已导出${arr.length}期完整历史数据文件。\n请到新网址点击“📥 导入数据”，选择刚才的JSON文件。`);
+      alert(`✅ 已导出${arr.length}期历史及预测存档备份。\n请到新网址点击“📥 导入数据”，选择刚才的JSON文件。`);
     }catch(e){alert('导出失败：'+e.message)}
   }
-  function applyArr(arr){
+  function applyArr(arr,audit){
     arr=normalize(arr);if(!valid(arr))throw new Error('开奖记录结构不完整');
+    if(audit&&window.S67Audit)window.S67Audit.restore(audit);
     localStorage.setItem(KEY,JSON.stringify(arr));
     if(typeof draws!=='undefined'&&Array.isArray(draws))draws.splice(0,draws.length,...arr);
     alert(`✅ 已导入${arr.length}期完整历史数据，页面将刷新。`);location.reload();
@@ -27,7 +28,7 @@
         try{
           const file=inp.files&&inp.files[0];if(!file){inp.remove();return}
           const text=await file.text();const obj=JSON.parse(text);const arr=Array.isArray(obj)?obj:obj&&Array.isArray(obj.draws)?obj.draws:null;
-          if(!arr)throw new Error('文件不是S4.4历史数据');applyArr(arr);
+          if(!arr)throw new Error('文件不是S4.4历史数据');applyArr(arr,obj&&obj.audit);
         }catch(e){alert('导入失败：'+e.message)}finally{inp.remove()}
       };
       inp.click();

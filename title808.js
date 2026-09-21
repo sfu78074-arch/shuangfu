@@ -88,8 +88,8 @@ function apply(){
  }
  const s46=document.getElementById('s46');
  if(s46){
-   const h=s46.querySelector('h1,h2');if(h)h.textContent='🧪 实验观察｜S4.6 数字+生肖增强·盲测层';
-   note(s46,'s46','<strong>实验观察：</strong>这一块是独立盲测模型，号码与S4.5不同是设计如此。先记录真实成绩，不作为主参考替代S4.5。');
+   const h=s46.querySelector('h1,h2');if(h)h.textContent='🧪 实验观察｜S4.6 数字+生肖增强·实验层';
+   note(s46,'s46','<strong>实验观察：</strong>这一块是实验模型。研究回算与提前存档分开统计，逐期核对见下方；暂不替代S4.5。');
    wrapTables(s46);
  }
  const old=document.querySelector('body > .wrap h1, .wrap h1');

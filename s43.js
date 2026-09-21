@@ -10,7 +10,7 @@ function s43ZList(score,k){return Object.keys(score).sort((a,b)=>score[b]-score[
 function s43State(){return {one:{A:[],B:[],C:[]},three:{A:[],B:[],C:[]},sixn:{A:[],B:[],C:[]},nine:{A:[],B:[],C:[]},fourz:{A:[],B:[],C:[]},sixz:{A:[],B:[],C:[]},prev:{one:'A',three:'A',sixn:'A',nine:'A',fourz:'A',sixz:'A'}}}
 function s43Miss(st,hit){if(hit)st.cur=0;else{st.cur++;st.max=Math.max(st.max,st.cur)}}
 function s43Compute(hist,target,statsOn){
- const bm=buildBaseMap(hist,target),actual={};hist.forEach(x=>actual[x.period]=x.special);const H=s43State(),S={one:{hit:0,cur:0,max:0},three:{hit:0,cur:0,max:0},sixn:{hit:0,cur:0,max:0},nine:{hit:0,cur:0,max:0},fourz:{hit:0,cur:0,max:0},sixz:{hit:0,cur:0,max:0}},B={one:0,three:0,sixn:0,nine:0};let current=null;const last=Math.min(target-1,Math.max(...hist.map(x=>x.period)));
+ const bm=buildBaseMap(hist,target),actual={};hist.forEach(x=>actual[x.period]=x.special);const H=s43State(),S={one:{hit:0,cur:0,max:0},three:{hit:0,cur:0,max:0},sixn:{hit:0,cur:0,max:0},nine:{hit:0,cur:0,max:0},fourz:{hit:0,cur:0,max:0},sixz:{hit:0,cur:0,max:0}},B={one:0,three:0,sixn:0,nine:0};let current=null,scoredCount=0;const last=Math.min(target-1,Math.max(...hist.map(x=>x.period)));
  for(let t=31;t<=target;t++){
   const base9=bm.base[t];if(!base9)continue;const cov=coverageScores(hist,t),nested=nestedRank(base9,base9,cov),covr=s43CovRank(base9,cov);
   const nA=base9.slice(),nB=rescueNine(base9,cov),nC=s43Rescue5(base9,cov);
@@ -25,12 +25,12 @@ function s43Compute(hist,target,statsOn){
   H.prev.fourz=s43Choose(['A','B','C'],H.fourz,H.prev.fourz,4/12);H.prev.sixz=s43Choose(['A','B','C'],H.sixz,H.prev.sixz,6/12);
   const fourz=zCand4[H.prev.fourz],sixz=zCand6[H.prev.sixz],pred={target:t,one,three,sixn,nine,fourz,sixz,mode:bm.mode[t],pick:{...H.prev}};
   if(t===target)current=pred;
-  if(t<=last&&actual[t]!=null){const sp=actual[t],az=numToZ[sp];for(const [k,cs] of Object.entries({one:cand.one,three:cand.three,sixn:cand.sixn,nine:{A:nA,B:nB,C:nC}})){for(const c of ['A','B','C'])H[k][c].push(cs[c].includes(sp))}for(const c of ['A','B','C']){H.fourz[c].push(zCand4[c].includes(az));H.sixz[c].push(zCand6[c].includes(az))}
+  if(t<=last&&actual[t]!=null){scoredCount++;const sp=actual[t],az=numToZ[sp];for(const [k,cs] of Object.entries({one:cand.one,three:cand.three,sixn:cand.sixn,nine:{A:nA,B:nB,C:nC}})){for(const c of ['A','B','C'])H[k][c].push(cs[c].includes(sp))}for(const c of ['A','B','C']){H.fourz[c].push(zCand4[c].includes(az));H.sixz[c].push(zCand6[c].includes(az))}
    const hits={one:one.includes(sp),three:three.includes(sp),sixn:sixn.includes(sp),nine:nine.includes(sp),fourz:fourz.includes(az),sixz:sixz.includes(az)};for(const k of Object.keys(hits)){if(hits[k])S[k].hit++;s43Miss(S[k],hits[k])}
    if(base9.slice(0,1).includes(sp))B.one++;if(base9.slice(0,3).includes(sp))B.three++;if(base9.slice(0,6).includes(sp))B.sixn++;if(base9.includes(sp))B.nine++;
   }
  }
- return {current,stats:statsOn?{n:last-30,S,B}:null};
+ return {current,stats:statsOn?{n:scoredCount,S,B}:null};
 }
 function s43Css(){return `<style id="s43style">#s43{max-width:800px;margin:14px auto 22px;padding:14px;color:#eef5ff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}#s43 *{box-sizing:border-box}#s43 .hero{background:#111c31;border:1px solid #304564;border-radius:18px;padding:16px;box-shadow:0 10px 30px #0005}#s43 h1{margin:0 0 4px;font-size:23px}#s43 .sub{font-size:13px;color:#9fb1ca}#s43 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px}@media(max-width:560px){#s43 .grid{grid-template-columns:1fr}}#s43 .card{background:#0e182b;border:1px solid #283b5b;border-radius:13px;padding:12px}#s43 .lab{font-size:13px;color:#9fb1ca;margin-bottom:7px}#s43 .vals{font-size:20px;font-weight:800;line-height:1.5}#s43 .meta{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}#s43 .pill{font-size:12px;padding:5px 8px;border-radius:999px;background:#172640;border:1px solid #31486b}#s43 button{margin-top:12px;border:0;border-radius:10px;padding:10px 13px;font-weight:800;background:#e0ebff;color:#14223a}#s43 table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13px}#s43 th,#s43 td{padding:8px 5px;border-bottom:1px solid #263a59;text-align:center}#s43 th:first-child,#s43 td:first-child{text-align:left}#s43 .good{color:#9fe3ad}#s43 .bad{color:#ffb2a8}#s43 .note{font-size:12px;color:#91a3bc;line-height:1.55;margin-top:10px}</style>`}
 function s43Render(){

@@ -144,7 +144,8 @@
       if(!merged.length)throw new Error('合并后没有有效开奖记录');
       saveMerged(merged);
       const latest=merged[merged.length-1].period;
-      window.__AUTO_SYNC_GUARD='ok';
+      window.__AUTO_SYNC_GUARD=conflicts.length?'conflict':'ok';
+      if(window.S67Audit)window.S67Audit.ingest(merged,[...apiMap.values()],{conflicts,apiLatest:Math.max(...apiMap.keys()),latestConfirmed:jobs[1].status==='fulfilled'&&listFromPayload(jobs[1].value.payload).some(d=>d.period===latest)});
       lastResult={ok:true,time:nowText(),latest,added,conflicts,via:[...new Set(vias)].join('+')||'接口'};
       try{localStorage.setItem(LAST_SYNC_KEY,JSON.stringify({ts:Date.now(),latest,version:SYNC_VERSION}))}catch(_){}
       refreshAfterSync(latest);renderLast();
