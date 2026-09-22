@@ -5,7 +5,7 @@ s46BlindStats=function(hist){return S67Audit.stats(hist,'S4.6')};
 s46ZBlindStats=function(hist){return S67Audit.stats(hist,'S4.6')};
 
 // Private state: replay never saves predictions or changes the live forecast.
-async function s67ReplayS46(hist,start,end){
+async function s67ReplayS46(hist,start,end,includeBase=false){
   if(!window.S67Ledger.validHistory(hist))throw new Error('历史缺期或号码异常，暂不能回算');
   const clone=x=>JSON.parse(JSON.stringify(x)),l50=clone(PRE50),ls2=clone(PRES2),choices=clone(PRECHOICE),cache=new Map();
   const actual=Object.fromEntries(hist.map(d=>[d.period,d.special])),out=[];
@@ -29,6 +29,7 @@ async function s67ReplayS46(hist,start,end){
         sixn:s46Fuse([base,r60,r120],[.70,.05,.25],.40).slice(0,6),
         nine:s46Fuse([base,r80,r120],[.70,.10,.20],.40).slice(0,9),four,six
       }});
+      if(includeBase)out[out.length-1].baseline={nine:base.slice(0,9),four:s1Zodiac(s1Raw(h,featurePack(h))).slice(0,4)};
     }
     await new Promise(resolve=>setTimeout(resolve,0));
   }

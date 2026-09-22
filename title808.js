@@ -1,6 +1,6 @@
 (function(){
 'use strict';
-const PAGE_TITLE='808 S4.5主参考｜S4.6实验';
+const PAGE_TITLE='808 固定规则对照观察';
 function setTitle(){if(document.title!==PAGE_TITLE)document.title=PAGE_TITLE}
 function ensureStyle(){
  if(document.getElementById('model-role-style'))return;
@@ -58,8 +58,9 @@ function ensureStyle(){
 }
 function guide(anchor){
  if(document.getElementById('model-role-guide')||!anchor||!anchor.parentNode)return;
+ anchor=document.getElementById('experiment-panel')||anchor;
  const g=document.createElement('div');g.id='model-role-guide';
- g.innerHTML='<div class="rg-title">📌 模型阅读顺序</div><div class="rg-row"><span class="rg-pill main">① S4.5｜主参考</span><span class="rg-pill exp">② S4.6｜实验观察</span><span class="rg-pill base">③ S3｜底层核对</span></div><div class="rg-note">同一期里，S4.6 与 S4.5 的号码不同属于正常，因为算法独立；S3 与 S4.5 的 1/3/6/9码应保持一致。不要把三块当成三套同等级主预测。</div>';
+ g.innerHTML='<div class="rg-title">📌 实验观察 · 先看真实记录</div><div class="rg-row"><span class="rg-pill main">① 固定期对照成绩</span><span class="rg-pill exp">② S4.5 / S4.6｜规则观察</span><span class="rg-pill base">③ S3｜底层核对</span></div><div class="rg-note">S4.5 与 S4.6 共用基础信号，不是独立验证。旧四肖已退出主推荐；先记录、后核对，不因连空修改规则。</div>';
  anchor.parentNode.insertBefore(g,anchor);
 }
 function note(root,key,html){
@@ -82,14 +83,14 @@ function apply(){
  const s45=document.getElementById('s44s');
  if(s45){
    guide(s45);
-   const h=s45.querySelector('h1,h2');if(h)h.textContent='🛡️ 主参考｜S4.5 保守增强版';
-   note(s45,'s45','<strong>主参考：</strong>日常判断优先看这一块。1/3/6/9码与S3锁定一致，六肖使用S4.5增强规则。');
+   const h=s45.querySelector('h1,h2');if(h)h.textContent='S4.5｜原规则观察';
+   note(s45,'s45','<strong>旧四肖降级：</strong>四肖仅作实验观察，已退出主推荐。原预测公式保留，用固定期存档检验，不把历史回算当作未来保证。');
    wrapTables(s45);
  }
  const s46=document.getElementById('s46');
  if(s46){
    const h=s46.querySelector('h1,h2');if(h)h.textContent='🧪 实验观察｜S4.6 数字+生肖增强·实验层';
-   note(s46,'s46','<strong>实验观察：</strong>这一块是实验模型。研究回算与提前存档分开统计，逐期核对见下方；暂不替代S4.5。');
+   note(s46,'s46','<strong>实验观察：</strong>这一块是实验模型。九码、四肖进入固定期对照；与S4.5共用部分信号，仍需开奖前存档验证。');
    wrapTables(s46);
  }
  const old=document.querySelector('body > .wrap h1, .wrap h1');

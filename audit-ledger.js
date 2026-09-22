@@ -29,6 +29,7 @@
   }
   const sameDraw=(a,b)=>a&&b&&JSON.stringify([a.period,...a.regular,a.special])===JSON.stringify([b.period,...b.regular,b.special]);
   function create(storage,now=()=>Date.now()){
+    const experiment=typeof module!=='undefined'&&module.exports?require('./experiment-core.js'):root.S68Experiment;
     let sync=null,lastError='';
     function read(key){
       const raw=storage.getItem(key);if(!raw)return {};
@@ -62,6 +63,11 @@
         const predictionCopy=Object.fromEntries(Object.keys(METRICS).map(k=>[k,prediction[k].slice()]));
         const entry={schema:2,id,year:2026,period:target,model,rule:RULES[model],createdAt:new Date(now()).toISOString(),
           syncedAt:new Date(sync.at).toISOString(),dataThrough:target-1,historySignature:signature(hist),prediction:predictionCopy,source:'local'};
+        if(experiment&&experiment.active(target)){
+          const controls=Object.values(records).filter(e=>e.period===target&&e.control).map(e=>e.control);
+          if(controls.some(c=>!experiment.validControl(c,target)||JSON.stringify(c)!==JSON.stringify(controls[0])))throw new Error('同一期随机对照冲突，未覆盖');
+          entry.control=controls.length?clone(controls[0]):experiment.newControl(target,entry.createdAt);
+        }
         records[id]=entry;write(KEY,records);return {saved:true,entry:clone(entry)};
       }catch(e){lastError='预测未能保存：'+e.message;return {saved:false,reason:lastError};}
     }
@@ -93,19 +99,25 @@
       }
       return out;
     }
-    function backup(){return {schema:2,records:read(KEY),drawTimes:read(TIMES),legacyDigital:storage.getItem('s46_blind_predictions_v1'),legacyZodiac:storage.getItem('s46_zodiac_blind_v1')};}
+    function backup(){return {schema:2,experimentPlan:experiment?clone(experiment.PLAN):null,records:read(KEY),drawTimes:read(TIMES),legacyDigital:storage.getItem('s46_blind_predictions_v1'),legacyZodiac:storage.getItem('s46_zodiac_blind_v1')};}
     function restore(data){
       if(!data||data.schema!==2||!data.records||typeof data.records!=='object'||Array.isArray(data.records))throw new Error('预测存档备份格式错误');
+      if(data.experimentPlan&&data.experimentPlan.id!==experiment?.PLAN.id)throw new Error('观察计划不匹配，未导入');
       const records=read(KEY),meta=read(TIMES);
       for(const [id,e] of Object.entries(data.records)){
         if(!e||e.id!==id||id!=='2026:'+e.period+':'+e.model||e.schema!==2||e.rule!==RULES[e.model]||!validPrediction(e.prediction))throw new Error('预测存档记录无效');
+        if(e.control&&(!experiment||!experiment.validControl(e.control,e.period)))throw new Error('随机对照记录无效');
         if(records[id]&&JSON.stringify(records[id].prediction)!==JSON.stringify(e.prediction))throw new Error('同一期预测冲突，未覆盖本机记录');
+        if(records[id]&&JSON.stringify(records[id].control)!==JSON.stringify(e.control))throw new Error('同一期随机对照冲突，未补写或覆盖本机记录');
       }
+      const combined={...data.records,...records},controls=new Map();
+      for(const e of Object.values(combined))if(e.control){const saved=controls.get(e.period),value=JSON.stringify(e.control);if(saved&&saved!==value)throw new Error('同一期随机对照冲突，未导入');controls.set(e.period,value);}
       for(const [id,e] of Object.entries(data.records))if(!records[id])records[id]={...clone(e),source:'imported'};
       for(const [id,d] of Object.entries(data.drawTimes||{}))if(!meta[id]&&d&&String(d.period)===id&&Array.isArray(d.regular)&&d.regular.length===6&&Number.isFinite(openTime(d.openTime)))meta[id]=clone(d);
       write(TIMES,meta);write(KEY,records);
     }
-    return {ingest,record,inspect,stats,entries,backup,restore,get error(){return lastError;}};
+    function drawTime(period){try{return openTime(read(TIMES)[period]?.openTime);}catch(_){return NaN;}}
+    return {ingest,record,inspect,stats,entries,backup,restore,drawTime,get error(){return lastError;}};
   }
   const api={create,signature,validHistory,validPrediction,openTime,RULES,METRICS,KEY,TIMES};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;

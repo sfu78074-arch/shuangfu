@@ -99,4 +99,10 @@ test('recent replay matches the original formulas and does not alter live state 
   const sums={};for(const k of ['one','three','sixn','nine'])sums[k]=replay.filter(r=>r.period<=263&&r.prediction[k].includes(r.actual)).length;
   assert.deepEqual(sums,{one:0,three:1,sixn:1,nine:1});
   assert.deepEqual(JSON.parse(JSON.stringify(replay.at(-1).prediction.nine)),[34,4,10,8,42,48,31,36,45]);
+  const both=await vm.runInContext('s67ReplayS46(history,256,264,true)',ctx);
+  assert.ok(both.every(r=>r.baseline.nine.length===9&&r.baseline.four.length===4));
+  assert.ok(both.every(r=>r.baseline.four.includes('猴')&&r.baseline.four.includes('龙')));
+  assert.equal(both.filter(r=>r.actual&&r.baseline.nine.includes(r.actual)).length,1);
+  assert.equal(vm.runInContext('JSON.stringify([modelLog50,modelLogS2,choiceLog])',ctx),state);
+  assert.equal(JSON.stringify([...storage.map]),before);
 });
