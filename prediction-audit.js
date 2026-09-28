@@ -38,7 +38,7 @@ async function s67ReplayS46(hist,start,end,includeBase=false){
 
 (function(){
   const labels={one:'1码',three:'3码',sixn:'6码',nine:'9码',four:'四肖',six:'六肖'};
-  let view='S4.6',metric='nine',history=[],replay=[],replaySignature='',running=false,message='',lastRender='';
+  let view='server:S4.6',metric='nine',history=[],replay=[],replaySignature='',running=false,message='',lastRender='';
   const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const time=text=>{const t=Date.parse(text);return Number.isFinite(t)?new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(t):'—'};
   function result(p,actual){if(!p||actual==null)return null;return p.includes(metric==='four'||metric==='six'?numToZ[actual]:actual);}
@@ -51,12 +51,13 @@ async function s67ReplayS46(hist,start,end,includeBase=false){
   function legacyCount(key){try{const x=JSON.parse(localStorage.getItem(key)||'{}');return x&&typeof x==='object'?Object.keys(x).length:0}catch(_){return 0}}
   function render(force=false){
     if(!history.length)return;
-    const currentSig=window.S67Ledger.signature(history),key=JSON.stringify([currentSig,localStorage.getItem(window.S67Ledger.KEY),localStorage.getItem(window.S67Ledger.TIMES),view,metric,running,message,replaySignature,S67Audit.error]);
+    const currentSig=window.S67Ledger.signature(history),key=JSON.stringify([currentSig,localStorage.getItem(window.S67Ledger.KEY),localStorage.getItem(window.S67Ledger.TIMES),view,metric,running,message,replaySignature,S67Audit.error,window.S69ServerAudit.revision]);
     if(!force&&key===lastRender)return;lastRender=key;styles();
     let root=document.getElementById('prediction-audit');
     if(!root){root=document.createElement('section');root.id='prediction-audit';const anchor=document.getElementById('s46');if(anchor)anchor.insertAdjacentElement('afterend',root);else document.body.appendChild(root);}
     const isReplay=view==='replay',last=history.at(-1).period,start=Math.max(31,last-29);
-    const saved=S67Audit.entries().filter(e=>e.model===view),byPeriod=new Map(saved.map(e=>[e.period,e]));
+    const isServer=view.startsWith('server:'),model=view.replace('server:',''),ledger=isServer?window.S69ServerAudit:S67Audit;
+    const saved=ledger.entries().filter(e=>e.model===model),byPeriod=new Map(saved.map(e=>[e.period,e]));
     let h=0,n=0,rows='';
     if(isReplay){
       if(replaySignature===currentSig){
@@ -66,15 +67,15 @@ async function s67ReplayS46(hist,start,end,includeBase=false){
         }
       }
     }else{
-      const st=S67Audit.stats(history,view)[metric];h=st.h;n=st.n;
+      const st=ledger.stats(history,model)[metric];h=st.h;n=st.n;
       for(let t=last+1;t>=start;t--){
-        const entry=byPeriod.get(t),actual=history.find(d=>d.period===t),info=entry?S67Audit.inspect(entry,history):null,p=entry?.prediction?.[metric];
+        const entry=byPeriod.get(t),actual=history.find(d=>d.period===t),info=entry?ledger.inspect(entry,history):null,p=entry?.prediction?.[metric];
         const hit=info?.status==='checked'?result(p,actual?.special):null;
-        rows+=`<tr><td>${t}</td><td>${esc(entry?time(entry.createdAt):'—')}</td><td class="audit-numbers">${Array.isArray(p)?p.map(x=>esc(typeof x==='number'?fmt(x):x)).join('、'):'—'}</td><td>${actual?fmt(actual.special)+' · '+esc(numToZ[actual.special]):'待开奖'}</td><td class="${info?.status==='checked'?'audit-hit':'audit-warn'}">${esc(info?info.reason:actual?'缺少存档 · 不计入成绩':'等待同步后留档')}${entry?.source==='imported'?'（导入）':''}</td><td class="${hit===null?'':hit?'audit-hit':'audit-miss'}">${hit===null?'—':hit?'中':'未中'}</td></tr>`;
+        rows+=`<tr><td>${t}</td><td>${esc(entry?time(entry.createdAt):'—')}</td><td class="audit-numbers">${Array.isArray(p)?p.map(x=>esc(typeof x==='number'?fmt(x):x)).join('、'):'—'}</td><td>${actual?fmt(actual.special)+' · '+esc(numToZ[actual.special]):'待开奖'}</td><td class="${info?.status==='checked'?'audit-hit':'audit-warn'}">${esc(info?info.reason:actual?(isServer?'缺少服务器存档 · 不计成绩':'缺少本机存档 · 不计成绩'):(isServer?'等待后台首次存档':'等待同步后留档'))}${entry?.source==='imported'?'（导入）':''}</td><td class="${hit===null?'':hit?'audit-hit':'audit-miss'}">${hit===null?'—':hit?'中':'未中'}</td></tr>`;
       }
     }
     const summary=n?`${labels[metric]}：${h}/${n} · ${(100*h/n).toFixed(2)}%`:isReplay?'尚未生成历史回算':'暂无已核对存档';
-    root.innerHTML=`<div class="audit-box"><h2>逐期核对</h2><p>提前存档只核对首次保存的预测；缺少记录、保存晚于开奖、开奖时间缺失或历史有变动的期次均不计入成绩。历史回算单独显示。</p><div class="audit-controls"><label>记录类型<select data-audit-view aria-label="记录类型"><option value="S4.5">S4.5 提前存档</option><option value="S4.6">S4.6 提前存档</option><option value="replay">S4.6 近30期历史回算</option></select></label><label>核对项目<select data-audit-metric aria-label="核对项目">${Object.entries(labels).map(([k,v])=>`<option value="${k}">${v}</option>`).join('')}</select></label>${isReplay?`<button type="button" data-audit-calculate ${running?'disabled':''}>${running?'正在回算…':'生成历史回算'}</button>`:''}</div><p class="audit-summary">${esc(summary)}</p><p>${isReplay?`当前数据可回算 ${start}–${last} 期；这些结果不会写入提前存档。`:'成绩统计本机所有已核对记录；下表显示最近30期及下一期。保存时间为北京时间。'}</p>${message?`<p role="status">${esc(message)}</p>`:''}${S67Audit.error?`<p class="audit-warn" role="alert">${esc(S67Audit.error)}</p>`:''}<div class="audit-scroll"><table><thead><tr><th>期号</th><th>保存时间</th><th>${isReplay?'回算预测':'首次存档'} · ${labels[metric]}</th><th>实际特码</th><th>核对状态</th><th>命中</th></tr></thead><tbody>${rows||'<tr><td colspan="6">点击“生成历史回算”查看逐期结果。</td></tr>'}</tbody></table></div><details><summary>统计说明与旧版记录</summary><p>存档保存在当前浏览器；保存时间与接口开奖时间进行比较，未经过服务器签名或第三方认证，不等同于独立认证的盲测。换设备请先导出完整数据。</p><p>原数字记录 ${legacyCount('s46_blind_predictions_v1')} 条、原生肖记录 ${legacyCount('s46_zodiac_blind_v1')} 条仍保留。旧版255期汇总及后续补算不再并入提前存档成绩。</p><p>数字研究表的31–245期成绩保留为旧版研究快照；生肖研究表按当前数据回算。历史成绩不代表未来命中概率。</p></details></div>`;
+    root.innerHTML=`<div class="audit-box"><h2>逐期核对</h2><p>提前存档只核对首次保存的预测；缺少记录、保存晚于开奖、开奖时间缺失或历史有变动的期次均不计入成绩。历史回算单独显示。</p><div class="audit-controls"><label>记录类型<select data-audit-view aria-label="记录类型"><option value="server:S4.5">S4.5 服务器存档</option><option value="server:S4.6">S4.6 服务器存档</option><option value="S4.5">S4.5 旧本机存档</option><option value="S4.6">S4.6 旧本机存档</option><option value="replay">S4.6 近30期历史回算</option></select></label><label>核对项目<select data-audit-metric aria-label="核对项目">${Object.entries(labels).map(([k,v])=>`<option value="${k}">${v}</option>`).join('')}</select></label>${isReplay?`<button type="button" data-audit-calculate ${running?'disabled':''}>${running?'正在回算…':'生成历史回算'}</button>`:''}</div><p class="audit-summary">${esc(summary)}</p><p>${isReplay?`当前数据可回算 ${start}–${last} 期；这些结果不会写入提前存档。`:(isServer?'成绩仅统计服务器已核对记录。后台每小时检查，关闭网页仍可存档；最近检查：'+time(ledger.data?.checkedAt)+'。':'成绩统计本机所有已核对记录。')+' 下表显示最近30期及下一期，时间为北京时间。'}</p>${message?`<p role="status">${esc(message)}</p>`:''}${ledger.error?`<p class="audit-warn" role="alert">${esc(ledger.error)}</p>`:''}<div class="audit-scroll"><table><thead><tr><th>期号</th><th>保存时间</th><th>${isReplay?'回算预测':'首次存档'} · ${labels[metric]}</th><th>实际特码</th><th>核对状态</th><th>命中</th></tr></thead><tbody>${rows||'<tr><td colspan="6">点击“生成历史回算”查看逐期结果。</td></tr>'}</tbody></table></div><details><summary>统计说明与旧版记录</summary><p>服务器存档跨设备共享，每期只保存首次结果，启用前缺档不补写；每小时检查可能受任务排队或接口故障影响，超过当日20:30不再补存。服务器时间未经过独立第三方认证。旧本机记录仍保留，换设备前请导出。</p><p>原数字记录 ${legacyCount('s46_blind_predictions_v1')} 条、原生肖记录 ${legacyCount('s46_zodiac_blind_v1')} 条仍保留。旧版255期汇总及后续补算不再并入提前存档成绩。</p><p>数字研究表的31–245期成绩保留为旧版研究快照；生肖研究表按当前数据回算。历史成绩不代表未来命中概率。</p></details></div>`;
     root.querySelector('[data-audit-view]').value=view;root.querySelector('[data-audit-metric]').value=metric;
     root.querySelector('[data-audit-view]').onchange=e=>{view=e.target.value;message='';render(true)};
     root.querySelector('[data-audit-metric]').onchange=e=>{metric=e.target.value;render(true)};
@@ -89,6 +90,7 @@ async function s67ReplayS46(hist,start,end,includeBase=false){
       replay=rows;replaySignature=sig;message='回算完成，未写入提前存档。';
     }catch(e){message='回算失败：'+e.message}finally{running=false;render(true)}
   }
+  window.addEventListener('server-audit-update',()=>render(true));
   const previous=s46Render;
   s46Render=function(){previous();try{history=s44GetHistory().hist;render()}catch(e){console.error('prediction audit',e)}};
 })();
