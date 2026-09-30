@@ -4,72 +4,132 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>特码生肖数据分析看板</title>
+<title>特码生肖分析总览</title>
 <link rel="stylesheet" href="./unified.css">
 </head>
 <body>
 <div class="wrap" id="app">
-  <div class="hero">
-    <div><div class="ey">SPECIAL ZODIAC ANALYTICS · LIVE + ARCHIVE</div><h1>特码生肖数据分析看板</h1><div class="sub">自动抓取开奖、永久存档、遗漏曲线、模型研究、前向验证与滚动回测，全部集中在一个页面。</div></div>
-    <div class="actions"><button class="btn" id="syncBtn">同步最新开奖</button><button class="btn" id="archiveBtn">刷新存档</button><div class="pill" id="syncState">准备同步…</div></div>
-  </div>
-  <div class="nav"><a class="btn" href="#live">实时分析</a><a class="btn" href="#archive">存档中心</a><a class="btn" href="#omissionChart">遗漏曲线</a><a class="btn" href="#research">模型研究</a><a class="btn" href="#forward">前向验证</a><a class="btn" href="#backtest">历史回测</a><a class="btn" href="#system">系统状态</a></div>
-
-  <div id="live" class="grid4 section-anchor">
-    <div class="card"><span>最新期号</span><b id="latestPeriod">—</b><small class="muted" id="latestDate">—</small></div>
-    <div class="card"><span>最新特码</span><b id="latestSpecial">—</b><small class="muted">特码生肖 / 号码</small></div>
-    <div class="card"><span>当前最长遗漏</span><b id="longest">—</b><small class="muted" id="secondLongest">—</small></div>
-    <div class="card"><span>4肖历史回测</span><b id="hero4">—</b><small class="muted" id="hero4base">—</small></div>
-  </div>
-
-  <section class="panel"><div class="head"><div><div class="ey">CURRENT MODEL</div><h2>2–6肖候选与命中率</h2></div><div class="tabs" id="tabs"></div></div><div class="candidate" id="cand">—</div><div class="metrics"><div class="m"><small>全部回测</small><b id="f">—</b></div><div class="m"><small>近100期</small><b id="r100">—</b></div><div class="m"><small>近50期</small><b id="r50">—</b></div><div class="m"><small>近30期</small><b id="r30">—</b></div></div><div class="warn">候选使用历史数据排序。历史回测不等于下一期真实概率，也不代表任何结果保证。</div></section>
-
-  <div class="two"><section class="panel"><div class="ey">CURRENT OMISSION</div><h2>当前遗漏排行</h2><div id="om"></div></section><section class="panel"><div class="ey">RECENT TREND</div><h2>近30期生肖走势</h2><div class="trend" id="trend"></div></section></div>
-
-  <section class="panel section-anchor" id="archive">
-    <div class="head"><div><div class="ey">PERSISTENT ARCHIVE</div><h2>开奖存档中心</h2></div><div class="pill" id="archiveState"><span class="statusDot"></span>读取存档中…</div></div>
-    <div class="archiveHero"><strong>这里显示的是已经真正写入仓库的永久存档。</strong><div class="muted" style="margin-top:6px">与“实时抓取”分开显示：只有后台归档成功的数据才会出现在这里，可用于后续模型学习和回测。</div></div>
-    <div class="archive-grid"><div class="archive-stat"><small>已存档期数</small><b id="archiveCount">—</b></div><div class="archive-stat"><small>最新存档期</small><b id="archiveLatest">—</b></div><div class="archive-stat"><small>最新特码</small><b id="archiveSpecial">—</b></div><div class="archive-stat"><small>数据完整性</small><b id="archiveQuality">—</b></div></div>
-    <div class="filters"><input class="input" id="archiveSearch" placeholder="搜索期号，如 2026273"><select class="select" id="archiveZodiac"><option value="">全部生肖</option></select><select class="select" id="archivePageSize"><option>20</option><option>50</option><option>100</option></select><span class="muted" id="archiveMeta">—</span></div>
-    <div class="archive-tools"><button class="btn" id="exportCsvBtn">导出当前筛选 CSV</button><button class="btn" id="exportExcelBtn">导出当前筛选 Excel</button><span class="muted">没有筛选时导出全部永久存档</span></div>
-    <div class="scroll" style="margin-top:12px"><table><thead><tr><th>期号</th><th>开奖时间</th><th>6个正码</th><th>特码</th><th>特码生肖</th><th>首次存档</th></tr></thead><tbody id="archiveRows"></tbody></table></div>
-    <div class="pager"><button class="btn" id="prevArchive">上一页</button><span class="muted" id="archivePageInfo">—</span><button class="btn" id="nextArchive">下一页</button></div>
-    <div class="hash" id="archiveHash" style="margin-top:10px">—</div>
-
-    <div class="chartbox section-anchor" id="omissionChart">
-      <div class="charthead"><div><div class="ey">OMISSION HISTORY</div><h2 style="margin-bottom:4px">生肖历史遗漏曲线</h2><div class="muted"><span class="legendline"></span>每期开奖后，该生肖已经连续未开多少期</div></div><select class="select" id="chartRange"><option value="50">最近50期</option><option value="100" selected>最近100期</option><option value="all">全部存档</option></select></div>
-      <div class="zodiacBtns" id="chartZodiacs"></div>
-      <div class="chartstats"><div class="chartstat"><small>当前遗漏</small><b id="chartCurrent">—</b></div><div class="chartstat"><small>历史最大遗漏</small><b id="chartMax">—</b></div><div class="chartstat"><small>最后开出期号</small><b id="chartLastHit">—</b></div><div class="chartstat"><small>样本区间</small><b id="chartSample">—</b></div></div>
-      <div class="svgwrap" id="omissionSvgWrap"></div>
+  <div class="hero simpleHero">
+    <div>
+      <div class="ey">DAILY ZODIAC DASHBOARD</div>
+      <h1>特码生肖分析总览</h1>
+      <div class="sub">首页只放每天需要看的核心数据；存档、模型研究和高级统计需要时再展开。</div>
     </div>
+    <div class="actions">
+      <button class="btn primaryBtn" id="syncBtn">同步最新开奖</button>
+      <button class="btn" id="archiveBtn">刷新存档</button>
+      <div class="pill" id="syncState">准备同步…</div>
+    </div>
+  </div>
+
+  <div class="guidebar">
+    <b>每天按这个顺序看：</b>
+    <span>① 最新开奖是否更新</span>
+    <span>② 默认4肖候选</span>
+    <span>③ 历史/近期表现</span>
+    <span>④ 最大遗漏是否异常</span>
+  </div>
+
+  <section id="live" class="focusPanel section-anchor">
+    <div class="focusTitle"><div><div class="ey">TODAY · 必看</div><h2>今日核心数据</h2></div><span class="focusTag">默认显示 4肖</span></div>
+    <div class="focusGrid">
+      <div class="focusCard">
+        <span class="focusLabel">最新开奖</span>
+        <b class="focusValue" id="latestPeriod">—</b>
+        <strong id="latestSpecial">—</strong>
+        <small class="muted" id="latestDate">—</small>
+      </div>
+      <div class="focusCard focusMain">
+        <span class="focusLabel">主候选（默认4肖）</span>
+        <div class="focusCandidate" id="cand">—</div>
+        <div class="tabs compactTabs" id="tabs"></div>
+        <small class="muted">可切换2–6肖；日常先看4肖即可</small>
+      </div>
+      <div class="focusCard">
+        <span class="focusLabel">命中表现</span>
+        <div class="rateLine"><b id="f">—</b><small>全部滚动回测</small></div>
+        <div class="rateLine secondaryRate"><b id="r30">—</b><small>近30期</small></div>
+        <div class="hiddenMetric"><span id="r100">—</span><span id="r50">—</span></div>
+      </div>
+      <div class="focusCard">
+        <span class="focusLabel">当前最大遗漏</span>
+        <b class="focusValue" id="longest">—</b>
+        <small class="muted" id="secondLongest">—</small>
+        <div class="miniHistory">4肖历史：<b id="hero4">—</b> <span id="hero4base">—</span></div>
+      </div>
+    </div>
+    <div class="simpleWarn">这些是统计候选和历史回测结果，不代表下一期确定概率。页面把“历史表现”和“真正前向成绩”分开记录。</div>
   </section>
 
-  <section class="panel section-anchor" id="research">
-    <div class="head"><div><div class="ey">MODEL RESEARCH</div><h2>模型研究中心</h2></div><div class="pill" id="researchState">读取研究数据中…</div></div>
-    <div class="research-grid"><div class="research-stat"><small>模型数据更新至</small><b id="researchThrough">—</b></div><div class="research-stat"><small>2肖实验模型</small><b id="researchTwoRate">—</b></div><div class="research-stat"><small>4肖当前最佳</small><b id="researchFourRate">—</b></div><div class="research-stat"><small>4肖231期后</small><b id="researchFourHoldout">—</b></div></div>
-    <div class="pickgrid"><div class="pickbox"><span class="muted">下一期优化2肖</span><div class="bigpick" id="researchP2">—</div></div><div class="pickbox"><span class="muted">下一期基准4肖</span><div class="bigpick" id="researchP4">—</div></div></div>
-    <div class="note">模型研究和主候选分开统计。只有滚动验证和未来新开奖都支持的改进，才会替换主模型；不会为了让历史命中率好看而事后调参。</div>
-    <h2 style="margin-top:20px">4肖模型对比</h2><div class="scroll"><table><thead><tr><th>模型</th><th>命中率</th><th>理论基准</th><th>超出</th><th>近50</th><th>近30</th><th>231期后</th><th>最大连未中</th></tr></thead><tbody id="research4Rows"></tbody></table></div>
-    <h2 style="margin-top:20px">2肖实验对比</h2><div class="scroll"><table><thead><tr><th>模型</th><th>命中率</th><th>理论基准</th><th>超出</th><th>前半段</th><th>后半段</th><th>231期后</th><th>近30</th></tr></thead><tbody id="research2Rows"></tbody></table></div>
-  </section>
+  <div class="healthStrip">
+    <div><span>永久存档</span><b id="archiveCount">—</b></div>
+    <div><span>最新落盘</span><b id="archiveLatest">—</b></div>
+    <div><span>完整性</span><b id="archiveQuality">—</b></div>
+    <div class="healthState" id="archiveState"><span class="statusDot"></span>读取存档中…</div>
+  </div>
 
-  <section class="panel section-anchor" id="forward">
-    <div class="head"><div><div class="ey">FORWARD VALIDATION</div><h2>开奖前锁定的真实前向成绩</h2></div><div class="pill" id="forwardState">读取前向账本中…</div></div>
-    <div class="research-grid"><div class="research-stat"><small>已锁定预测</small><b id="forwardLocked">—</b></div><div class="research-stat"><small>已结算期数</small><b id="forwardResolved">—</b></div><div class="research-stat"><small>当前目标期</small><b id="forwardTarget">—</b></div><div class="research-stat"><small>数据截至</small><b id="forwardThrough">—</b></div></div>
-    <div class="scroll"><table><thead><tr><th>模型</th><th>2肖</th><th>3肖</th><th>4肖</th><th>5肖</th><th>6肖</th></tr></thead><tbody id="forwardRows"></tbody></table></div>
-    <h2 style="margin-top:20px">最近锁定记录</h2><div class="scroll"><table><thead><tr><th>目标期</th><th>数据截至</th><th>优化2肖</th><th>基准4肖</th><th>开奖结果</th><th>状态</th></tr></thead><tbody id="forwardLogRows"></tbody></table></div>
-    <div class="note">这里才是判断模型是否真的提高的关键：候选必须在开奖前永久存档，开奖后只能追加结果，不能修改之前的预测。</div>
-  </section>
+  <details class="fold" id="archive">
+    <summary><div><b>开奖记录与永久存档</b><span>搜索、筛选、导出、查看遗漏曲线</span></div><em>展开</em></summary>
+    <div class="foldBody">
+      <div class="archiveHero"><strong>这里只显示已经真正写入仓库的永久存档。</strong><div class="muted" style="margin-top:6px">实时抓取和永久落盘分开；模型训练只使用已经归档的数据。</div></div>
+      <div class="archive-grid compactStats">
+        <div class="archive-stat"><small>最新存档特码</small><b id="archiveSpecial">—</b></div>
+        <div class="archive-stat wideStat"><small>存档信息</small><b class="smallText" id="archiveMeta">—</b></div>
+      </div>
+      <div class="filters"><input class="input" id="archiveSearch" placeholder="搜索期号，如 2026273"><select class="select" id="archiveZodiac"><option value="">全部生肖</option></select><select class="select" id="archivePageSize"><option>20</option><option>50</option><option>100</option></select></div>
+      <div class="archive-tools"><button class="btn" id="exportCsvBtn">导出 CSV</button><button class="btn" id="exportExcelBtn">导出 Excel</button><span class="muted">没有筛选时导出全部永久存档</span></div>
+      <div class="scroll"><table><thead><tr><th>期号</th><th>开奖时间</th><th>6个正码</th><th>特码</th><th>特码生肖</th><th>首次存档</th></tr></thead><tbody id="archiveRows"></tbody></table></div>
+      <div class="pager"><button class="btn" id="prevArchive">上一页</button><span class="muted" id="archivePageInfo">—</span><button class="btn" id="nextArchive">下一页</button></div>
+      <div class="hash" id="archiveHash">—</div>
 
-  <section class="panel section-anchor" id="system">
-    <div class="ey">SYSTEM HEALTH</div><h2>数据与模型系统状态</h2>
-    <div class="sysgrid"><div class="sysitem"><small>永久存档</small><b id="sysArchive">—</b></div><div class="sysitem"><small>模型数据</small><b id="sysModel">—</b></div><div class="sysitem"><small>下一目标</small><b id="sysTarget">—</b></div><div class="sysitem"><small>前向账本</small><b id="sysForward">—</b></div></div>
-  </section>
+      <div class="chartbox section-anchor" id="omissionChart">
+        <div class="charthead"><div><div class="ey">OMISSION HISTORY</div><h2>生肖历史遗漏曲线</h2></div><select class="select" id="chartRange"><option value="50">最近50期</option><option value="100" selected>最近100期</option><option value="all">全部存档</option></select></div>
+        <div class="zodiacBtns" id="chartZodiacs"></div>
+        <div class="chartstats"><div class="chartstat"><small>当前遗漏</small><b id="chartCurrent">—</b></div><div class="chartstat"><small>历史最大遗漏</small><b id="chartMax">—</b></div><div class="chartstat"><small>最后开出期号</small><b id="chartLastHit">—</b></div><div class="chartstat"><small>样本区间</small><b id="chartSample">—</b></div></div>
+        <div class="svgwrap" id="omissionSvgWrap"></div>
+      </div>
+    </div>
+  </details>
 
-  <section class="panel section-anchor" id="backtest"><div class="head"><div><div class="ey">BACKTEST</div><h2>多肖滚动回测</h2></div><span class="muted" id="btRange">—</span></div><div class="scroll"><table><thead><tr><th>选肖数</th><th>当前候选</th><th>命中</th><th>历史命中率</th><th>理论基准</th><th>高出</th><th>最大连未中</th></tr></thead><tbody id="bt"></tbody></table></div></section>
-  <section class="panel"><div class="head"><div><div class="ey">REBOUND</div><h2>遗漏后回补率</h2></div><div class="tabs" id="wins"></div></div><div class="recovery" id="rec"></div></section>
-  <section class="panel"><div class="ey">EXTREME COLD</div><h2>30期以上极端遗漏历史</h2><div class="scroll"><table><thead><tr><th>生肖</th><th>达到30期</th><th>再等多少期</th><th>回补期号</th><th>最终/当前遗漏</th><th>状态</th></tr></thead><tbody id="ext"></tbody></table></div></section>
-  <footer>单页总控台 · 实时开奖 + 永久存档 + 遗漏曲线 + 模型研究 + 前向验证 · 每3分钟自动检查一次</footer>
+  <details class="fold" id="validation">
+    <summary><div><b>模型验证</b><span>想判断模型有没有真的提高时看这里</span></div><em>展开</em></summary>
+    <div class="foldBody">
+      <section class="subpanel section-anchor" id="forward">
+        <div class="head"><div><div class="ey">FORWARD VALIDATION · 最重要</div><h2>开奖前锁定的真实前向成绩</h2></div><div class="pill" id="forwardState">读取前向账本中…</div></div>
+        <div class="research-grid"><div class="research-stat"><small>已锁定预测</small><b id="forwardLocked">—</b></div><div class="research-stat"><small>已结算期数</small><b id="forwardResolved">—</b></div><div class="research-stat"><small>当前目标期</small><b id="forwardTarget">—</b></div><div class="research-stat"><small>数据截至</small><b id="forwardThrough">—</b></div></div>
+        <div class="scroll"><table><thead><tr><th>模型</th><th>2肖</th><th>3肖</th><th>4肖</th><th>5肖</th><th>6肖</th></tr></thead><tbody id="forwardRows"></tbody></table></div>
+        <h2 class="subheading">最近锁定记录</h2><div class="scroll"><table><thead><tr><th>目标期</th><th>数据截至</th><th>优化2肖</th><th>基准4肖</th><th>开奖结果</th><th>状态</th></tr></thead><tbody id="forwardLogRows"></tbody></table></div>
+        <div class="note">判断模型是否真的提高，优先看这里，而不是只看历史回测。候选必须在开奖前锁死，开奖后不能修改。</div>
+      </section>
+
+      <section class="subpanel section-anchor" id="research">
+        <div class="head"><div><div class="ey">MODEL RESEARCH</div><h2>模型研究中心</h2></div><div class="pill" id="researchState">读取研究数据中…</div></div>
+        <div class="research-grid"><div class="research-stat"><small>数据更新至</small><b id="researchThrough">—</b></div><div class="research-stat"><small>2肖实验模型</small><b id="researchTwoRate">—</b></div><div class="research-stat"><small>4肖当前最佳</small><b id="researchFourRate">—</b></div><div class="research-stat"><small>4肖231期后</small><b id="researchFourHoldout">—</b></div></div>
+        <div class="pickgrid"><div class="pickbox"><span class="muted">下一期优化2肖</span><div class="bigpick" id="researchP2">—</div></div><div class="pickbox"><span class="muted">下一期基准4肖</span><div class="bigpick" id="researchP4">—</div></div></div>
+        <div class="note">2肖实验和4肖主模型分开。只有历史滚动验证和未来前向验证都支持，才会替换主模型。</div>
+        <h2 class="subheading">4肖模型对比</h2><div class="scroll"><table><thead><tr><th>模型</th><th>命中率</th><th>理论基准</th><th>超出</th><th>近50</th><th>近30</th><th>231期后</th><th>最大连未中</th></tr></thead><tbody id="research4Rows"></tbody></table></div>
+        <h2 class="subheading">2肖实验对比</h2><div class="scroll"><table><thead><tr><th>模型</th><th>命中率</th><th>理论基准</th><th>超出</th><th>前半段</th><th>后半段</th><th>231期后</th><th>近30</th></tr></thead><tbody id="research2Rows"></tbody></table></div>
+      </section>
+    </div>
+  </details>
+
+  <details class="fold" id="advanced">
+    <summary><div><b>高级统计</b><span>平时不用看；做规律研究时再展开</span></div><em>展开</em></summary>
+    <div class="foldBody">
+      <div class="two"><section class="subpanel"><div class="ey">CURRENT OMISSION</div><h2>当前遗漏排行</h2><div id="om"></div></section><section class="subpanel"><div class="ey">RECENT TREND</div><h2>近30期生肖走势</h2><div class="trend" id="trend"></div></section></div>
+
+      <section class="subpanel section-anchor" id="backtest"><div class="head"><div><div class="ey">BACKTEST</div><h2>多肖滚动回测</h2></div><span class="muted" id="btRange">—</span></div><div class="scroll"><table><thead><tr><th>选肖数</th><th>当前候选</th><th>命中</th><th>历史命中率</th><th>理论基准</th><th>高出</th><th>最大连未中</th></tr></thead><tbody id="bt"></tbody></table></div></section>
+
+      <section class="subpanel"><div class="head"><div><div class="ey">REBOUND</div><h2>遗漏后回补率</h2></div><div class="tabs" id="wins"></div></div><div class="recovery" id="rec"></div></section>
+
+      <section class="subpanel"><div class="ey">EXTREME COLD</div><h2>30期以上极端遗漏历史</h2><div class="scroll"><table><thead><tr><th>生肖</th><th>达到30期</th><th>再等多少期</th><th>回补期号</th><th>最终/当前遗漏</th><th>状态</th></tr></thead><tbody id="ext"></tbody></table></div></section>
+
+      <section class="subpanel section-anchor" id="system"><div class="ey">SYSTEM HEALTH</div><h2>数据与模型系统状态</h2><div class="sysgrid"><div class="sysitem"><small>永久存档</small><b id="sysArchive">—</b></div><div class="sysitem"><small>模型数据</small><b id="sysModel">—</b></div><div class="sysitem"><small>下一目标</small><b id="sysTarget">—</b></div><div class="sysitem"><small>前向账本</small><b id="sysForward">—</b></div></div></section>
+    </div>
+  </details>
+
+  <footer>简化总览 · 核心数据优先 · 研究数据按需展开 · 每3分钟自动检查一次</footer>
 </div>
 <script src="./unified.js"></script>
-</body></html>
+</body>
+</html>
