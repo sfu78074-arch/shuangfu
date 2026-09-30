@@ -14,6 +14,7 @@ on:
       - '.github/workflows/archive-draws.yml'
       - 'server/archive-draws.cjs'
       - 'server/build-zodiac-dataset.cjs'
+      - 'tests/zodiac-dataset.test.cjs'
 
 permissions:
   contents: write
@@ -35,6 +36,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+
+      - name: Test archive and feature pipeline
+        run: node --test tests/zodiac-dataset.test.cjs
 
       - name: Fetch, validate and archive draws
         run: node server/archive-draws.cjs
