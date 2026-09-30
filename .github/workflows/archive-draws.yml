@@ -16,6 +16,7 @@ on:
       - 'server/build-zodiac-dataset.cjs'
       - 'server/research-zodiac-models.cjs'
       - 'server/research-zodiac-meta.cjs'
+      - 'server/zodiac-forward-ledger.cjs'
       - 'tests/zodiac-dataset.test.cjs'
 
 permissions:
@@ -69,6 +70,10 @@ jobs:
         if: steps.archive_change.outputs.changed == 'true' || github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         run: node server/research-zodiac-meta.cjs
 
+      - name: Update immutable forward-validation ledger
+        if: steps.archive_change.outputs.changed == 'true' || github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        run: node server/zodiac-forward-ledger.cjs
+
       - name: Persist draw archive and model datasets
         run: |
           git config user.name 'github-actions[bot]'
@@ -80,7 +85,8 @@ jobs:
             data/zodiac-latest-features-2026.json \
             data/zodiac-model-status-2026.json \
             data/zodiac-research-2026.json \
-            data/zodiac-meta-research-2026.json
+            data/zodiac-meta-research-2026.json \
+            data/zodiac-forward-ledger-2026.json
           if git diff --cached --quiet; then
             echo 'No archive/model dataset changes.'
             exit 0
