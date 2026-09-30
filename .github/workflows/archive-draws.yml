@@ -15,6 +15,7 @@ on:
       - 'server/archive-draws.cjs'
       - 'server/build-zodiac-dataset.cjs'
       - 'server/research-zodiac-models.cjs'
+      - 'server/research-zodiac-meta.cjs'
       - 'tests/zodiac-dataset.test.cjs'
 
 permissions:
@@ -64,6 +65,10 @@ jobs:
         if: steps.archive_change.outputs.changed == 'true' || github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         run: node server/research-zodiac-models.cjs
 
+      - name: Run targeted meta research
+        if: steps.archive_change.outputs.changed == 'true' || github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        run: node server/research-zodiac-meta.cjs
+
       - name: Persist draw archive and model datasets
         run: |
           git config user.name 'github-actions[bot]'
@@ -74,7 +79,8 @@ jobs:
             data/zodiac-features-2026.jsonl \
             data/zodiac-latest-features-2026.json \
             data/zodiac-model-status-2026.json \
-            data/zodiac-research-2026.json
+            data/zodiac-research-2026.json \
+            data/zodiac-meta-research-2026.json
           if git diff --cached --quiet; then
             echo 'No archive/model dataset changes.'
             exit 0
