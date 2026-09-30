@@ -1,0 +1,259 @@
+{
+  "schema": 1,
+  "year": 2026,
+  "createdAt": "2026-09-30T17:28:40.362Z",
+  "entries": [
+    {
+      "schema": 1,
+      "targetExpect": "2026274",
+      "targetPeriod": 274,
+      "dataThrough": "2026273",
+      "createdAt": "2026-09-30T17:28:40.362Z",
+      "archiveSha256": "bb9b6cc51b13fa106f4fd39e7ab6c9a092a95e29228b160ba77797eb0fbbabbe",
+      "models": {
+        "baseline": {
+          "2": [
+            "龙",
+            "羊"
+          ],
+          "3": [
+            "龙",
+            "羊",
+            "牛"
+          ],
+          "4": [
+            "龙",
+            "羊",
+            "牛",
+            "马"
+          ],
+          "5": [
+            "龙",
+            "羊",
+            "牛",
+            "马",
+            "狗"
+          ],
+          "6": [
+            "龙",
+            "羊",
+            "牛",
+            "马",
+            "狗",
+            "猪"
+          ]
+        },
+        "cold": {
+          "2": [
+            "龙",
+            "羊"
+          ],
+          "3": [
+            "龙",
+            "羊",
+            "虎"
+          ],
+          "4": [
+            "龙",
+            "羊",
+            "虎",
+            "马"
+          ],
+          "5": [
+            "龙",
+            "羊",
+            "虎",
+            "马",
+            "猴"
+          ],
+          "6": [
+            "龙",
+            "羊",
+            "虎",
+            "马",
+            "猴",
+            "狗"
+          ]
+        },
+        "meta": {
+          "2": [
+            "龙",
+            "羊"
+          ],
+          "3": [
+            "龙",
+            "羊",
+            "牛"
+          ],
+          "4": [
+            "龙",
+            "羊",
+            "牛",
+            "马"
+          ],
+          "5": [
+            "龙",
+            "羊",
+            "牛",
+            "马",
+            "狗"
+          ],
+          "6": [
+            "龙",
+            "羊",
+            "牛",
+            "马",
+            "狗",
+            "猪"
+          ]
+        },
+        "optimized": {
+          "2": [
+            "龙",
+            "羊"
+          ],
+          "3": [
+            "龙",
+            "羊",
+            "牛"
+          ],
+          "4": [
+            "龙",
+            "羊",
+            "牛",
+            "马"
+          ],
+          "5": [
+            "龙",
+            "羊",
+            "牛",
+            "马",
+            "狗"
+          ],
+          "6": [
+            "龙",
+            "羊",
+            "牛",
+            "马",
+            "狗",
+            "猪"
+          ]
+        }
+      },
+      "resolved": null
+    }
+  ],
+  "updatedAt": "2026-09-30T17:28:40.363Z",
+  "latestArchived": "2026273",
+  "nextTarget": "2026274",
+  "summary": {
+    "baseline": {
+      "2": {
+        "resolved": 0,
+        "hits": 0,
+        "hitRate": null
+      },
+      "3": {
+        "resolved": 0,
+        "hits": 0,
+        "hitRate": null
+      },
+      "4": {
+        "resolved": 0,
+        "hits": 0,
+        "hitRate": null
+      },
+      "5": {
+        "resolved": 0,
+        "hits": 0,
+        "hitRate": null
+      },
+      "6": {
+        "resolved": 0,
+        "hits": 0,
+        "hitRate": null
+      }
+    },
+    "cold": {
+      "2": {
+        "resolved": 0,
+        "hits": 0,
+        "hitRate": null
+      },
+      "3": {
+        "resolved": 0,
+        "hits": 0,
+        "hitRate": null
+      },
+      "4": {
+        "resolved": 0,
+        "hits": 0,
+        "hitRate": null
+      },
+      "5": {
+        "resolved": 0,
+        "hits": 0,
+        "hitRate": null
+      },
+      "6": {
+        "resolved": 0,
+        "hits": 0,
+        "hitRate": null
+      }
+    },
+    "meta": {
+      "2": {
+        "resolved": 0,
+        "hits": 0,
+        "hitRate": null
+      },
+      "3": {
+        "resolved": 0,
+        "hits": 0,
+        "hitRate": null
+      },
+      "4": {
+        "resolved": 0,
+        "hits": 0,
+        "hitRate": null
+      },
+      "5": {
+        "resolved": 0,
+        "hits": 0,
+        "hitRate": null
+      },
+      "6": {
+        "resolved": 0,
+        "hits": 0,
+        "hitRate": null
+      }
+    },
+    "optimized": {
+      "2": {
+        "resolved": 0,
+        "hits": 0,
+        "hitRate": null
+      },
+      "3": {
+        "resolved": 0,
+        "hits": 0,
+        "hitRate": null
+      },
+      "4": {
+        "resolved": 0,
+        "hits": 0,
+        "hitRate": null
+      },
+      "5": {
+        "resolved": 0,
+        "hits": 0,
+        "hitRate": null
+      },
+      "6": {
+        "resolved": 0,
+        "hits": 0,
+        "hitRate": null
+      }
+    }
+  }
+}
