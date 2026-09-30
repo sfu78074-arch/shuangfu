@@ -13,6 +13,7 @@ on:
     paths:
       - '.github/workflows/archive-draws.yml'
       - 'server/archive-draws.cjs'
+      - 'server/build-zodiac-dataset.cjs'
 
 permissions:
   contents: write
@@ -38,15 +39,23 @@ jobs:
       - name: Fetch, validate and archive draws
         run: node server/archive-draws.cjs
 
-      - name: Persist draw archive
+      - name: Build leakage-safe model datasets
+        run: node server/build-zodiac-dataset.cjs
+
+      - name: Persist draw archive and model datasets
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/draw-archive-2026.json data/zodiac-learning-2026.jsonl
+          git add \
+            data/draw-archive-2026.json \
+            data/zodiac-learning-2026.jsonl \
+            data/zodiac-features-2026.jsonl \
+            data/zodiac-latest-features-2026.json \
+            data/zodiac-model-status-2026.json
           if git diff --cached --quiet; then
-            echo 'No new draw to archive.'
+            echo 'No archive/model dataset changes.'
             exit 0
           fi
-          git commit -m '[CF-Pages-Skip] Archive latest draw data'
+          git commit -m '[CF-Pages-Skip] Archive draw and rebuild zodiac datasets'
           git pull --rebase origin main
           git push origin HEAD:main
