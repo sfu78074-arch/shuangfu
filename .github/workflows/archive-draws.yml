@@ -39,7 +39,20 @@ jobs:
       - name: Fetch, validate and archive draws
         run: node server/archive-draws.cjs
 
+      - name: Detect archive change
+        id: archive_change
+        shell: bash
+        run: |
+          if git diff --quiet -- data/draw-archive-2026.json; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+            echo 'No new draw was archived.'
+          else
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+            echo 'New draw data detected.'
+          fi
+
       - name: Build leakage-safe model datasets
+        if: steps.archive_change.outputs.changed == 'true' || github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         run: node server/build-zodiac-dataset.cjs
 
       - name: Persist draw archive and model datasets
