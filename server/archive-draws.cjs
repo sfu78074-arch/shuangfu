@@ -117,6 +117,7 @@ function mergeImmutable(oldArchive, incoming, nowIso) {
   const signature = crypto.createHash('sha256')
     .update(JSON.stringify(draws.map(d => [d.expect, ...d.regular, d.special, d.specialZodiac])))
     .digest('hex');
+  const persistedCheckAt = added > 0 ? nowIso : (oldArchive.checkedAt || oldArchive.createdAt || nowIso);
 
   return {
     schema: 1,
@@ -125,7 +126,7 @@ function mergeImmutable(oldArchive, incoming, nowIso) {
     sourceHistory: HISTORY_URL,
     sourceLatest: LATEST_URL,
     createdAt: oldArchive.createdAt || nowIso,
-    checkedAt: nowIso,
+    checkedAt: persistedCheckAt,
     latestExpect: latest?.expect || null,
     count: draws.length,
     sha256: signature,
@@ -179,6 +180,7 @@ async function main() {
   console.log(JSON.stringify({
     status: 'ok',
     added: merged.added,
+    changed: merged.added > 0,
     count: output.count,
     latestExpect: output.latestExpect,
     sha256: output.sha256
