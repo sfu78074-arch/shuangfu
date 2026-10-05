@@ -832,119 +832,292 @@
           ]
         }
       },
+      "resolved": {
+        "resolvedAt": "2026-10-05T21:09:13.938Z",
+        "actualSpecial": 2,
+        "actualZodiac": "蛇",
+        "hits": {
+          "baseline": {
+            "2": false,
+            "3": false,
+            "4": false,
+            "5": false,
+            "6": false
+          },
+          "cold": {
+            "2": false,
+            "3": false,
+            "4": false,
+            "5": false,
+            "6": false
+          },
+          "meta": {
+            "2": false,
+            "3": false,
+            "4": false,
+            "5": false,
+            "6": false
+          },
+          "optimized": {
+            "2": false,
+            "3": false,
+            "4": false,
+            "5": false,
+            "6": false
+          }
+        }
+      }
+    },
+    {
+      "schema": 1,
+      "targetExpect": "2026279",
+      "targetPeriod": 279,
+      "dataThrough": "2026278",
+      "createdAt": "2026-10-05T21:09:13.938Z",
+      "archiveSha256": "a330cc6a30e5984c39c6e416fadc54c8b91a00bbc4e692215bdbbb19d9cc19ba",
+      "models": {
+        "baseline": {
+          "2": [
+            "龙",
+            "羊"
+          ],
+          "3": [
+            "龙",
+            "羊",
+            "马"
+          ],
+          "4": [
+            "龙",
+            "羊",
+            "马",
+            "牛"
+          ],
+          "5": [
+            "龙",
+            "羊",
+            "马",
+            "牛",
+            "猪"
+          ],
+          "6": [
+            "龙",
+            "羊",
+            "马",
+            "牛",
+            "猪",
+            "兔"
+          ]
+        },
+        "cold": {
+          "2": [
+            "龙",
+            "羊"
+          ],
+          "3": [
+            "龙",
+            "羊",
+            "马"
+          ],
+          "4": [
+            "龙",
+            "羊",
+            "马",
+            "牛"
+          ],
+          "5": [
+            "龙",
+            "羊",
+            "马",
+            "牛",
+            "鼠"
+          ],
+          "6": [
+            "龙",
+            "羊",
+            "马",
+            "牛",
+            "鼠",
+            "兔"
+          ]
+        },
+        "meta": {
+          "2": [
+            "龙",
+            "羊"
+          ],
+          "3": [
+            "龙",
+            "羊",
+            "马"
+          ],
+          "4": [
+            "龙",
+            "羊",
+            "马",
+            "牛"
+          ],
+          "5": [
+            "龙",
+            "羊",
+            "马",
+            "牛",
+            "猪"
+          ],
+          "6": [
+            "龙",
+            "羊",
+            "马",
+            "牛",
+            "猪",
+            "兔"
+          ]
+        },
+        "optimized": {
+          "2": [
+            "龙",
+            "羊"
+          ],
+          "3": [
+            "龙",
+            "羊",
+            "马"
+          ],
+          "4": [
+            "龙",
+            "羊",
+            "马",
+            "牛"
+          ],
+          "5": [
+            "龙",
+            "羊",
+            "马",
+            "牛",
+            "猪"
+          ],
+          "6": [
+            "龙",
+            "羊",
+            "马",
+            "牛",
+            "猪",
+            "兔"
+          ]
+        }
+      },
       "resolved": null
     }
   ],
-  "updatedAt": "2026-10-04T17:40:27.789Z",
-  "latestArchived": "2026277",
-  "nextTarget": "2026278",
+  "updatedAt": "2026-10-05T21:09:13.938Z",
+  "latestArchived": "2026278",
+  "nextTarget": "2026279",
   "summary": {
     "baseline": {
       "2": {
-        "resolved": 4,
+        "resolved": 5,
         "hits": 0,
         "hitRate": 0
       },
       "3": {
-        "resolved": 4,
+        "resolved": 5,
         "hits": 0,
         "hitRate": 0
       },
       "4": {
-        "resolved": 4,
+        "resolved": 5,
         "hits": 0,
         "hitRate": 0
       },
       "5": {
-        "resolved": 4,
+        "resolved": 5,
         "hits": 1,
-        "hitRate": 0.25
+        "hitRate": 0.2
       },
       "6": {
-        "resolved": 4,
+        "resolved": 5,
         "hits": 1,
-        "hitRate": 0.25
+        "hitRate": 0.2
       }
     },
     "cold": {
       "2": {
-        "resolved": 4,
+        "resolved": 5,
         "hits": 0,
         "hitRate": 0
       },
       "3": {
-        "resolved": 4,
+        "resolved": 5,
         "hits": 1,
-        "hitRate": 0.25
+        "hitRate": 0.2
       },
       "4": {
-        "resolved": 4,
+        "resolved": 5,
         "hits": 1,
-        "hitRate": 0.25
+        "hitRate": 0.2
       },
       "5": {
-        "resolved": 4,
+        "resolved": 5,
         "hits": 2,
-        "hitRate": 0.5
+        "hitRate": 0.4
       },
       "6": {
-        "resolved": 4,
+        "resolved": 5,
         "hits": 3,
-        "hitRate": 0.75
+        "hitRate": 0.6
       }
     },
     "meta": {
       "2": {
-        "resolved": 4,
+        "resolved": 5,
         "hits": 0,
         "hitRate": 0
       },
       "3": {
-        "resolved": 4,
+        "resolved": 5,
         "hits": 0,
         "hitRate": 0
       },
       "4": {
-        "resolved": 4,
+        "resolved": 5,
         "hits": 0,
         "hitRate": 0
       },
       "5": {
-        "resolved": 4,
+        "resolved": 5,
         "hits": 1,
-        "hitRate": 0.25
+        "hitRate": 0.2
       },
       "6": {
-        "resolved": 4,
+        "resolved": 5,
         "hits": 1,
-        "hitRate": 0.25
+        "hitRate": 0.2
       }
     },
     "optimized": {
       "2": {
-        "resolved": 4,
+        "resolved": 5,
         "hits": 0,
         "hitRate": 0
       },
       "3": {
-        "resolved": 4,
+        "resolved": 5,
         "hits": 0,
         "hitRate": 0
       },
       "4": {
-        "resolved": 4,
+        "resolved": 5,
         "hits": 0,
         "hitRate": 0
       },
       "5": {
-        "resolved": 4,
+        "resolved": 5,
         "hits": 1,
-        "hitRate": 0.25
+        "hitRate": 0.2
       },
       "6": {
-        "resolved": 4,
+        "resolved": 5,
         "hits": 1,
-        "hitRate": 0.25
+        "hitRate": 0.2
       }
     }
   }
