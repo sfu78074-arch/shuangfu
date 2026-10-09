@@ -1915,6 +1915,180 @@
         "attempt": "1",
         "commit": "6f9b945f0bcc800fa035ac9021de6831fb5c129c"
       }
+    },
+    {
+      "schema": 3,
+      "id": "2026:283:S4.5",
+      "year": 2026,
+      "period": 283,
+      "model": "S4.5",
+      "rule": "S45-S3-and-six-cold-v1",
+      "source": "server",
+      "createdAt": "2026-10-09T16:09:59.327Z",
+      "cutoffAt": "2026-10-10T12:30:00.000Z",
+      "dataThrough": 282,
+      "historySignature": "54693a4b",
+      "historySha256": "9dc898a0893e080f3560aa0585a5a56c216a4ef2e087b35bda3f0b16bf038727",
+      "prediction": {
+        "one": [
+          13
+        ],
+        "three": [
+          13,
+          18,
+          7
+        ],
+        "sixn": [
+          13,
+          18,
+          7,
+          45,
+          3,
+          12
+        ],
+        "nine": [
+          13,
+          18,
+          7,
+          45,
+          3,
+          12,
+          1,
+          31,
+          41
+        ],
+        "four": [
+          "蛇",
+          "虎",
+          "猪",
+          "鸡"
+        ],
+        "six": [
+          "兔",
+          "猪",
+          "马",
+          "牛",
+          "羊",
+          "鼠"
+        ]
+      },
+      "control": {
+        "plan": "LOCAL-2026-266-365-v1",
+        "period": 283,
+        "rule": "UNIFORM-49-12-v1",
+        "createdAt": "2026-10-09T16:09:59.327Z",
+        "prediction": {
+          "nine": [
+            42,
+            46,
+            19,
+            39,
+            36,
+            4,
+            7,
+            13,
+            24
+          ],
+          "four": [
+            "牛",
+            "马",
+            "龙",
+            "鼠"
+          ]
+        }
+      },
+      "run": {
+        "id": "37957091720",
+        "attempt": "1",
+        "commit": "a01a26d47204a21a985ad7caa541e4b6272f8702"
+      }
+    },
+    {
+      "schema": 3,
+      "id": "2026:283:S4.6",
+      "year": 2026,
+      "period": 283,
+      "model": "S4.6",
+      "rule": "NUM-LOCK1-20260903|ZOD-LOCK1-20260906",
+      "source": "server",
+      "createdAt": "2026-10-09T16:09:59.327Z",
+      "cutoffAt": "2026-10-10T12:30:00.000Z",
+      "dataThrough": 282,
+      "historySignature": "54693a4b",
+      "historySha256": "9dc898a0893e080f3560aa0585a5a56c216a4ef2e087b35bda3f0b16bf038727",
+      "prediction": {
+        "one": [
+          45
+        ],
+        "three": [
+          13,
+          18,
+          7
+        ],
+        "sixn": [
+          13,
+          18,
+          45,
+          7,
+          12,
+          3
+        ],
+        "nine": [
+          13,
+          18,
+          45,
+          7,
+          12,
+          3,
+          31,
+          41,
+          1
+        ],
+        "four": [
+          "鼠",
+          "兔",
+          "猪",
+          "马"
+        ],
+        "six": [
+          "鼠",
+          "兔",
+          "猪",
+          "马",
+          "牛",
+          "羊"
+        ]
+      },
+      "control": {
+        "plan": "LOCAL-2026-266-365-v1",
+        "period": 283,
+        "rule": "UNIFORM-49-12-v1",
+        "createdAt": "2026-10-09T16:09:59.327Z",
+        "prediction": {
+          "nine": [
+            42,
+            46,
+            19,
+            39,
+            36,
+            4,
+            7,
+            13,
+            24
+          ],
+          "four": [
+            "牛",
+            "马",
+            "龙",
+            "鼠"
+          ]
+        }
+      },
+      "run": {
+        "id": "37957091720",
+        "attempt": "1",
+        "commit": "a01a26d47204a21a985ad7caa541e4b6272f8702"
+      }
     }
   ],
   "draws": [
@@ -5570,10 +5744,23 @@
       ],
       "special": 10,
       "openTime": "2026-10-08T13:32:32.000Z"
+    },
+    {
+      "period": 282,
+      "regular": [
+        44,
+        3,
+        37,
+        46,
+        29,
+        20
+      ],
+      "special": 23,
+      "openTime": "2026-10-09T13:32:32.000Z"
     }
   ],
-  "checkedAt": "2026-10-09T08:59:56.161Z",
-  "latest": 281,
+  "checkedAt": "2026-10-09T16:09:59.327Z",
+  "latest": 282,
   "status": "recorded",
   "startedAt": "2026-09-28T13:49:56.589Z"
 }
