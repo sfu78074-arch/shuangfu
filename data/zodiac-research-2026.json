@@ -1,18 +1,18 @@
 {
   "schema": 1,
   "year": 2026,
-  "builtAt": "2026-10-08T19:19:17.207Z",
-  "dataThrough": "2026281",
+  "builtAt": "2026-10-09T18:52:09.553Z",
+  "dataThrough": "2026282",
   "testStart": "2026078",
-  "tested": 204,
+  "tested": 205,
   "models": {
     "omission": {
       "2": {
-        "tested": 204,
+        "tested": 205,
         "hits": 35,
-        "hitRate": 0.1715686274509804,
-        "theoreticalBaseline": 0.1645658263305316,
-        "edge": 0.007002801120448793,
+        "hitRate": 0.17073170731707318,
+        "theoreticalBaseline": 0.1646590343454449,
+        "edge": 0.006072672971628279,
         "recent100": 0.17,
         "recent50": 0.22,
         "recent30": 0.13333333333333333,
@@ -29,36 +29,36 @@
           "maxConsecutiveMisses": 15
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 17,
-          "hitRate": 0.16666666666666666,
-          "theoreticalBaseline": 0.16526610644257714,
-          "edge": 0.0014005602240895199,
+          "hitRate": 0.1650485436893204,
+          "theoreticalBaseline": 0.16544481870418082,
+          "edge": -0.00039627501486041994,
           "recent100": 0.17,
           "recent50": 0.22,
           "recent30": 0.13333333333333333,
           "maxConsecutiveMisses": 14
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 11,
-          "hitRate": 0.21568627450980393,
-          "theoreticalBaseline": 0.16526610644257717,
-          "edge": 0.05042016806722677,
-          "recent100": 0.21568627450980393,
+          "hitRate": 0.21153846153846154,
+          "theoreticalBaseline": 0.16562009419152293,
+          "edge": 0.045918367346938604,
+          "recent100": 0.21153846153846154,
           "recent50": 0.22,
           "recent30": 0.13333333333333333,
           "maxConsecutiveMisses": 11
         }
       },
       "3": {
-        "tested": 204,
+        "tested": 205,
         "hits": 67,
-        "hitRate": 0.3284313725490196,
-        "theoreticalBaseline": 0.24819927971188502,
-        "edge": 0.08023209283713459,
+        "hitRate": 0.32682926829268294,
+        "theoreticalBaseline": 0.24828272772523668,
+        "edge": 0.07854654056744625,
         "recent100": 0.34,
-        "recent50": 0.4,
+        "recent50": 0.38,
         "recent30": 0.26666666666666666,
         "maxConsecutiveMisses": 7,
         "firstHalf": {
@@ -73,36 +73,36 @@
           "maxConsecutiveMisses": 7
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 36,
-          "hitRate": 0.35294117647058826,
-          "theoreticalBaseline": 0.24909963985594258,
-          "edge": 0.10384153661464568,
+          "hitRate": 0.34951456310679613,
+          "theoreticalBaseline": 0.2492569843471371,
+          "edge": 0.10025757875965902,
           "recent100": 0.34,
-          "recent50": 0.4,
+          "recent50": 0.38,
           "recent30": 0.26666666666666666,
           "maxConsecutiveMisses": 7
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 21,
-          "hitRate": 0.4117647058823529,
-          "theoreticalBaseline": 0.2513005202080831,
-          "edge": 0.16046418567426984,
-          "recent100": 0.4117647058823529,
-          "recent50": 0.4,
+          "hitRate": 0.40384615384615385,
+          "theoreticalBaseline": 0.2515698587127157,
+          "edge": 0.15227629513343816,
+          "recent100": 0.40384615384615385,
+          "recent50": 0.38,
           "recent30": 0.26666666666666666,
           "maxConsecutiveMisses": 7
         }
       },
       "4": {
-        "tested": 204,
+        "tested": 205,
         "hits": 84,
-        "hitRate": 0.4117647058823529,
-        "theoreticalBaseline": 0.3308323329331724,
-        "edge": 0.08093237294918054,
+        "hitRate": 0.4097560975609756,
+        "theoreticalBaseline": 0.33091090094574327,
+        "edge": 0.07884519661523232,
         "recent100": 0.39,
-        "recent50": 0.44,
+        "recent50": 0.42,
         "recent30": 0.3,
         "maxConsecutiveMisses": 6,
         "firstHalf": {
@@ -117,36 +117,36 @@
           "maxConsecutiveMisses": 6
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 41,
-          "hitRate": 0.4019607843137255,
-          "theoreticalBaseline": 0.3319327731092438,
-          "edge": 0.07002801120448171,
+          "hitRate": 0.39805825242718446,
+          "theoreticalBaseline": 0.3320784624529424,
+          "edge": 0.06597978997424203,
           "recent100": 0.39,
-          "recent50": 0.44,
+          "recent50": 0.42,
           "recent30": 0.3,
           "maxConsecutiveMisses": 6
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 23,
-          "hitRate": 0.45098039215686275,
-          "theoreticalBaseline": 0.3353341336534615,
-          "edge": 0.11564625850340127,
-          "recent100": 0.45098039215686275,
-          "recent50": 0.44,
+          "hitRate": 0.4423076923076923,
+          "theoreticalBaseline": 0.3355572998430142,
+          "edge": 0.1067503924646781,
+          "recent100": 0.4423076923076923,
+          "recent50": 0.42,
           "recent30": 0.3,
           "maxConsecutiveMisses": 6
         }
       },
       "5": {
-        "tested": 204,
+        "tested": 205,
         "hits": 100,
-        "hitRate": 0.49019607843137253,
-        "theoreticalBaseline": 0.41386554621848826,
-        "edge": 0.07633053221288427,
+        "hitRate": 0.4878048780487805,
+        "theoreticalBaseline": 0.413937282229966,
+        "edge": 0.07386759581881447,
         "recent100": 0.48,
-        "recent50": 0.5,
+        "recent50": 0.48,
         "recent30": 0.4,
         "maxConsecutiveMisses": 6,
         "firstHalf": {
@@ -161,36 +161,36 @@
           "maxConsecutiveMisses": 6
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 50,
-          "hitRate": 0.49019607843137253,
-          "theoreticalBaseline": 0.41416566626650625,
-          "edge": 0.07603041216486628,
+          "hitRate": 0.4854368932038835,
+          "theoreticalBaseline": 0.414305528036457,
+          "edge": 0.07113136516742652,
           "recent100": 0.48,
-          "recent50": 0.5,
+          "recent50": 0.48,
           "recent30": 0.4,
           "maxConsecutiveMisses": 5
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 26,
-          "hitRate": 0.5098039215686274,
-          "theoreticalBaseline": 0.4181672669067623,
-          "edge": 0.0916366546618651,
-          "recent100": 0.5098039215686274,
-          "recent50": 0.5,
+          "hitRate": 0.5,
+          "theoreticalBaseline": 0.4183673469387751,
+          "edge": 0.08163265306122491,
+          "recent100": 0.5,
+          "recent50": 0.48,
           "recent30": 0.4,
           "maxConsecutiveMisses": 5
         }
       },
       "6": {
-        "tested": 204,
+        "tested": 205,
         "hits": 117,
-        "hitRate": 0.5735294117647058,
-        "theoreticalBaseline": 0.4974989995998402,
-        "edge": 0.07603041216486567,
-        "recent100": 0.57,
-        "recent50": 0.56,
+        "hitRate": 0.5707317073170731,
+        "theoreticalBaseline": 0.4975609756097563,
+        "edge": 0.0731707317073168,
+        "recent100": 0.56,
+        "recent50": 0.54,
         "recent30": 0.4666666666666667,
         "maxConsecutiveMisses": 5,
         "firstHalf": {
@@ -205,24 +205,24 @@
           "maxConsecutiveMisses": 4
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 59,
-          "hitRate": 0.5784313725490197,
-          "theoreticalBaseline": 0.4971988795518205,
-          "edge": 0.08123249299719915,
-          "recent100": 0.57,
-          "recent50": 0.56,
+          "hitRate": 0.5728155339805825,
+          "theoreticalBaseline": 0.49732514364969266,
+          "edge": 0.07549039033088983,
+          "recent100": 0.56,
+          "recent50": 0.54,
           "recent30": 0.4666666666666667,
           "maxConsecutiveMisses": 5
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 29,
-          "hitRate": 0.5686274509803921,
-          "theoreticalBaseline": 0.5018007202881153,
-          "edge": 0.06682673069227685,
-          "recent100": 0.5686274509803921,
-          "recent50": 0.56,
+          "hitRate": 0.5576923076923077,
+          "theoreticalBaseline": 0.501962323390895,
+          "edge": 0.05572998430141274,
+          "recent100": 0.5576923076923077,
+          "recent50": 0.54,
           "recent30": 0.4666666666666667,
           "maxConsecutiveMisses": 5
         }
@@ -230,11 +230,11 @@
     },
     "cold": {
       "2": {
-        "tested": 204,
+        "tested": 205,
         "hits": 45,
-        "hitRate": 0.22058823529411764,
-        "theoreticalBaseline": 0.1639655862344931,
-        "edge": 0.05662264905962455,
+        "hitRate": 0.21951219512195122,
+        "theoreticalBaseline": 0.16396217023394652,
+        "edge": 0.0555500248880047,
         "recent100": 0.22,
         "recent50": 0.22,
         "recent30": 0.16666666666666666,
@@ -251,36 +251,36 @@
           "maxConsecutiveMisses": 15
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 22,
-          "hitRate": 0.21568627450980393,
-          "theoreticalBaseline": 0.1640656262505003,
-          "edge": 0.051620648259303625,
+          "hitRate": 0.21359223300970873,
+          "theoreticalBaseline": 0.1640578561521697,
+          "edge": 0.04953437685753903,
           "recent100": 0.22,
           "recent50": 0.22,
           "recent30": 0.16666666666666666,
           "maxConsecutiveMisses": 13
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 11,
-          "hitRate": 0.21568627450980393,
-          "theoreticalBaseline": 0.16406562625050033,
-          "edge": 0.0516206482593036,
-          "recent100": 0.21568627450980393,
+          "hitRate": 0.21153846153846154,
+          "theoreticalBaseline": 0.16405023547880704,
+          "edge": 0.0474882260596545,
+          "recent100": 0.21153846153846154,
           "recent50": 0.22,
           "recent30": 0.16666666666666666,
           "maxConsecutiveMisses": 11
         }
       },
       "3": {
-        "tested": 204,
+        "tested": 205,
         "hits": 62,
-        "hitRate": 0.30392156862745096,
-        "theoreticalBaseline": 0.24819927971188502,
-        "edge": 0.05572228891556594,
+        "hitRate": 0.3024390243902439,
+        "theoreticalBaseline": 0.24828272772523668,
+        "edge": 0.05415629666500721,
         "recent100": 0.28,
-        "recent50": 0.32,
+        "recent50": 0.3,
         "recent30": 0.26666666666666666,
         "maxConsecutiveMisses": 8,
         "firstHalf": {
@@ -295,37 +295,37 @@
           "maxConsecutiveMisses": 7
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 28,
-          "hitRate": 0.27450980392156865,
-          "theoreticalBaseline": 0.24929971988795527,
-          "edge": 0.025210084033613384,
+          "hitRate": 0.27184466019417475,
+          "theoreticalBaseline": 0.24945512185456717,
+          "edge": 0.02238953833960758,
           "recent100": 0.28,
-          "recent50": 0.32,
+          "recent50": 0.3,
           "recent30": 0.26666666666666666,
           "maxConsecutiveMisses": 8
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 16,
-          "hitRate": 0.3137254901960784,
-          "theoreticalBaseline": 0.25130052020808313,
-          "edge": 0.062424969987995294,
-          "recent100": 0.3137254901960784,
-          "recent50": 0.32,
+          "hitRate": 0.3076923076923077,
+          "theoreticalBaseline": 0.25156985871271575,
+          "edge": 0.056122448979591955,
+          "recent100": 0.3076923076923077,
+          "recent50": 0.3,
           "recent30": 0.26666666666666666,
           "maxConsecutiveMisses": 5
         }
       },
       "4": {
-        "tested": 204,
+        "tested": 205,
         "hits": 72,
-        "hitRate": 0.35294117647058826,
-        "theoreticalBaseline": 0.3306322529011596,
-        "edge": 0.02230892356942865,
+        "hitRate": 0.35121951219512193,
+        "theoreticalBaseline": 0.3307117969138867,
+        "edge": 0.02050771528123524,
         "recent100": 0.32,
-        "recent50": 0.38,
-        "recent30": 0.36666666666666664,
+        "recent50": 0.36,
+        "recent30": 0.3333333333333333,
         "maxConsecutiveMisses": 8,
         "firstHalf": {
           "tested": 102,
@@ -339,37 +339,37 @@
           "maxConsecutiveMisses": 7
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 32,
-          "hitRate": 0.3137254901960784,
-          "theoreticalBaseline": 0.33173269307723097,
-          "edge": -0.01800720288115254,
+          "hitRate": 0.3106796116504854,
+          "theoreticalBaseline": 0.3318803249455123,
+          "edge": -0.021200713295026874,
           "recent100": 0.32,
-          "recent50": 0.38,
-          "recent30": 0.36666666666666664,
+          "recent50": 0.36,
+          "recent30": 0.3333333333333333,
           "maxConsecutiveMisses": 8
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 19,
-          "hitRate": 0.37254901960784315,
-          "theoreticalBaseline": 0.3345338135254101,
-          "edge": 0.03801520608243303,
-          "recent100": 0.37254901960784315,
-          "recent50": 0.38,
-          "recent30": 0.36666666666666664,
+          "hitRate": 0.36538461538461536,
+          "theoreticalBaseline": 0.33477237048665615,
+          "edge": 0.030612244897959218,
+          "recent100": 0.36538461538461536,
+          "recent50": 0.36,
+          "recent30": 0.3333333333333333,
           "maxConsecutiveMisses": 4
         }
       },
       "5": {
-        "tested": 204,
+        "tested": 205,
         "hits": 89,
-        "hitRate": 0.4362745098039216,
-        "theoreticalBaseline": 0.4132653061224499,
-        "edge": 0.02300920368147169,
+        "hitRate": 0.43414634146341463,
+        "theoreticalBaseline": 0.41333997013439616,
+        "edge": 0.02080637132901847,
         "recent100": 0.43,
-        "recent50": 0.5,
-        "recent30": 0.4666666666666667,
+        "recent50": 0.48,
+        "recent30": 0.43333333333333335,
         "maxConsecutiveMisses": 8,
         "firstHalf": {
           "tested": 102,
@@ -383,37 +383,37 @@
           "maxConsecutiveMisses": 6
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 44,
-          "hitRate": 0.43137254901960786,
-          "theoreticalBaseline": 0.41456582633053213,
-          "edge": 0.016806722689075737,
+          "hitRate": 0.42718446601941745,
+          "theoreticalBaseline": 0.41470180305131754,
+          "edge": 0.012482662968099911,
           "recent100": 0.43,
-          "recent50": 0.5,
-          "recent30": 0.4666666666666667,
+          "recent50": 0.48,
+          "recent30": 0.43333333333333335,
           "maxConsecutiveMisses": 8
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 26,
-          "hitRate": 0.5098039215686274,
-          "theoreticalBaseline": 0.41816726690676237,
-          "edge": 0.09163665466186505,
-          "recent100": 0.5098039215686274,
-          "recent50": 0.5,
-          "recent30": 0.4666666666666667,
+          "hitRate": 0.5,
+          "theoreticalBaseline": 0.41836734693877514,
+          "edge": 0.08163265306122486,
+          "recent100": 0.5,
+          "recent50": 0.48,
+          "recent30": 0.43333333333333335,
           "maxConsecutiveMisses": 4
         }
       },
       "6": {
-        "tested": 204,
+        "tested": 205,
         "hits": 115,
-        "hitRate": 0.5637254901960784,
-        "theoreticalBaseline": 0.49649859943977614,
-        "edge": 0.06722689075630228,
-        "recent100": 0.6,
-        "recent50": 0.64,
-        "recent30": 0.5666666666666667,
+        "hitRate": 0.5609756097560976,
+        "theoreticalBaseline": 0.4965654554504731,
+        "edge": 0.06441015430562452,
+        "recent100": 0.59,
+        "recent50": 0.62,
+        "recent30": 0.5333333333333333,
         "maxConsecutiveMisses": 6,
         "firstHalf": {
           "tested": 102,
@@ -427,36 +427,36 @@
           "maxConsecutiveMisses": 6
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 62,
-          "hitRate": 0.6078431372549019,
-          "theoreticalBaseline": 0.4975990396158455,
-          "edge": 0.1102440976390564,
-          "recent100": 0.6,
-          "recent50": 0.64,
-          "recent30": 0.5666666666666667,
+          "hitRate": 0.6019417475728155,
+          "theoreticalBaseline": 0.49772141866455233,
+          "edge": 0.10422032890826316,
+          "recent100": 0.59,
+          "recent50": 0.62,
+          "recent30": 0.5333333333333333,
           "maxConsecutiveMisses": 4
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 33,
-          "hitRate": 0.6470588235294118,
-          "theoreticalBaseline": 0.5022008803521409,
-          "edge": 0.14485794317727085,
-          "recent100": 0.6470588235294118,
-          "recent50": 0.64,
-          "recent30": 0.5666666666666667,
+          "hitRate": 0.6346153846153846,
+          "theoreticalBaseline": 0.5023547880690739,
+          "edge": 0.13226059654631073,
+          "recent100": 0.6346153846153846,
+          "recent50": 0.62,
+          "recent30": 0.5333333333333333,
           "maxConsecutiveMisses": 3
         }
       }
     },
     "hazard": {
       "2": {
-        "tested": 204,
+        "tested": 205,
         "hits": 41,
-        "hitRate": 0.20098039215686275,
-        "theoreticalBaseline": 0.16536614645858289,
-        "edge": 0.03561424569827987,
+        "hitRate": 0.2,
+        "theoreticalBaseline": 0.1653558984569432,
+        "edge": 0.034644101543056804,
         "recent100": 0.23,
         "recent50": 0.24,
         "recent30": 0.2,
@@ -473,36 +473,36 @@
           "maxConsecutiveMisses": 14
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 23,
-          "hitRate": 0.22549019607843138,
-          "theoreticalBaseline": 0.16626650660264122,
-          "edge": 0.05922368947579015,
+          "hitRate": 0.22330097087378642,
+          "theoreticalBaseline": 0.16623736873390146,
+          "edge": 0.057063602139884956,
           "recent100": 0.23,
           "recent50": 0.24,
           "recent30": 0.2,
           "maxConsecutiveMisses": 12
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 13,
-          "hitRate": 0.2549019607843137,
-          "theoreticalBaseline": 0.1668667466986796,
-          "edge": 0.08803521408563411,
-          "recent100": 0.2549019607843137,
+          "hitRate": 0.25,
+          "theoreticalBaseline": 0.16679748822605978,
+          "edge": 0.08320251177394022,
+          "recent100": 0.25,
           "recent50": 0.24,
           "recent30": 0.2,
           "maxConsecutiveMisses": 11
         }
       },
       "3": {
-        "tested": 204,
+        "tested": 205,
         "hits": 64,
-        "hitRate": 0.3137254901960784,
-        "theoreticalBaseline": 0.24859943977591062,
-        "edge": 0.06512605042016781,
+        "hitRate": 0.3121951219512195,
+        "theoreticalBaseline": 0.24858138377302166,
+        "edge": 0.06361373817819785,
         "recent100": 0.34,
-        "recent50": 0.34,
+        "recent50": 0.32,
         "recent30": 0.3,
         "maxConsecutiveMisses": 12,
         "firstHalf": {
@@ -517,36 +517,36 @@
           "maxConsecutiveMisses": 11
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 35,
-          "hitRate": 0.3431372549019608,
-          "theoreticalBaseline": 0.249699879951981,
-          "edge": 0.09343737494997978,
+          "hitRate": 0.33980582524271846,
+          "theoreticalBaseline": 0.24965325936199745,
+          "edge": 0.09015256588072101,
           "recent100": 0.34,
-          "recent50": 0.34,
+          "recent50": 0.32,
           "recent30": 0.3,
           "maxConsecutiveMisses": 12
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 18,
-          "hitRate": 0.35294117647058826,
-          "theoreticalBaseline": 0.25090036014405753,
-          "edge": 0.10204081632653073,
-          "recent100": 0.35294117647058826,
-          "recent50": 0.34,
+          "hitRate": 0.34615384615384615,
+          "theoreticalBaseline": 0.2507849293563578,
+          "edge": 0.09536891679748832,
+          "recent100": 0.34615384615384615,
+          "recent50": 0.32,
           "recent30": 0.3,
           "maxConsecutiveMisses": 7
         }
       },
       "4": {
-        "tested": 204,
+        "tested": 205,
         "hits": 85,
-        "hitRate": 0.4166666666666667,
-        "theoreticalBaseline": 0.3321328531412557,
-        "edge": 0.084533813525411,
+        "hitRate": 0.4146341463414634,
+        "theoreticalBaseline": 0.3321055251368832,
+        "edge": 0.08252862120458021,
         "recent100": 0.46,
-        "recent50": 0.48,
+        "recent50": 0.46,
         "recent30": 0.4666666666666667,
         "maxConsecutiveMisses": 7,
         "firstHalf": {
@@ -561,36 +561,36 @@
           "maxConsecutiveMisses": 7
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 48,
-          "hitRate": 0.47058823529411764,
-          "theoreticalBaseline": 0.3335334133653461,
-          "edge": 0.13705482192877155,
+          "hitRate": 0.46601941747572817,
+          "theoreticalBaseline": 0.33346542500495335,
+          "edge": 0.13255399247077482,
           "recent100": 0.46,
-          "recent50": 0.48,
+          "recent50": 0.46,
           "recent30": 0.4666666666666667,
           "maxConsecutiveMisses": 7
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 25,
-          "hitRate": 0.49019607843137253,
-          "theoreticalBaseline": 0.3361344537815127,
-          "edge": 0.15406162464985984,
-          "recent100": 0.49019607843137253,
-          "recent50": 0.48,
+          "hitRate": 0.4807692307692308,
+          "theoreticalBaseline": 0.3359497645211932,
+          "edge": 0.1448194662480376,
+          "recent100": 0.4807692307692308,
+          "recent50": 0.46,
           "recent30": 0.4666666666666667,
           "maxConsecutiveMisses": 5
         }
       },
       "5": {
-        "tested": 204,
+        "tested": 205,
         "hits": 94,
-        "hitRate": 0.46078431372549017,
-        "theoreticalBaseline": 0.4161664665866356,
-        "edge": 0.04461784713885458,
+        "hitRate": 0.4585365853658537,
+        "theoreticalBaseline": 0.4162269785963175,
+        "edge": 0.04230960676953616,
         "recent100": 0.48,
-        "recent50": 0.5,
+        "recent50": 0.48,
         "recent30": 0.5,
         "maxConsecutiveMisses": 6,
         "firstHalf": {
@@ -605,36 +605,36 @@
           "maxConsecutiveMisses": 6
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 50,
-          "hitRate": 0.49019607843137253,
-          "theoreticalBaseline": 0.41716686674669845,
-          "edge": 0.07302921168467408,
+          "hitRate": 0.4854368932038835,
+          "theoreticalBaseline": 0.4172775906479094,
+          "edge": 0.06815930255597408,
           "recent100": 0.48,
-          "recent50": 0.5,
+          "recent50": 0.48,
           "recent30": 0.5,
           "maxConsecutiveMisses": 5
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 26,
-          "hitRate": 0.5098039215686274,
-          "theoreticalBaseline": 0.42016806722689043,
-          "edge": 0.08963585434173699,
-          "recent100": 0.5098039215686274,
-          "recent50": 0.5,
+          "hitRate": 0.5,
+          "theoreticalBaseline": 0.42032967032967,
+          "edge": 0.07967032967033,
+          "recent100": 0.5,
+          "recent50": 0.48,
           "recent30": 0.5,
           "maxConsecutiveMisses": 5
         }
       },
       "6": {
-        "tested": 204,
+        "tested": 205,
         "hits": 117,
-        "hitRate": 0.5735294117647058,
-        "theoreticalBaseline": 0.49939975990396146,
-        "edge": 0.07412965186074438,
-        "recent100": 0.55,
-        "recent50": 0.52,
+        "hitRate": 0.5707317073170731,
+        "theoreticalBaseline": 0.49945246391239406,
+        "edge": 0.07127924340467906,
+        "recent100": 0.54,
+        "recent50": 0.5,
         "recent30": 0.5,
         "maxConsecutiveMisses": 6,
         "firstHalf": {
@@ -649,24 +649,24 @@
           "maxConsecutiveMisses": 6
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 57,
-          "hitRate": 0.5588235294117647,
-          "theoreticalBaseline": 0.500800320128051,
-          "edge": 0.05802320928371374,
-          "recent100": 0.55,
-          "recent50": 0.52,
+          "hitRate": 0.5533980582524272,
+          "theoreticalBaseline": 0.5008916187834355,
+          "edge": 0.052506439468991695,
+          "recent100": 0.54,
+          "recent50": 0.5,
           "recent30": 0.5,
           "maxConsecutiveMisses": 5
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 27,
-          "hitRate": 0.5294117647058824,
-          "theoreticalBaseline": 0.5038015206082435,
-          "edge": 0.0256102440976389,
-          "recent100": 0.5294117647058824,
-          "recent50": 0.52,
+          "hitRate": 0.5192307692307693,
+          "theoreticalBaseline": 0.5039246467817897,
+          "edge": 0.015306122448979553,
+          "recent100": 0.5192307692307693,
+          "recent50": 0.5,
           "recent30": 0.5,
           "maxConsecutiveMisses": 5
         }
@@ -674,11 +674,11 @@
     },
     "transition": {
       "2": {
-        "tested": 204,
+        "tested": 205,
         "hits": 29,
-        "hitRate": 0.14215686274509803,
-        "theoreticalBaseline": 0.16766706682673024,
-        "edge": -0.02551020408163221,
+        "hitRate": 0.14146341463414633,
+        "theoreticalBaseline": 0.16764559482329472,
+        "edge": -0.02618218018914839,
         "recent100": 0.18,
         "recent50": 0.18,
         "recent30": 0.16666666666666666,
@@ -695,34 +695,34 @@
           "maxConsecutiveMisses": 24
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 18,
-          "hitRate": 0.17647058823529413,
-          "theoreticalBaseline": 0.16846738695478203,
-          "edge": 0.008003201280512101,
+          "hitRate": 0.17475728155339806,
+          "theoreticalBaseline": 0.16841688131563315,
+          "edge": 0.006340400237764915,
           "recent100": 0.18,
           "recent50": 0.18,
           "recent30": 0.16666666666666666,
           "maxConsecutiveMisses": 18
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 9,
-          "hitRate": 0.17647058823529413,
-          "theoreticalBaseline": 0.1680672268907564,
-          "edge": 0.00840336134453773,
-          "recent100": 0.17647058823529413,
+          "hitRate": 0.17307692307692307,
+          "theoreticalBaseline": 0.16797488226059665,
+          "edge": 0.005102040816326425,
+          "recent100": 0.17307692307692307,
           "recent50": 0.18,
           "recent30": 0.16666666666666666,
           "maxConsecutiveMisses": 18
         }
       },
       "3": {
-        "tested": 204,
+        "tested": 205,
         "hits": 47,
-        "hitRate": 0.23039215686274508,
-        "theoreticalBaseline": 0.2513005202080832,
-        "edge": -0.020908363345338105,
+        "hitRate": 0.22926829268292684,
+        "theoreticalBaseline": 0.2512692882030861,
+        "edge": -0.022000995520159244,
         "recent100": 0.25,
         "recent50": 0.26,
         "recent30": 0.23333333333333334,
@@ -739,34 +739,34 @@
           "maxConsecutiveMisses": 12
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 25,
-          "hitRate": 0.24509803921568626,
-          "theoreticalBaseline": 0.25230092036814744,
-          "edge": -0.007202881152461177,
+          "hitRate": 0.24271844660194175,
+          "theoreticalBaseline": 0.2522290469585895,
+          "edge": -0.009510600356647747,
           "recent100": 0.25,
           "recent50": 0.26,
           "recent30": 0.23333333333333334,
           "maxConsecutiveMisses": 12
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 13,
-          "hitRate": 0.2549019607843137,
-          "theoreticalBaseline": 0.25210084033613434,
-          "edge": 0.0028011204481793728,
-          "recent100": 0.2549019607843137,
+          "hitRate": 0.25,
+          "theoreticalBaseline": 0.2519623233908947,
+          "edge": -0.0019623233908946935,
+          "recent100": 0.25,
           "recent50": 0.26,
           "recent30": 0.23333333333333334,
           "maxConsecutiveMisses": 12
         }
       },
       "4": {
-        "tested": 204,
+        "tested": 205,
         "hits": 64,
-        "hitRate": 0.3137254901960784,
-        "theoreticalBaseline": 0.333733493397358,
-        "edge": -0.0200080032012796,
+        "hitRate": 0.3121951219512195,
+        "theoreticalBaseline": 0.33369835739173626,
+        "edge": -0.021503235440516744,
         "recent100": 0.3,
         "recent50": 0.32,
         "recent30": 0.3,
@@ -783,36 +783,36 @@
           "maxConsecutiveMisses": 7
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 30,
-          "hitRate": 0.29411764705882354,
-          "theoreticalBaseline": 0.3351340536214484,
-          "edge": -0.04101640656262484,
+          "hitRate": 0.2912621359223301,
+          "theoreticalBaseline": 0.3350505250643945,
+          "edge": -0.0437883891420644,
           "recent100": 0.3,
           "recent50": 0.32,
           "recent30": 0.3,
           "maxConsecutiveMisses": 12
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 16,
-          "hitRate": 0.3137254901960784,
-          "theoreticalBaseline": 0.33493397358943583,
-          "edge": -0.021208483393357402,
-          "recent100": 0.3137254901960784,
+          "hitRate": 0.3076923076923077,
+          "theoreticalBaseline": 0.33477237048665626,
+          "edge": -0.027080062794348547,
+          "recent100": 0.3076923076923077,
           "recent50": 0.32,
           "recent30": 0.3,
           "maxConsecutiveMisses": 12
         }
       },
       "5": {
-        "tested": 204,
+        "tested": 205,
         "hits": 82,
-        "hitRate": 0.4019607843137255,
-        "theoreticalBaseline": 0.4170668267306933,
-        "edge": -0.01510604241696778,
+        "hitRate": 0.4,
+        "theoreticalBaseline": 0.4170233947237442,
+        "edge": -0.0170233947237442,
         "recent100": 0.42,
-        "recent50": 0.38,
+        "recent50": 0.36,
         "recent30": 0.36666666666666664,
         "maxConsecutiveMisses": 8,
         "firstHalf": {
@@ -827,36 +827,36 @@
           "maxConsecutiveMisses": 7
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 43,
-          "hitRate": 0.4215686274509804,
-          "theoreticalBaseline": 0.4185674269707881,
-          "edge": 0.003001200480192312,
+          "hitRate": 0.4174757281553398,
+          "theoreticalBaseline": 0.4184664156924904,
+          "edge": -0.0009906875371505919,
           "recent100": 0.42,
-          "recent50": 0.38,
+          "recent50": 0.36,
           "recent30": 0.36666666666666664,
           "maxConsecutiveMisses": 8
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 19,
-          "hitRate": 0.37254901960784315,
-          "theoreticalBaseline": 0.4189675870348136,
-          "edge": -0.04641856742697048,
-          "recent100": 0.37254901960784315,
-          "recent50": 0.38,
+          "hitRate": 0.36538461538461536,
+          "theoreticalBaseline": 0.41875981161695414,
+          "edge": -0.05337519623233877,
+          "recent100": 0.36538461538461536,
+          "recent50": 0.36,
           "recent30": 0.36666666666666664,
           "maxConsecutiveMisses": 8
         }
       },
       "6": {
-        "tested": 204,
+        "tested": 205,
         "hits": 100,
-        "hitRate": 0.49019607843137253,
-        "theoreticalBaseline": 0.49939975990396146,
-        "edge": -0.009203681472588932,
-        "recent100": 0.52,
-        "recent50": 0.46,
+        "hitRate": 0.4878048780487805,
+        "theoreticalBaseline": 0.4993529118964658,
+        "edge": -0.011548033847685324,
+        "recent100": 0.51,
+        "recent50": 0.44,
         "recent30": 0.4,
         "maxConsecutiveMisses": 7,
         "firstHalf": {
@@ -871,24 +871,24 @@
           "maxConsecutiveMisses": 7
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 53,
-          "hitRate": 0.5196078431372549,
-          "theoreticalBaseline": 0.501000400160064,
-          "edge": 0.01860744297719097,
-          "recent100": 0.52,
-          "recent50": 0.46,
+          "hitRate": 0.5145631067961165,
+          "theoreticalBaseline": 0.5008916187834357,
+          "edge": 0.01367148801268081,
+          "recent100": 0.51,
+          "recent50": 0.44,
           "recent30": 0.4,
           "maxConsecutiveMisses": 7
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 23,
-          "hitRate": 0.45098039215686275,
-          "theoreticalBaseline": 0.5022008803521408,
-          "edge": -0.05122048819527808,
-          "recent100": 0.45098039215686275,
-          "recent50": 0.46,
+          "hitRate": 0.4423076923076923,
+          "theoreticalBaseline": 0.5019623233908947,
+          "edge": -0.05965463108320246,
+          "recent100": 0.4423076923076923,
+          "recent50": 0.44,
           "recent30": 0.4,
           "maxConsecutiveMisses": 7
         }
@@ -896,11 +896,11 @@
     },
     "balanced": {
       "2": {
-        "tested": 204,
+        "tested": 205,
         "hits": 38,
-        "hitRate": 0.18627450980392157,
-        "theoreticalBaseline": 0.1645658263305316,
-        "edge": 0.021708683473389973,
+        "hitRate": 0.18536585365853658,
+        "theoreticalBaseline": 0.16455948232951656,
+        "edge": 0.020806371329020024,
         "recent100": 0.21,
         "recent50": 0.24,
         "recent30": 0.16666666666666666,
@@ -917,36 +917,36 @@
           "maxConsecutiveMisses": 13
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 21,
-          "hitRate": 0.20588235294117646,
-          "theoreticalBaseline": 0.16526610644257714,
-          "edge": 0.04061624649859932,
+          "hitRate": 0.20388349514563106,
+          "theoreticalBaseline": 0.16524668119675065,
+          "edge": 0.03863681394888041,
           "recent100": 0.21,
           "recent50": 0.24,
           "recent30": 0.16666666666666666,
           "maxConsecutiveMisses": 12
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 12,
-          "hitRate": 0.23529411764705882,
-          "theoreticalBaseline": 0.16526610644257717,
-          "edge": 0.07002801120448165,
-          "recent100": 0.23529411764705882,
+          "hitRate": 0.23076923076923078,
+          "theoreticalBaseline": 0.16522762951334394,
+          "edge": 0.06554160125588684,
+          "recent100": 0.23076923076923078,
           "recent50": 0.24,
           "recent30": 0.16666666666666666,
           "maxConsecutiveMisses": 11
         }
       },
       "3": {
-        "tested": 204,
+        "tested": 205,
         "hits": 65,
-        "hitRate": 0.31862745098039214,
-        "theoreticalBaseline": 0.2479991996798722,
-        "edge": 0.07062825130051995,
+        "hitRate": 0.3170731707317073,
+        "theoreticalBaseline": 0.24808362369338002,
+        "edge": 0.0689895470383273,
         "recent100": 0.31,
-        "recent50": 0.38,
+        "recent50": 0.36,
         "recent30": 0.26666666666666666,
         "maxConsecutiveMisses": 12,
         "firstHalf": {
@@ -961,36 +961,36 @@
           "maxConsecutiveMisses": 7
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 32,
-          "hitRate": 0.3137254901960784,
-          "theoreticalBaseline": 0.24929971988795535,
-          "edge": 0.06442577030812308,
+          "hitRate": 0.3106796116504854,
+          "theoreticalBaseline": 0.24945512185456722,
+          "edge": 0.061224489795918186,
           "recent100": 0.31,
-          "recent50": 0.38,
+          "recent50": 0.36,
           "recent30": 0.26666666666666666,
           "maxConsecutiveMisses": 12
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 20,
-          "hitRate": 0.39215686274509803,
-          "theoreticalBaseline": 0.2517006802721088,
-          "edge": 0.14045618247298924,
-          "recent100": 0.39215686274509803,
-          "recent50": 0.38,
+          "hitRate": 0.38461538461538464,
+          "theoreticalBaseline": 0.25196232339089475,
+          "edge": 0.1326530612244899,
+          "recent100": 0.38461538461538464,
+          "recent50": 0.36,
           "recent30": 0.26666666666666666,
           "maxConsecutiveMisses": 7
         }
       },
       "4": {
-        "tested": 204,
+        "tested": 205,
         "hits": 82,
-        "hitRate": 0.4019607843137255,
-        "theoreticalBaseline": 0.33103241296518526,
-        "edge": 0.07092837134854024,
+        "hitRate": 0.4,
+        "theoreticalBaseline": 0.3311100049776,
+        "edge": 0.06888999502240001,
         "recent100": 0.4,
-        "recent50": 0.42,
+        "recent50": 0.4,
         "recent30": 0.26666666666666666,
         "maxConsecutiveMisses": 7,
         "firstHalf": {
@@ -1005,36 +1005,36 @@
           "maxConsecutiveMisses": 7
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 41,
-          "hitRate": 0.4019607843137255,
-          "theoreticalBaseline": 0.332733093237295,
-          "edge": 0.06922769107643051,
+          "hitRate": 0.39805825242718446,
+          "theoreticalBaseline": 0.33287101248266304,
+          "edge": 0.06518723994452141,
           "recent100": 0.4,
-          "recent50": 0.42,
+          "recent50": 0.4,
           "recent30": 0.26666666666666666,
           "maxConsecutiveMisses": 7
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 22,
-          "hitRate": 0.43137254901960786,
-          "theoreticalBaseline": 0.33693477390956383,
-          "edge": 0.09443777511004403,
-          "recent100": 0.43137254901960786,
-          "recent50": 0.42,
+          "hitRate": 0.4230769230769231,
+          "theoreticalBaseline": 0.33712715855573,
+          "edge": 0.08594976452119307,
+          "recent100": 0.4230769230769231,
+          "recent50": 0.4,
           "recent30": 0.26666666666666666,
           "maxConsecutiveMisses": 7
         }
       },
       "5": {
-        "tested": 204,
+        "tested": 205,
         "hits": 95,
-        "hitRate": 0.46568627450980393,
-        "theoreticalBaseline": 0.4141656662665073,
-        "edge": 0.05152060824329663,
-        "recent100": 0.46,
-        "recent50": 0.46,
+        "hitRate": 0.4634146341463415,
+        "theoreticalBaseline": 0.41423593827775085,
+        "edge": 0.04917869586859064,
+        "recent100": 0.45,
+        "recent50": 0.44,
         "recent30": 0.3333333333333333,
         "maxConsecutiveMisses": 6,
         "firstHalf": {
@@ -1049,37 +1049,37 @@
           "maxConsecutiveMisses": 6
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 48,
-          "hitRate": 0.47058823529411764,
-          "theoreticalBaseline": 0.4157663065226088,
-          "edge": 0.05482192877150882,
-          "recent100": 0.46,
-          "recent50": 0.46,
+          "hitRate": 0.46601941747572817,
+          "theoreticalBaseline": 0.4158906280958984,
+          "edge": 0.050128789379829786,
+          "recent100": 0.45,
+          "recent50": 0.44,
           "recent30": 0.3333333333333333,
           "maxConsecutiveMisses": 5
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 24,
-          "hitRate": 0.47058823529411764,
-          "theoreticalBaseline": 0.42136854741896723,
-          "edge": 0.04921968787515041,
-          "recent100": 0.47058823529411764,
-          "recent50": 0.46,
+          "hitRate": 0.46153846153846156,
+          "theoreticalBaseline": 0.4215070643642068,
+          "edge": 0.040031397174254746,
+          "recent100": 0.46153846153846156,
+          "recent50": 0.44,
           "recent30": 0.3333333333333333,
           "maxConsecutiveMisses": 5
         }
       },
       "6": {
-        "tested": 204,
+        "tested": 205,
         "hits": 116,
-        "hitRate": 0.5686274509803921,
-        "theoreticalBaseline": 0.49729891956782724,
-        "edge": 0.0713285314125649,
-        "recent100": 0.59,
-        "recent50": 0.62,
-        "recent30": 0.5666666666666667,
+        "hitRate": 0.5658536585365853,
+        "theoreticalBaseline": 0.4973618715778996,
+        "edge": 0.06849178695868574,
+        "recent100": 0.58,
+        "recent50": 0.6,
+        "recent30": 0.5333333333333333,
         "maxConsecutiveMisses": 4,
         "firstHalf": {
           "tested": 102,
@@ -1093,36 +1093,36 @@
           "maxConsecutiveMisses": 4
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 61,
-          "hitRate": 0.5980392156862745,
-          "theoreticalBaseline": 0.4981992797118843,
-          "edge": 0.09983993597439017,
-          "recent100": 0.59,
-          "recent50": 0.62,
-          "recent30": 0.5666666666666667,
+          "hitRate": 0.5922330097087378,
+          "theoreticalBaseline": 0.49831583118684325,
+          "edge": 0.09391717852189457,
+          "recent100": 0.58,
+          "recent50": 0.6,
+          "recent30": 0.5333333333333333,
           "maxConsecutiveMisses": 4
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 32,
-          "hitRate": 0.6274509803921569,
-          "theoreticalBaseline": 0.5038015206082435,
-          "edge": 0.1236494597839134,
-          "recent100": 0.6274509803921569,
-          "recent50": 0.62,
-          "recent30": 0.5666666666666667,
+          "hitRate": 0.6153846153846154,
+          "theoreticalBaseline": 0.5039246467817898,
+          "edge": 0.11145996860282559,
+          "recent100": 0.6153846153846154,
+          "recent50": 0.6,
+          "recent30": 0.5333333333333333,
           "maxConsecutiveMisses": 4
         }
       }
     },
     "rebound": {
       "2": {
-        "tested": 204,
+        "tested": 205,
         "hits": 40,
-        "hitRate": 0.19607843137254902,
-        "theoreticalBaseline": 0.16466586634653801,
-        "edge": 0.031412565026011,
+        "hitRate": 0.1951219512195122,
+        "theoreticalBaseline": 0.1646590343454449,
+        "edge": 0.030462916874067297,
         "recent100": 0.2,
         "recent50": 0.24,
         "recent30": 0.16666666666666666,
@@ -1139,36 +1139,36 @@
           "maxConsecutiveMisses": 11
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 20,
-          "hitRate": 0.19607843137254902,
-          "theoreticalBaseline": 0.16566626650660277,
-          "edge": 0.03041216486594625,
+          "hitRate": 0.1941747572815534,
+          "theoreticalBaseline": 0.16564295621161096,
+          "edge": 0.028531801069942436,
           "recent100": 0.2,
           "recent50": 0.24,
           "recent30": 0.16666666666666666,
           "maxConsecutiveMisses": 12
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 12,
-          "hitRate": 0.23529411764705882,
-          "theoreticalBaseline": 0.1660664265706284,
-          "edge": 0.06922769107643043,
-          "recent100": 0.23529411764705882,
+          "hitRate": 0.23076923076923078,
+          "theoreticalBaseline": 0.16601255886970187,
+          "edge": 0.06475667189952891,
+          "recent100": 0.23076923076923078,
           "recent50": 0.24,
           "recent30": 0.16666666666666666,
           "maxConsecutiveMisses": 11
         }
       },
       "3": {
-        "tested": 204,
+        "tested": 205,
         "hits": 59,
-        "hitRate": 0.28921568627450983,
-        "theoreticalBaseline": 0.24779911964785947,
-        "edge": 0.04141656662665036,
+        "hitRate": 0.28780487804878047,
+        "theoreticalBaseline": 0.24788451966152344,
+        "edge": 0.03992035838725702,
         "recent100": 0.28,
-        "recent50": 0.32,
+        "recent50": 0.3,
         "recent30": 0.23333333333333334,
         "maxConsecutiveMisses": 12,
         "firstHalf": {
@@ -1183,36 +1183,36 @@
           "maxConsecutiveMisses": 11
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 29,
-          "hitRate": 0.28431372549019607,
-          "theoreticalBaseline": 0.24869947979191695,
-          "edge": 0.03561424569827912,
+          "hitRate": 0.2815533980582524,
+          "theoreticalBaseline": 0.2488607093322768,
+          "edge": 0.03269268872597561,
           "recent100": 0.28,
-          "recent50": 0.32,
+          "recent50": 0.3,
           "recent30": 0.23333333333333334,
           "maxConsecutiveMisses": 12
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 17,
-          "hitRate": 0.3333333333333333,
-          "theoreticalBaseline": 0.2505002000800319,
-          "edge": 0.08283313325330144,
-          "recent100": 0.3333333333333333,
-          "recent50": 0.32,
+          "hitRate": 0.3269230769230769,
+          "theoreticalBaseline": 0.2507849293563578,
+          "edge": 0.0761381475667191,
+          "recent100": 0.3269230769230769,
+          "recent50": 0.3,
           "recent30": 0.23333333333333334,
           "maxConsecutiveMisses": 7
         }
       },
       "4": {
-        "tested": 204,
+        "tested": 205,
         "hits": 77,
-        "hitRate": 0.37745098039215685,
-        "theoreticalBaseline": 0.33103241296518526,
-        "edge": 0.04641856742697159,
+        "hitRate": 0.375609756097561,
+        "theoreticalBaseline": 0.3311100049776,
+        "edge": 0.04449975111996096,
         "recent100": 0.35,
-        "recent50": 0.38,
+        "recent50": 0.36,
         "recent30": 0.26666666666666666,
         "maxConsecutiveMisses": 9,
         "firstHalf": {
@@ -1227,36 +1227,36 @@
           "maxConsecutiveMisses": 7
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 37,
-          "hitRate": 0.3627450980392157,
-          "theoreticalBaseline": 0.3325330132052821,
-          "edge": 0.03021208483393356,
+          "hitRate": 0.3592233009708738,
+          "theoreticalBaseline": 0.3326728749752328,
+          "edge": 0.026550425995641003,
           "recent100": 0.35,
-          "recent50": 0.38,
+          "recent50": 0.36,
           "recent30": 0.26666666666666666,
           "maxConsecutiveMisses": 9
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 20,
-          "hitRate": 0.39215686274509803,
-          "theoreticalBaseline": 0.33653461384553823,
-          "edge": 0.0556222488995598,
-          "recent100": 0.39215686274509803,
-          "recent50": 0.38,
+          "hitRate": 0.38461538461538464,
+          "theoreticalBaseline": 0.33673469387755106,
+          "edge": 0.047880690737833576,
+          "recent100": 0.38461538461538464,
+          "recent50": 0.36,
           "recent30": 0.26666666666666666,
           "maxConsecutiveMisses": 7
         }
       },
       "5": {
-        "tested": 204,
+        "tested": 205,
         "hits": 101,
-        "hitRate": 0.4950980392156863,
-        "theoreticalBaseline": 0.4147659063625458,
-        "edge": 0.0803321328531405,
+        "hitRate": 0.4926829268292683,
+        "theoreticalBaseline": 0.41483325037332086,
+        "edge": 0.07784967645594743,
         "recent100": 0.5,
-        "recent50": 0.5,
+        "recent50": 0.48,
         "recent30": 0.4666666666666667,
         "maxConsecutiveMisses": 7,
         "firstHalf": {
@@ -1271,36 +1271,36 @@
           "maxConsecutiveMisses": 6
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 52,
-          "hitRate": 0.5098039215686274,
-          "theoreticalBaseline": 0.41636654661864725,
-          "edge": 0.09343737494998017,
+          "hitRate": 0.5048543689320388,
+          "theoreticalBaseline": 0.41648504061818886,
+          "edge": 0.08836932831384997,
           "recent100": 0.5,
-          "recent50": 0.5,
+          "recent50": 0.48,
           "recent30": 0.4666666666666667,
           "maxConsecutiveMisses": 7
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 26,
-          "hitRate": 0.5098039215686274,
-          "theoreticalBaseline": 0.42096838735494163,
-          "edge": 0.08883553421368579,
-          "recent100": 0.5098039215686274,
-          "recent50": 0.5,
+          "hitRate": 0.5,
+          "theoreticalBaseline": 0.4211145996860279,
+          "edge": 0.07888540031397212,
+          "recent100": 0.5,
+          "recent50": 0.48,
           "recent30": 0.4666666666666667,
           "maxConsecutiveMisses": 5
         }
       },
       "6": {
-        "tested": 204,
+        "tested": 205,
         "hits": 116,
-        "hitRate": 0.5686274509803921,
-        "theoreticalBaseline": 0.49829931972789104,
-        "edge": 0.07032813125250109,
-        "recent100": 0.58,
-        "recent50": 0.56,
+        "hitRate": 0.5658536585365853,
+        "theoreticalBaseline": 0.4983573917371826,
+        "edge": 0.06749626679940274,
+        "recent100": 0.57,
+        "recent50": 0.54,
         "recent30": 0.4666666666666667,
         "maxConsecutiveMisses": 5,
         "firstHalf": {
@@ -1315,24 +1315,24 @@
           "maxConsecutiveMisses": 4
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 60,
-          "hitRate": 0.5882352941176471,
-          "theoreticalBaseline": 0.5002000800320123,
-          "edge": 0.08803521408563475,
-          "recent100": 0.58,
-          "recent50": 0.56,
+          "hitRate": 0.5825242718446602,
+          "theoreticalBaseline": 0.5002972062611447,
+          "edge": 0.08222706558351545,
+          "recent100": 0.57,
+          "recent50": 0.54,
           "recent30": 0.4666666666666667,
           "maxConsecutiveMisses": 5
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 29,
-          "hitRate": 0.5686274509803921,
-          "theoreticalBaseline": 0.5046018407362948,
-          "edge": 0.06402561024409736,
-          "recent100": 0.5686274509803921,
-          "recent50": 0.56,
+          "hitRate": 0.5576923076923077,
+          "theoreticalBaseline": 0.5047095761381478,
+          "edge": 0.05298273155415989,
+          "recent100": 0.5576923076923077,
+          "recent50": 0.54,
           "recent30": 0.4666666666666667,
           "maxConsecutiveMisses": 5
         }
@@ -1340,11 +1340,11 @@
     },
     "ensemble": {
       "2": {
-        "tested": 204,
+        "tested": 205,
         "hits": 41,
-        "hitRate": 0.20098039215686275,
-        "theoreticalBaseline": 0.1644657863145252,
-        "edge": 0.036514605842337566,
+        "hitRate": 0.2,
+        "theoreticalBaseline": 0.16445993031358824,
+        "edge": 0.03554006968641177,
         "recent100": 0.2,
         "recent50": 0.22,
         "recent30": 0.16666666666666666,
@@ -1361,36 +1361,36 @@
           "maxConsecutiveMisses": 11
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 20,
-          "hitRate": 0.19607843137254902,
-          "theoreticalBaseline": 0.16526610644257717,
-          "edge": 0.03081232492997185,
+          "hitRate": 0.1941747572815534,
+          "theoreticalBaseline": 0.16524668119675068,
+          "edge": 0.028928076084802717,
           "recent100": 0.2,
           "recent50": 0.22,
           "recent30": 0.16666666666666666,
           "maxConsecutiveMisses": 13
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 11,
-          "hitRate": 0.21568627450980393,
-          "theoreticalBaseline": 0.16566626650660277,
-          "edge": 0.050020008003201166,
-          "recent100": 0.21568627450980393,
+          "hitRate": 0.21153846153846154,
+          "theoreticalBaseline": 0.16562009419152288,
+          "edge": 0.04591836734693866,
+          "recent100": 0.21153846153846154,
           "recent50": 0.22,
           "recent30": 0.16666666666666666,
           "maxConsecutiveMisses": 11
         }
       },
       "3": {
-        "tested": 204,
+        "tested": 205,
         "hits": 62,
-        "hitRate": 0.30392156862745096,
-        "theoreticalBaseline": 0.2479991996798722,
-        "edge": 0.055922368947578766,
+        "hitRate": 0.3024390243902439,
+        "theoreticalBaseline": 0.24808362369338002,
+        "edge": 0.05435540069686387,
         "recent100": 0.27,
-        "recent50": 0.32,
+        "recent50": 0.3,
         "recent30": 0.2,
         "maxConsecutiveMisses": 12,
         "firstHalf": {
@@ -1405,36 +1405,36 @@
           "maxConsecutiveMisses": 7
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 28,
-          "hitRate": 0.27450980392156865,
-          "theoreticalBaseline": 0.24949979991996818,
-          "edge": 0.025010004001600472,
+          "hitRate": 0.27184466019417475,
+          "theoreticalBaseline": 0.24965325936199742,
+          "edge": 0.022191400832177327,
           "recent100": 0.27,
-          "recent50": 0.32,
+          "recent50": 0.3,
           "recent30": 0.2,
           "maxConsecutiveMisses": 12
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 16,
-          "hitRate": 0.3137254901960784,
-          "theoreticalBaseline": 0.2521008403361344,
-          "edge": 0.061624649859944036,
-          "recent100": 0.3137254901960784,
-          "recent50": 0.32,
+          "hitRate": 0.3076923076923077,
+          "theoreticalBaseline": 0.25235478806907374,
+          "edge": 0.055337519623233966,
+          "recent100": 0.3076923076923077,
+          "recent50": 0.3,
           "recent30": 0.2,
           "maxConsecutiveMisses": 9
         }
       },
       "4": {
-        "tested": 204,
+        "tested": 205,
         "hits": 81,
-        "hitRate": 0.39705882352941174,
-        "theoreticalBaseline": 0.33083233293317243,
-        "edge": 0.0662264905962393,
+        "hitRate": 0.3951219512195122,
+        "theoreticalBaseline": 0.3309109009457434,
+        "edge": 0.06421105027376883,
         "recent100": 0.39,
-        "recent50": 0.42,
+        "recent50": 0.4,
         "recent30": 0.26666666666666666,
         "maxConsecutiveMisses": 7,
         "firstHalf": {
@@ -1449,36 +1449,36 @@
           "maxConsecutiveMisses": 6
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 40,
-          "hitRate": 0.39215686274509803,
-          "theoreticalBaseline": 0.3325330132052821,
-          "edge": 0.05962384953981592,
+          "hitRate": 0.3883495145631068,
+          "theoreticalBaseline": 0.3326728749752328,
+          "edge": 0.055676639587874,
           "recent100": 0.39,
-          "recent50": 0.42,
+          "recent50": 0.4,
           "recent30": 0.26666666666666666,
           "maxConsecutiveMisses": 7
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 22,
-          "hitRate": 0.43137254901960786,
-          "theoreticalBaseline": 0.33653461384553823,
-          "edge": 0.09483793517406963,
-          "recent100": 0.43137254901960786,
-          "recent50": 0.42,
+          "hitRate": 0.4230769230769231,
+          "theoreticalBaseline": 0.33673469387755106,
+          "edge": 0.08634222919937201,
+          "recent100": 0.4230769230769231,
+          "recent50": 0.4,
           "recent30": 0.26666666666666666,
           "maxConsecutiveMisses": 7
         }
       },
       "5": {
-        "tested": 204,
+        "tested": 205,
         "hits": 95,
-        "hitRate": 0.46568627450980393,
-        "theoreticalBaseline": 0.41436574629852013,
-        "edge": 0.0513205282112838,
-        "recent100": 0.47,
-        "recent50": 0.48,
+        "hitRate": 0.4634146341463415,
+        "theoreticalBaseline": 0.4144350423096075,
+        "edge": 0.048979591836734004,
+        "recent100": 0.46,
+        "recent50": 0.46,
         "recent30": 0.36666666666666664,
         "maxConsecutiveMisses": 6,
         "firstHalf": {
@@ -1493,37 +1493,37 @@
           "maxConsecutiveMisses": 6
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 49,
-          "hitRate": 0.4803921568627451,
-          "theoreticalBaseline": 0.41596638655462165,
-          "edge": 0.06442577030812346,
-          "recent100": 0.47,
-          "recent50": 0.48,
+          "hitRate": 0.47572815533980584,
+          "theoreticalBaseline": 0.4160887656033285,
+          "edge": 0.05963938973647731,
+          "recent100": 0.46,
+          "recent50": 0.46,
           "recent30": 0.36666666666666664,
           "maxConsecutiveMisses": 5
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 25,
-          "hitRate": 0.49019607843137253,
-          "theoreticalBaseline": 0.42136854741896723,
-          "edge": 0.0688275310124053,
-          "recent100": 0.49019607843137253,
-          "recent50": 0.48,
+          "hitRate": 0.4807692307692308,
+          "theoreticalBaseline": 0.4215070643642068,
+          "edge": 0.059262166405023964,
+          "recent100": 0.4807692307692308,
+          "recent50": 0.46,
           "recent30": 0.36666666666666664,
           "maxConsecutiveMisses": 5
         }
       },
       "6": {
-        "tested": 204,
+        "tested": 205,
         "hits": 114,
-        "hitRate": 0.5588235294117647,
-        "theoreticalBaseline": 0.4975990396158464,
-        "edge": 0.061224489795918324,
-        "recent100": 0.59,
-        "recent50": 0.62,
-        "recent30": 0.5666666666666667,
+        "hitRate": 0.5560975609756098,
+        "theoreticalBaseline": 0.49766052762568447,
+        "edge": 0.05843703334992534,
+        "recent100": 0.58,
+        "recent50": 0.6,
+        "recent30": 0.5333333333333333,
         "maxConsecutiveMisses": 4,
         "firstHalf": {
           "tested": 102,
@@ -1537,36 +1537,36 @@
           "maxConsecutiveMisses": 4
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 61,
-          "hitRate": 0.5980392156862745,
-          "theoreticalBaseline": 0.4989995998399355,
-          "edge": 0.09903961584633897,
-          "recent100": 0.59,
-          "recent50": 0.62,
-          "recent30": 0.5666666666666667,
+          "hitRate": 0.5922330097087378,
+          "theoreticalBaseline": 0.4991083812165638,
+          "edge": 0.09312462849217401,
+          "recent100": 0.58,
+          "recent50": 0.6,
+          "recent30": 0.5333333333333333,
           "maxConsecutiveMisses": 3
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 32,
-          "hitRate": 0.6274509803921569,
-          "theoreticalBaseline": 0.5038015206082435,
-          "edge": 0.1236494597839134,
-          "recent100": 0.6274509803921569,
-          "recent50": 0.62,
-          "recent30": 0.5666666666666667,
+          "hitRate": 0.6153846153846154,
+          "theoreticalBaseline": 0.5039246467817897,
+          "edge": 0.1114599686028257,
+          "recent100": 0.6153846153846154,
+          "recent50": 0.6,
+          "recent30": 0.5333333333333333,
           "maxConsecutiveMisses": 3
         }
       }
     },
     "adaptive": {
       "2": {
-        "tested": 204,
+        "tested": 205,
         "hits": 41,
-        "hitRate": 0.20098039215686275,
-        "theoreticalBaseline": 0.16496598639455723,
-        "edge": 0.036014405762305524,
+        "hitRate": 0.2,
+        "theoreticalBaseline": 0.16495769039322988,
+        "edge": 0.03504230960677013,
         "recent100": 0.19,
         "recent50": 0.22,
         "recent30": 0.16666666666666666,
@@ -1583,36 +1583,36 @@
           "maxConsecutiveMisses": 10
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 19,
-          "hitRate": 0.18627450980392157,
-          "theoreticalBaseline": 0.16546618647458997,
-          "edge": 0.020808323329331607,
+          "hitRate": 0.18446601941747573,
+          "theoreticalBaseline": 0.16544481870418082,
+          "edge": 0.01902120071329491,
           "recent100": 0.19,
           "recent50": 0.22,
           "recent30": 0.16666666666666666,
           "maxConsecutiveMisses": 13
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 11,
-          "hitRate": 0.21568627450980393,
-          "theoreticalBaseline": 0.16566626650660277,
-          "edge": 0.050020008003201166,
-          "recent100": 0.21568627450980393,
+          "hitRate": 0.21153846153846154,
+          "theoreticalBaseline": 0.16562009419152288,
+          "edge": 0.04591836734693866,
+          "recent100": 0.21153846153846154,
           "recent50": 0.22,
           "recent30": 0.16666666666666666,
           "maxConsecutiveMisses": 11
         }
       },
       "3": {
-        "tested": 204,
+        "tested": 205,
         "hits": 60,
-        "hitRate": 0.29411764705882354,
-        "theoreticalBaseline": 0.24769907963185306,
-        "edge": 0.04641856742697048,
+        "hitRate": 0.2926829268292683,
+        "theoreticalBaseline": 0.24778496764559513,
+        "edge": 0.04489795918367315,
         "recent100": 0.28,
-        "recent50": 0.32,
+        "recent50": 0.3,
         "recent30": 0.23333333333333334,
         "maxConsecutiveMisses": 12,
         "firstHalf": {
@@ -1627,36 +1627,36 @@
           "maxConsecutiveMisses": 7
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 29,
-          "hitRate": 0.28431372549019607,
-          "theoreticalBaseline": 0.24889955982392975,
-          "edge": 0.03541416566626632,
+          "hitRate": 0.2815533980582524,
+          "theoreticalBaseline": 0.24905884683970694,
+          "edge": 0.03249455121854547,
           "recent100": 0.28,
-          "recent50": 0.32,
+          "recent50": 0.3,
           "recent30": 0.23333333333333334,
           "maxConsecutiveMisses": 12
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 17,
-          "hitRate": 0.3333333333333333,
-          "theoreticalBaseline": 0.25090036014405753,
-          "edge": 0.08243297318927578,
-          "recent100": 0.3333333333333333,
-          "recent50": 0.32,
+          "hitRate": 0.3269230769230769,
+          "theoreticalBaseline": 0.2511773940345368,
+          "edge": 0.07574568288854011,
+          "recent100": 0.3269230769230769,
+          "recent50": 0.3,
           "recent30": 0.23333333333333334,
           "maxConsecutiveMisses": 7
         }
       },
       "4": {
-        "tested": 204,
+        "tested": 205,
         "hits": 77,
-        "hitRate": 0.37745098039215685,
-        "theoreticalBaseline": 0.3308323329331724,
-        "edge": 0.046618647458984475,
+        "hitRate": 0.375609756097561,
+        "theoreticalBaseline": 0.33091090094574327,
+        "edge": 0.04469885515181771,
         "recent100": 0.36,
-        "recent50": 0.38,
+        "recent50": 0.36,
         "recent30": 0.26666666666666666,
         "maxConsecutiveMisses": 7,
         "firstHalf": {
@@ -1671,36 +1671,36 @@
           "maxConsecutiveMisses": 6
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 37,
-          "hitRate": 0.3627450980392157,
-          "theoreticalBaseline": 0.33233293317326934,
-          "edge": 0.030412164865946334,
+          "hitRate": 0.3592233009708738,
+          "theoreticalBaseline": 0.33247473746780265,
+          "edge": 0.026748563503071143,
           "recent100": 0.36,
-          "recent50": 0.38,
+          "recent50": 0.36,
           "recent30": 0.26666666666666666,
           "maxConsecutiveMisses": 7
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 20,
-          "hitRate": 0.39215686274509803,
-          "theoreticalBaseline": 0.3361344537815127,
-          "edge": 0.056022408963585346,
-          "recent100": 0.39215686274509803,
-          "recent50": 0.38,
+          "hitRate": 0.38461538461538464,
+          "theoreticalBaseline": 0.3363422291993721,
+          "edge": 0.048273155416012514,
+          "recent100": 0.38461538461538464,
+          "recent50": 0.36,
           "recent30": 0.26666666666666666,
           "maxConsecutiveMisses": 7
         }
       },
       "5": {
-        "tested": 204,
+        "tested": 205,
         "hits": 95,
-        "hitRate": 0.46568627450980393,
-        "theoreticalBaseline": 0.41426570628251375,
-        "edge": 0.051420568227290187,
+        "hitRate": 0.4634146341463415,
+        "theoreticalBaseline": 0.4143354902936792,
+        "edge": 0.049079143852662266,
         "recent100": 0.46,
-        "recent50": 0.5,
+        "recent50": 0.48,
         "recent30": 0.4,
         "maxConsecutiveMisses": 6,
         "firstHalf": {
@@ -1715,37 +1715,37 @@
           "maxConsecutiveMisses": 6
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 48,
-          "hitRate": 0.47058823529411764,
-          "theoreticalBaseline": 0.415566226490596,
-          "edge": 0.05502200880352165,
+          "hitRate": 0.46601941747572817,
+          "theoreticalBaseline": 0.4156924905884682,
+          "edge": 0.05032692688725998,
           "recent100": 0.46,
-          "recent50": 0.5,
+          "recent50": 0.48,
           "recent30": 0.4,
           "maxConsecutiveMisses": 5
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 26,
-          "hitRate": 0.5098039215686274,
-          "theoreticalBaseline": 0.42096838735494163,
-          "edge": 0.08883553421368579,
-          "recent100": 0.5098039215686274,
-          "recent50": 0.5,
+          "hitRate": 0.5,
+          "theoreticalBaseline": 0.4211145996860279,
+          "edge": 0.07888540031397212,
+          "recent100": 0.5,
+          "recent50": 0.48,
           "recent30": 0.4,
           "maxConsecutiveMisses": 5
         }
       },
       "6": {
-        "tested": 204,
+        "tested": 205,
         "hits": 115,
-        "hitRate": 0.5637254901960784,
-        "theoreticalBaseline": 0.496998799519808,
-        "edge": 0.0667266906762704,
-        "recent100": 0.6,
-        "recent50": 0.64,
-        "recent30": 0.6,
+        "hitRate": 0.5609756097560976,
+        "theoreticalBaseline": 0.4970632155301146,
+        "edge": 0.063912394225983,
+        "recent100": 0.59,
+        "recent50": 0.62,
+        "recent30": 0.5666666666666667,
         "maxConsecutiveMisses": 5,
         "firstHalf": {
           "tested": 102,
@@ -1759,34 +1759,34 @@
           "maxConsecutiveMisses": 5
         },
         "secondHalf": {
-          "tested": 102,
+          "tested": 103,
           "hits": 62,
-          "hitRate": 0.6078431372549019,
-          "theoreticalBaseline": 0.4981992797118843,
-          "edge": 0.10964385754301759,
-          "recent100": 0.6,
-          "recent50": 0.64,
-          "recent30": 0.6,
+          "hitRate": 0.6019417475728155,
+          "theoreticalBaseline": 0.49831583118684325,
+          "edge": 0.10362591638597224,
+          "recent100": 0.59,
+          "recent50": 0.62,
+          "recent30": 0.5666666666666667,
           "maxConsecutiveMisses": 4
         },
         "holdout231plus": {
-          "tested": 51,
+          "tested": 52,
           "hits": 33,
-          "hitRate": 0.6470588235294118,
-          "theoreticalBaseline": 0.5038015206082435,
-          "edge": 0.14325730292116834,
-          "recent100": 0.6470588235294118,
-          "recent50": 0.64,
-          "recent30": 0.6,
+          "hitRate": 0.6346153846153846,
+          "theoreticalBaseline": 0.5039246467817898,
+          "edge": 0.13069073783359475,
+          "recent100": 0.6346153846153846,
+          "recent50": 0.62,
+          "recent30": 0.5666666666666667,
           "maxConsecutiveMisses": 4
         }
       }
     }
   },
   "current": {
-    "targetExpect": "2026282",
-    "targetPeriod": 282,
-    "dataThrough": "2026281",
+    "targetExpect": "2026283",
+    "targetPeriod": 283,
+    "dataThrough": "2026282",
     "models": {
       "omission": {
         "2": [
@@ -1822,166 +1822,6 @@
       },
       "cold": {
         "2": [
-          "羊",
-          "牛"
-        ],
-        "3": [
-          "羊",
-          "牛",
-          "马"
-        ],
-        "4": [
-          "羊",
-          "牛",
-          "马",
-          "鼠"
-        ],
-        "5": [
-          "羊",
-          "牛",
-          "马",
-          "鼠",
-          "龙"
-        ],
-        "6": [
-          "羊",
-          "牛",
-          "马",
-          "鼠",
-          "龙",
-          "猪"
-        ]
-      },
-      "hazard": {
-        "2": [
-          "羊",
-          "牛"
-        ],
-        "3": [
-          "羊",
-          "牛",
-          "猪"
-        ],
-        "4": [
-          "羊",
-          "牛",
-          "猪",
-          "兔"
-        ],
-        "5": [
-          "羊",
-          "牛",
-          "猪",
-          "兔",
-          "马"
-        ],
-        "6": [
-          "羊",
-          "牛",
-          "猪",
-          "兔",
-          "马",
-          "鸡"
-        ]
-      },
-      "transition": {
-        "2": [
-          "鸡",
-          "兔"
-        ],
-        "3": [
-          "鸡",
-          "兔",
-          "龙"
-        ],
-        "4": [
-          "鸡",
-          "兔",
-          "龙",
-          "狗"
-        ],
-        "5": [
-          "鸡",
-          "兔",
-          "龙",
-          "狗",
-          "猪"
-        ],
-        "6": [
-          "鸡",
-          "兔",
-          "龙",
-          "狗",
-          "猪",
-          "鼠"
-        ]
-      },
-      "balanced": {
-        "2": [
-          "羊",
-          "牛"
-        ],
-        "3": [
-          "羊",
-          "牛",
-          "马"
-        ],
-        "4": [
-          "羊",
-          "牛",
-          "马",
-          "猪"
-        ],
-        "5": [
-          "羊",
-          "牛",
-          "马",
-          "猪",
-          "兔"
-        ],
-        "6": [
-          "羊",
-          "牛",
-          "马",
-          "猪",
-          "兔",
-          "鼠"
-        ]
-      },
-      "rebound": {
-        "2": [
-          "羊",
-          "牛"
-        ],
-        "3": [
-          "羊",
-          "牛",
-          "马"
-        ],
-        "4": [
-          "羊",
-          "牛",
-          "马",
-          "猪"
-        ],
-        "5": [
-          "羊",
-          "牛",
-          "马",
-          "猪",
-          "兔"
-        ],
-        "6": [
-          "羊",
-          "牛",
-          "马",
-          "猪",
-          "兔",
-          "鼠"
-        ]
-      },
-      "ensemble": {
-        "2": [
           "牛",
           "羊"
         ],
@@ -1994,94 +1834,254 @@
           "牛",
           "羊",
           "马",
-          "猪"
+          "鼠"
         ],
         "5": [
           "牛",
           "羊",
           "马",
-          "猪",
-          "兔"
+          "鼠",
+          "龙"
         ],
         "6": [
           "牛",
           "羊",
           "马",
-          "猪",
-          "兔",
+          "鼠",
+          "龙",
+          "猪"
+        ]
+      },
+      "hazard": {
+        "2": [
+          "羊",
+          "马"
+        ],
+        "3": [
+          "羊",
+          "马",
+          "虎"
+        ],
+        "4": [
+          "羊",
+          "马",
+          "虎",
           "鼠"
+        ],
+        "5": [
+          "羊",
+          "马",
+          "虎",
+          "鼠",
+          "牛"
+        ],
+        "6": [
+          "羊",
+          "马",
+          "虎",
+          "鼠",
+          "牛",
+          "猪"
+        ]
+      },
+      "transition": {
+        "2": [
+          "蛇",
+          "鼠"
+        ],
+        "3": [
+          "蛇",
+          "鼠",
+          "马"
+        ],
+        "4": [
+          "蛇",
+          "鼠",
+          "马",
+          "羊"
+        ],
+        "5": [
+          "蛇",
+          "鼠",
+          "马",
+          "羊",
+          "牛"
+        ],
+        "6": [
+          "蛇",
+          "鼠",
+          "马",
+          "羊",
+          "牛",
+          "虎"
+        ]
+      },
+      "balanced": {
+        "2": [
+          "马",
+          "羊"
+        ],
+        "3": [
+          "马",
+          "羊",
+          "牛"
+        ],
+        "4": [
+          "马",
+          "羊",
+          "牛",
+          "鼠"
+        ],
+        "5": [
+          "马",
+          "羊",
+          "牛",
+          "鼠",
+          "猪"
+        ],
+        "6": [
+          "马",
+          "羊",
+          "牛",
+          "鼠",
+          "猪",
+          "兔"
+        ]
+      },
+      "rebound": {
+        "2": [
+          "羊",
+          "马"
+        ],
+        "3": [
+          "羊",
+          "马",
+          "牛"
+        ],
+        "4": [
+          "羊",
+          "马",
+          "牛",
+          "鼠"
+        ],
+        "5": [
+          "羊",
+          "马",
+          "牛",
+          "鼠",
+          "虎"
+        ],
+        "6": [
+          "羊",
+          "马",
+          "牛",
+          "鼠",
+          "虎",
+          "猪"
+        ]
+      },
+      "ensemble": {
+        "2": [
+          "羊",
+          "马"
+        ],
+        "3": [
+          "羊",
+          "马",
+          "牛"
+        ],
+        "4": [
+          "羊",
+          "马",
+          "牛",
+          "鼠"
+        ],
+        "5": [
+          "羊",
+          "马",
+          "牛",
+          "鼠",
+          "虎"
+        ],
+        "6": [
+          "羊",
+          "马",
+          "牛",
+          "鼠",
+          "虎",
+          "猪"
         ]
       },
       "adaptive": {
         "2": [
           "羊",
-          "牛"
+          "马"
         ],
         "3": [
+          "马",
           "羊",
-          "牛",
-          "马"
+          "牛"
         ],
         "4": [
           "羊",
-          "牛",
           "马",
-          "猪"
+          "牛",
+          "鼠"
         ],
         "5": [
           "羊",
-          "牛",
           "马",
-          "猪",
-          "兔"
+          "牛",
+          "鼠",
+          "猪"
         ],
         "6": [
           "羊",
-          "牛",
           "马",
+          "牛",
+          "鼠",
           "猪",
-          "兔",
-          "鼠"
+          "兔"
         ],
         "weights_2": {
-          "omission": 0.16277415974249568,
-          "cold": 0.16457070139980537,
-          "hazard": 0.18972228460214094,
-          "transition": 0.09989520173665689,
-          "balanced": 0.19211767347855377,
-          "rebound": 0.19091997904034735
+          "omission": 0.1622724889521384,
+          "cold": 0.16466931316006292,
+          "hazard": 0.1898359673432702,
+          "transition": 0.09995505954610137,
+          "balanced": 0.19223279155119474,
+          "rebound": 0.19103437944723245
         },
         "weights_3": {
-          "omission": 0.2412705090450147,
-          "cold": 0.14703407656710138,
-          "hazard": 0.17107398281146702,
-          "transition": 0.07539515595889186,
-          "balanced": 0.217230602800649,
-          "rebound": 0.147995672816876
+          "omission": 0.24663937222790855,
+          "cold": 0.13964517229614465,
+          "hazard": 0.16748549982940975,
+          "transition": 0.08614807233026284,
+          "balanced": 0.21934493346980544,
+          "rebound": 0.14073694984646878
         },
         "weights_4": {
-          "omission": 0.2166334318916316,
-          "cold": 0.13686997180774269,
-          "hazard": 0.2694423433954479,
-          "transition": 0.0554562332393592,
-          "balanced": 0.1874785119988998,
-          "rebound": 0.13411950766691882
+          "omission": 0.21886687355773043,
+          "cold": 0.12656162966499576,
+          "hazard": 0.28125248667144104,
+          "transition": 0.06481260444020052,
+          "balanced": 0.18512771544521373,
+          "rebound": 0.12337869022041856
         },
         "weights_5": {
-          "omission": 0.20944741532976824,
-          "cold": 0.20944741532976807,
-          "hazard": 0.20634736107881865,
-          "transition": 0.025924203673564673,
-          "balanced": 0.14372626520964132,
-          "rebound": 0.20510733937843914
+          "omission": 0.21342169903137603,
+          "cold": 0.21342169903137592,
+          "hazard": 0.21045557769847503,
+          "transition": 0.01816749316401718,
+          "balanced": 0.13556101404273094,
+          "rebound": 0.20897251703202493
         },
         "weights_6": {
-          "omission": 0.16857444084644932,
-          "cold": 0.2860531666541158,
-          "hazard": 0.10652157541983572,
-          "transition": 0.020370509827547265,
-          "balanced": 0.25412305143459596,
-          "rebound": 0.16435725581745594
+          "omission": 0.16433052996929645,
+          "cold": 0.3024518310861925,
+          "hazard": 0.09099808659280025,
+          "transition": 0.017443154007030674,
+          "balanced": 0.26542962666310677,
+          "rebound": 0.15934677168157332
         }
       }
     }
@@ -2089,13 +2089,13 @@
   "fourByOverallEdge": [
     {
       "model": "hazard",
-      "tested": 204,
+      "tested": 205,
       "hits": 85,
-      "hitRate": 0.4166666666666667,
-      "theoreticalBaseline": 0.3321328531412557,
-      "edge": 0.084533813525411,
+      "hitRate": 0.4146341463414634,
+      "theoreticalBaseline": 0.3321055251368832,
+      "edge": 0.08252862120458021,
       "recent100": 0.46,
-      "recent50": 0.48,
+      "recent50": 0.46,
       "recent30": 0.4666666666666667,
       "maxConsecutiveMisses": 7,
       "firstHalf": {
@@ -2110,37 +2110,37 @@
         "maxConsecutiveMisses": 7
       },
       "secondHalf": {
-        "tested": 102,
+        "tested": 103,
         "hits": 48,
-        "hitRate": 0.47058823529411764,
-        "theoreticalBaseline": 0.3335334133653461,
-        "edge": 0.13705482192877155,
+        "hitRate": 0.46601941747572817,
+        "theoreticalBaseline": 0.33346542500495335,
+        "edge": 0.13255399247077482,
         "recent100": 0.46,
-        "recent50": 0.48,
+        "recent50": 0.46,
         "recent30": 0.4666666666666667,
         "maxConsecutiveMisses": 7
       },
       "holdout231plus": {
-        "tested": 51,
+        "tested": 52,
         "hits": 25,
-        "hitRate": 0.49019607843137253,
-        "theoreticalBaseline": 0.3361344537815127,
-        "edge": 0.15406162464985984,
-        "recent100": 0.49019607843137253,
-        "recent50": 0.48,
+        "hitRate": 0.4807692307692308,
+        "theoreticalBaseline": 0.3359497645211932,
+        "edge": 0.1448194662480376,
+        "recent100": 0.4807692307692308,
+        "recent50": 0.46,
         "recent30": 0.4666666666666667,
         "maxConsecutiveMisses": 5
       }
     },
     {
       "model": "omission",
-      "tested": 204,
+      "tested": 205,
       "hits": 84,
-      "hitRate": 0.4117647058823529,
-      "theoreticalBaseline": 0.3308323329331724,
-      "edge": 0.08093237294918054,
+      "hitRate": 0.4097560975609756,
+      "theoreticalBaseline": 0.33091090094574327,
+      "edge": 0.07884519661523232,
       "recent100": 0.39,
-      "recent50": 0.44,
+      "recent50": 0.42,
       "recent30": 0.3,
       "maxConsecutiveMisses": 6,
       "firstHalf": {
@@ -2155,37 +2155,37 @@
         "maxConsecutiveMisses": 6
       },
       "secondHalf": {
-        "tested": 102,
+        "tested": 103,
         "hits": 41,
-        "hitRate": 0.4019607843137255,
-        "theoreticalBaseline": 0.3319327731092438,
-        "edge": 0.07002801120448171,
+        "hitRate": 0.39805825242718446,
+        "theoreticalBaseline": 0.3320784624529424,
+        "edge": 0.06597978997424203,
         "recent100": 0.39,
-        "recent50": 0.44,
+        "recent50": 0.42,
         "recent30": 0.3,
         "maxConsecutiveMisses": 6
       },
       "holdout231plus": {
-        "tested": 51,
+        "tested": 52,
         "hits": 23,
-        "hitRate": 0.45098039215686275,
-        "theoreticalBaseline": 0.3353341336534615,
-        "edge": 0.11564625850340127,
-        "recent100": 0.45098039215686275,
-        "recent50": 0.44,
+        "hitRate": 0.4423076923076923,
+        "theoreticalBaseline": 0.3355572998430142,
+        "edge": 0.1067503924646781,
+        "recent100": 0.4423076923076923,
+        "recent50": 0.42,
         "recent30": 0.3,
         "maxConsecutiveMisses": 6
       }
     },
     {
       "model": "balanced",
-      "tested": 204,
+      "tested": 205,
       "hits": 82,
-      "hitRate": 0.4019607843137255,
-      "theoreticalBaseline": 0.33103241296518526,
-      "edge": 0.07092837134854024,
+      "hitRate": 0.4,
+      "theoreticalBaseline": 0.3311100049776,
+      "edge": 0.06888999502240001,
       "recent100": 0.4,
-      "recent50": 0.42,
+      "recent50": 0.4,
       "recent30": 0.26666666666666666,
       "maxConsecutiveMisses": 7,
       "firstHalf": {
@@ -2200,37 +2200,37 @@
         "maxConsecutiveMisses": 7
       },
       "secondHalf": {
-        "tested": 102,
+        "tested": 103,
         "hits": 41,
-        "hitRate": 0.4019607843137255,
-        "theoreticalBaseline": 0.332733093237295,
-        "edge": 0.06922769107643051,
+        "hitRate": 0.39805825242718446,
+        "theoreticalBaseline": 0.33287101248266304,
+        "edge": 0.06518723994452141,
         "recent100": 0.4,
-        "recent50": 0.42,
+        "recent50": 0.4,
         "recent30": 0.26666666666666666,
         "maxConsecutiveMisses": 7
       },
       "holdout231plus": {
-        "tested": 51,
+        "tested": 52,
         "hits": 22,
-        "hitRate": 0.43137254901960786,
-        "theoreticalBaseline": 0.33693477390956383,
-        "edge": 0.09443777511004403,
-        "recent100": 0.43137254901960786,
-        "recent50": 0.42,
+        "hitRate": 0.4230769230769231,
+        "theoreticalBaseline": 0.33712715855573,
+        "edge": 0.08594976452119307,
+        "recent100": 0.4230769230769231,
+        "recent50": 0.4,
         "recent30": 0.26666666666666666,
         "maxConsecutiveMisses": 7
       }
     },
     {
       "model": "ensemble",
-      "tested": 204,
+      "tested": 205,
       "hits": 81,
-      "hitRate": 0.39705882352941174,
-      "theoreticalBaseline": 0.33083233293317243,
-      "edge": 0.0662264905962393,
+      "hitRate": 0.3951219512195122,
+      "theoreticalBaseline": 0.3309109009457434,
+      "edge": 0.06421105027376883,
       "recent100": 0.39,
-      "recent50": 0.42,
+      "recent50": 0.4,
       "recent30": 0.26666666666666666,
       "maxConsecutiveMisses": 7,
       "firstHalf": {
@@ -2245,37 +2245,37 @@
         "maxConsecutiveMisses": 6
       },
       "secondHalf": {
-        "tested": 102,
+        "tested": 103,
         "hits": 40,
-        "hitRate": 0.39215686274509803,
-        "theoreticalBaseline": 0.3325330132052821,
-        "edge": 0.05962384953981592,
+        "hitRate": 0.3883495145631068,
+        "theoreticalBaseline": 0.3326728749752328,
+        "edge": 0.055676639587874,
         "recent100": 0.39,
-        "recent50": 0.42,
+        "recent50": 0.4,
         "recent30": 0.26666666666666666,
         "maxConsecutiveMisses": 7
       },
       "holdout231plus": {
-        "tested": 51,
+        "tested": 52,
         "hits": 22,
-        "hitRate": 0.43137254901960786,
-        "theoreticalBaseline": 0.33653461384553823,
-        "edge": 0.09483793517406963,
-        "recent100": 0.43137254901960786,
-        "recent50": 0.42,
+        "hitRate": 0.4230769230769231,
+        "theoreticalBaseline": 0.33673469387755106,
+        "edge": 0.08634222919937201,
+        "recent100": 0.4230769230769231,
+        "recent50": 0.4,
         "recent30": 0.26666666666666666,
         "maxConsecutiveMisses": 7
       }
     },
     {
       "model": "adaptive",
-      "tested": 204,
+      "tested": 205,
       "hits": 77,
-      "hitRate": 0.37745098039215685,
-      "theoreticalBaseline": 0.3308323329331724,
-      "edge": 0.046618647458984475,
+      "hitRate": 0.375609756097561,
+      "theoreticalBaseline": 0.33091090094574327,
+      "edge": 0.04469885515181771,
       "recent100": 0.36,
-      "recent50": 0.38,
+      "recent50": 0.36,
       "recent30": 0.26666666666666666,
       "maxConsecutiveMisses": 7,
       "firstHalf": {
@@ -2290,37 +2290,37 @@
         "maxConsecutiveMisses": 6
       },
       "secondHalf": {
-        "tested": 102,
+        "tested": 103,
         "hits": 37,
-        "hitRate": 0.3627450980392157,
-        "theoreticalBaseline": 0.33233293317326934,
-        "edge": 0.030412164865946334,
+        "hitRate": 0.3592233009708738,
+        "theoreticalBaseline": 0.33247473746780265,
+        "edge": 0.026748563503071143,
         "recent100": 0.36,
-        "recent50": 0.38,
+        "recent50": 0.36,
         "recent30": 0.26666666666666666,
         "maxConsecutiveMisses": 7
       },
       "holdout231plus": {
-        "tested": 51,
+        "tested": 52,
         "hits": 20,
-        "hitRate": 0.39215686274509803,
-        "theoreticalBaseline": 0.3361344537815127,
-        "edge": 0.056022408963585346,
-        "recent100": 0.39215686274509803,
-        "recent50": 0.38,
+        "hitRate": 0.38461538461538464,
+        "theoreticalBaseline": 0.3363422291993721,
+        "edge": 0.048273155416012514,
+        "recent100": 0.38461538461538464,
+        "recent50": 0.36,
         "recent30": 0.26666666666666666,
         "maxConsecutiveMisses": 7
       }
     },
     {
       "model": "rebound",
-      "tested": 204,
+      "tested": 205,
       "hits": 77,
-      "hitRate": 0.37745098039215685,
-      "theoreticalBaseline": 0.33103241296518526,
-      "edge": 0.04641856742697159,
+      "hitRate": 0.375609756097561,
+      "theoreticalBaseline": 0.3311100049776,
+      "edge": 0.04449975111996096,
       "recent100": 0.35,
-      "recent50": 0.38,
+      "recent50": 0.36,
       "recent30": 0.26666666666666666,
       "maxConsecutiveMisses": 9,
       "firstHalf": {
@@ -2335,38 +2335,38 @@
         "maxConsecutiveMisses": 7
       },
       "secondHalf": {
-        "tested": 102,
+        "tested": 103,
         "hits": 37,
-        "hitRate": 0.3627450980392157,
-        "theoreticalBaseline": 0.3325330132052821,
-        "edge": 0.03021208483393356,
+        "hitRate": 0.3592233009708738,
+        "theoreticalBaseline": 0.3326728749752328,
+        "edge": 0.026550425995641003,
         "recent100": 0.35,
-        "recent50": 0.38,
+        "recent50": 0.36,
         "recent30": 0.26666666666666666,
         "maxConsecutiveMisses": 9
       },
       "holdout231plus": {
-        "tested": 51,
+        "tested": 52,
         "hits": 20,
-        "hitRate": 0.39215686274509803,
-        "theoreticalBaseline": 0.33653461384553823,
-        "edge": 0.0556222488995598,
-        "recent100": 0.39215686274509803,
-        "recent50": 0.38,
+        "hitRate": 0.38461538461538464,
+        "theoreticalBaseline": 0.33673469387755106,
+        "edge": 0.047880690737833576,
+        "recent100": 0.38461538461538464,
+        "recent50": 0.36,
         "recent30": 0.26666666666666666,
         "maxConsecutiveMisses": 7
       }
     },
     {
       "model": "cold",
-      "tested": 204,
+      "tested": 205,
       "hits": 72,
-      "hitRate": 0.35294117647058826,
-      "theoreticalBaseline": 0.3306322529011596,
-      "edge": 0.02230892356942865,
+      "hitRate": 0.35121951219512193,
+      "theoreticalBaseline": 0.3307117969138867,
+      "edge": 0.02050771528123524,
       "recent100": 0.32,
-      "recent50": 0.38,
-      "recent30": 0.36666666666666664,
+      "recent50": 0.36,
+      "recent30": 0.3333333333333333,
       "maxConsecutiveMisses": 8,
       "firstHalf": {
         "tested": 102,
@@ -2380,35 +2380,35 @@
         "maxConsecutiveMisses": 7
       },
       "secondHalf": {
-        "tested": 102,
+        "tested": 103,
         "hits": 32,
-        "hitRate": 0.3137254901960784,
-        "theoreticalBaseline": 0.33173269307723097,
-        "edge": -0.01800720288115254,
+        "hitRate": 0.3106796116504854,
+        "theoreticalBaseline": 0.3318803249455123,
+        "edge": -0.021200713295026874,
         "recent100": 0.32,
-        "recent50": 0.38,
-        "recent30": 0.36666666666666664,
+        "recent50": 0.36,
+        "recent30": 0.3333333333333333,
         "maxConsecutiveMisses": 8
       },
       "holdout231plus": {
-        "tested": 51,
+        "tested": 52,
         "hits": 19,
-        "hitRate": 0.37254901960784315,
-        "theoreticalBaseline": 0.3345338135254101,
-        "edge": 0.03801520608243303,
-        "recent100": 0.37254901960784315,
-        "recent50": 0.38,
-        "recent30": 0.36666666666666664,
+        "hitRate": 0.36538461538461536,
+        "theoreticalBaseline": 0.33477237048665615,
+        "edge": 0.030612244897959218,
+        "recent100": 0.36538461538461536,
+        "recent50": 0.36,
+        "recent30": 0.3333333333333333,
         "maxConsecutiveMisses": 4
       }
     },
     {
       "model": "transition",
-      "tested": 204,
+      "tested": 205,
       "hits": 64,
-      "hitRate": 0.3137254901960784,
-      "theoreticalBaseline": 0.333733493397358,
-      "edge": -0.0200080032012796,
+      "hitRate": 0.3121951219512195,
+      "theoreticalBaseline": 0.33369835739173626,
+      "edge": -0.021503235440516744,
       "recent100": 0.3,
       "recent50": 0.32,
       "recent30": 0.3,
@@ -2425,23 +2425,23 @@
         "maxConsecutiveMisses": 7
       },
       "secondHalf": {
-        "tested": 102,
+        "tested": 103,
         "hits": 30,
-        "hitRate": 0.29411764705882354,
-        "theoreticalBaseline": 0.3351340536214484,
-        "edge": -0.04101640656262484,
+        "hitRate": 0.2912621359223301,
+        "theoreticalBaseline": 0.3350505250643945,
+        "edge": -0.0437883891420644,
         "recent100": 0.3,
         "recent50": 0.32,
         "recent30": 0.3,
         "maxConsecutiveMisses": 12
       },
       "holdout231plus": {
-        "tested": 51,
+        "tested": 52,
         "hits": 16,
-        "hitRate": 0.3137254901960784,
-        "theoreticalBaseline": 0.33493397358943583,
-        "edge": -0.021208483393357402,
-        "recent100": 0.3137254901960784,
+        "hitRate": 0.3076923076923077,
+        "theoreticalBaseline": 0.33477237048665626,
+        "edge": -0.027080062794348547,
+        "recent100": 0.3076923076923077,
         "recent50": 0.32,
         "recent30": 0.3,
         "maxConsecutiveMisses": 12
@@ -2451,67 +2451,67 @@
   "fourByStability": [
     {
       "model": "omission",
-      "edge": 0.08093237294918054,
-      "holdoutEdge": 0.11564625850340127,
+      "edge": 0.07884519661523232,
+      "holdoutEdge": 0.1067503924646781,
       "recent30": 0.3,
-      "recent50": 0.44,
-      "stability": 0.07002801120448171
+      "recent50": 0.42,
+      "stability": 0.06597978997424203
     },
     {
       "model": "balanced",
-      "edge": 0.07092837134854024,
-      "holdoutEdge": 0.09443777511004403,
+      "edge": 0.06888999502240001,
+      "holdoutEdge": 0.08594976452119307,
       "recent30": 0.26666666666666666,
-      "recent50": 0.42,
-      "stability": 0.06922769107643051
+      "recent50": 0.4,
+      "stability": 0.06518723994452141
     },
     {
       "model": "ensemble",
-      "edge": 0.0662264905962393,
-      "holdoutEdge": 0.09483793517406963,
+      "edge": 0.06421105027376883,
+      "holdoutEdge": 0.08634222919937201,
       "recent30": 0.26666666666666666,
-      "recent50": 0.42,
-      "stability": 0.05962384953981592
+      "recent50": 0.4,
+      "stability": 0.055676639587874
     },
     {
       "model": "hazard",
-      "edge": 0.084533813525411,
-      "holdoutEdge": 0.15406162464985984,
+      "edge": 0.08252862120458021,
+      "holdoutEdge": 0.1448194662480376,
       "recent30": 0.4666666666666667,
-      "recent50": 0.48,
+      "recent50": 0.46,
       "stability": 0.03201280512204868
     },
     {
       "model": "adaptive",
-      "edge": 0.046618647458984475,
-      "holdoutEdge": 0.056022408963585346,
+      "edge": 0.04469885515181771,
+      "holdoutEdge": 0.048273155416012514,
       "recent30": 0.26666666666666666,
-      "recent50": 0.38,
-      "stability": 0.030412164865946334
+      "recent50": 0.36,
+      "stability": 0.026748563503071143
     },
     {
       "model": "rebound",
-      "edge": 0.04641856742697159,
-      "holdoutEdge": 0.0556222488995598,
+      "edge": 0.04449975111996096,
+      "holdoutEdge": 0.047880690737833576,
       "recent30": 0.26666666666666666,
-      "recent50": 0.38,
-      "stability": 0.03021208483393356
+      "recent50": 0.36,
+      "stability": 0.026550425995641003
     },
     {
       "model": "cold",
-      "edge": 0.02230892356942865,
-      "holdoutEdge": 0.03801520608243303,
-      "recent30": 0.36666666666666664,
-      "recent50": 0.38,
-      "stability": -0.01800720288115254
+      "edge": 0.02050771528123524,
+      "holdoutEdge": 0.030612244897959218,
+      "recent30": 0.3333333333333333,
+      "recent50": 0.36,
+      "stability": -0.021200713295026874
     },
     {
       "model": "transition",
-      "edge": -0.0200080032012796,
-      "holdoutEdge": -0.021208483393357402,
+      "edge": -0.021503235440516744,
+      "holdoutEdge": -0.027080062794348547,
       "recent30": 0.3,
       "recent50": 0.32,
-      "stability": -0.04101640656262484
+      "stability": -0.0437883891420644
     }
   ],
   "notes": [
