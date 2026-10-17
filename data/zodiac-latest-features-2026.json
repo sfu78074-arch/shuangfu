@@ -1,35 +1,35 @@
 {
   "schema": 2,
   "year": 2026,
-  "targetPeriod": 290,
-  "targetExpect": "2026290",
-  "dataThroughExpect": "2026289",
-  "dataThroughPeriod": 289,
-  "sampleSize": 289,
+  "targetPeriod": 291,
+  "targetExpect": "2026291",
+  "dataThroughExpect": "2026290",
+  "dataThroughPeriod": 290,
+  "sampleSize": 290,
   "mappingEra": "2026-horse",
-  "previousSpecial": 38,
-  "previousSpecialZodiac": "蛇",
+  "previousSpecial": 40,
+  "previousSpecialZodiac": "兔",
   "currentSameZodiacRun": {
-    "zodiac": "蛇",
+    "zodiac": "兔",
     "length": 1
   },
   "perZodiac": {
     "鼠": {
-      "omission": 4,
-      "normalizedOmissionScore": 16,
+      "omission": 5,
+      "normalizedOmissionScore": 20,
       "numberCount": 4,
-      "rank": 8,
-      "freq5": 1,
+      "rank": 7,
+      "freq5": 0,
       "freq10": 1,
-      "freq20": 2,
+      "freq20": 1,
       "freq30": 2,
       "previousGap": 15
     },
     "牛": {
-      "omission": 6,
-      "normalizedOmissionScore": 24,
+      "omission": 7,
+      "normalizedOmissionScore": 28,
       "numberCount": 4,
-      "rank": 7,
+      "rank": 6,
       "freq5": 0,
       "freq10": 1,
       "freq20": 1,
@@ -37,10 +37,10 @@
       "previousGap": 21
     },
     "虎": {
-      "omission": 14,
-      "normalizedOmissionScore": 56,
+      "omission": 15,
+      "normalizedOmissionScore": 60,
       "numberCount": 4,
-      "rank": 3,
+      "rank": 2,
       "freq5": 0,
       "freq10": 0,
       "freq20": 2,
@@ -48,32 +48,32 @@
       "previousGap": 2
     },
     "兔": {
-      "omission": 21,
-      "normalizedOmissionScore": 84,
+      "omission": 0,
+      "normalizedOmissionScore": 0,
       "numberCount": 4,
-      "rank": 1,
-      "freq5": 0,
-      "freq10": 0,
-      "freq20": 0,
-      "freq30": 2,
-      "previousGap": 1
+      "rank": 12,
+      "freq5": 1,
+      "freq10": 1,
+      "freq20": 1,
+      "freq30": 3,
+      "previousGap": 22
     },
     "龙": {
-      "omission": 9,
-      "normalizedOmissionScore": 36,
+      "omission": 10,
+      "normalizedOmissionScore": 40,
       "numberCount": 4,
-      "rank": 4,
+      "rank": 3,
       "freq5": 0,
-      "freq10": 1,
+      "freq10": 0,
       "freq20": 1,
       "freq30": 1,
       "previousGap": 40
     },
     "蛇": {
-      "omission": 0,
-      "normalizedOmissionScore": 0,
+      "omission": 1,
+      "normalizedOmissionScore": 4,
       "numberCount": 4,
-      "rank": 12,
+      "rank": 11,
       "freq5": 1,
       "freq10": 1,
       "freq20": 4,
@@ -81,10 +81,10 @@
       "previousGap": 11
     },
     "马": {
-      "omission": 1,
-      "normalizedOmissionScore": 5,
+      "omission": 2,
+      "normalizedOmissionScore": 10,
       "numberCount": 5,
-      "rank": 11,
+      "rank": 10,
       "freq5": 1,
       "freq10": 1,
       "freq20": 1,
@@ -92,10 +92,10 @@
       "previousGap": 23
     },
     "羊": {
-      "omission": 3,
-      "normalizedOmissionScore": 12,
+      "omission": 4,
+      "normalizedOmissionScore": 16,
       "numberCount": 4,
-      "rank": 9,
+      "rank": 8,
       "freq5": 1,
       "freq10": 1,
       "freq20": 1,
@@ -103,10 +103,10 @@
       "previousGap": 25
     },
     "猴": {
-      "omission": 7,
-      "normalizedOmissionScore": 28,
+      "omission": 8,
+      "normalizedOmissionScore": 32,
       "numberCount": 4,
-      "rank": 6,
+      "rank": 5,
       "freq5": 0,
       "freq10": 1,
       "freq20": 3,
@@ -114,10 +114,10 @@
       "previousGap": 5
     },
     "鸡": {
-      "omission": 8,
-      "normalizedOmissionScore": 32,
+      "omission": 9,
+      "normalizedOmissionScore": 36,
       "numberCount": 4,
-      "rank": 5,
+      "rank": 4,
       "freq5": 0,
       "freq10": 1,
       "freq20": 2,
@@ -125,10 +125,10 @@
       "previousGap": 2
     },
     "狗": {
-      "omission": 15,
-      "normalizedOmissionScore": 60,
+      "omission": 16,
+      "normalizedOmissionScore": 64,
       "numberCount": 4,
-      "rank": 2,
+      "rank": 1,
       "freq5": 0,
       "freq10": 0,
       "freq20": 1,
@@ -136,86 +136,86 @@
       "previousGap": 10
     },
     "猪": {
-      "omission": 2,
-      "normalizedOmissionScore": 8,
+      "omission": 3,
+      "normalizedOmissionScore": 12,
       "numberCount": 4,
-      "rank": 10,
+      "rank": 9,
       "freq5": 1,
       "freq10": 2,
       "freq20": 2,
-      "freq30": 4,
+      "freq30": 3,
       "previousGap": 3
     }
   },
   "ranked": [
     {
-      "zodiac": "兔",
-      "omission": 21,
+      "zodiac": "狗",
+      "omission": 16,
       "numberCount": 4,
-      "score": 84
+      "score": 64
     },
     {
-      "zodiac": "狗",
+      "zodiac": "虎",
       "omission": 15,
       "numberCount": 4,
       "score": 60
     },
     {
-      "zodiac": "虎",
-      "omission": 14,
+      "zodiac": "龙",
+      "omission": 10,
       "numberCount": 4,
-      "score": 56
+      "score": 40
     },
     {
-      "zodiac": "龙",
+      "zodiac": "鸡",
       "omission": 9,
       "numberCount": 4,
       "score": 36
     },
     {
-      "zodiac": "鸡",
+      "zodiac": "猴",
       "omission": 8,
       "numberCount": 4,
       "score": 32
     },
     {
-      "zodiac": "猴",
+      "zodiac": "牛",
       "omission": 7,
       "numberCount": 4,
       "score": 28
     },
     {
-      "zodiac": "牛",
-      "omission": 6,
+      "zodiac": "鼠",
+      "omission": 5,
       "numberCount": 4,
-      "score": 24
+      "score": 20
     },
     {
-      "zodiac": "鼠",
+      "zodiac": "羊",
       "omission": 4,
       "numberCount": 4,
       "score": 16
     },
     {
-      "zodiac": "羊",
+      "zodiac": "猪",
       "omission": 3,
       "numberCount": 4,
       "score": 12
     },
     {
-      "zodiac": "猪",
-      "omission": 2,
-      "numberCount": 4,
-      "score": 8
-    },
-    {
       "zodiac": "马",
-      "omission": 1,
+      "omission": 2,
       "numberCount": 5,
-      "score": 5
+      "score": 10
     },
     {
       "zodiac": "蛇",
+      "omission": 1,
+      "numberCount": 4,
+      "score": 4
+    },
+    {
+      "zodiac": "兔",
       "omission": 0,
       "numberCount": 4,
       "score": 0
@@ -223,36 +223,36 @@
   ],
   "candidates": {
     "2": [
-      "兔",
-      "狗"
-    ],
-    "3": [
-      "兔",
       "狗",
       "虎"
     ],
-    "4": [
-      "兔",
+    "3": [
       "狗",
       "虎",
       "龙"
     ],
-    "5": [
-      "兔",
+    "4": [
       "狗",
       "虎",
       "龙",
       "鸡"
     ],
-    "6": [
-      "兔",
+    "5": [
       "狗",
       "虎",
       "龙",
       "鸡",
       "猴"
+    ],
+    "6": [
+      "狗",
+      "虎",
+      "龙",
+      "鸡",
+      "猴",
+      "牛"
     ]
   },
-  "builtAt": "2026-10-16T17:31:49.957Z",
-  "archiveSha256": "b6dbe5c68f29adae718ffd95238de6644352163930b0241afe1a4baceefdb37f"
+  "builtAt": "2026-10-17T16:30:39.920Z",
+  "archiveSha256": "9f7c50eabdcec822b80d4d207d34a811e52e3f1b613cf5f26fb063dcd0eaf862"
 }
