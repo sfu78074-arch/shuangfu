@@ -3081,119 +3081,292 @@
           ]
         }
       },
+      "resolved": {
+        "resolvedAt": "2026-10-18T16:36:42.387Z",
+        "actualSpecial": 17,
+        "actualZodiac": "虎",
+        "hits": {
+          "baseline": {
+            "2": true,
+            "3": true,
+            "4": true,
+            "5": true,
+            "6": true
+          },
+          "cold": {
+            "2": false,
+            "3": false,
+            "4": false,
+            "5": true,
+            "6": true
+          },
+          "meta": {
+            "2": true,
+            "3": true,
+            "4": true,
+            "5": true,
+            "6": true
+          },
+          "optimized": {
+            "2": false,
+            "3": true,
+            "4": true,
+            "5": true,
+            "6": true
+          }
+        }
+      }
+    },
+    {
+      "schema": 1,
+      "targetExpect": "2026292",
+      "targetPeriod": 292,
+      "dataThrough": "2026291",
+      "createdAt": "2026-10-18T16:36:42.388Z",
+      "archiveSha256": "504ff3d616469abb91107181a49f62cba6b195f9de7f335711bf3ee499ccb316",
+      "models": {
+        "baseline": {
+          "2": [
+            "狗",
+            "龙"
+          ],
+          "3": [
+            "狗",
+            "龙",
+            "鸡"
+          ],
+          "4": [
+            "狗",
+            "龙",
+            "鸡",
+            "猴"
+          ],
+          "5": [
+            "狗",
+            "龙",
+            "鸡",
+            "猴",
+            "牛"
+          ],
+          "6": [
+            "狗",
+            "龙",
+            "鸡",
+            "猴",
+            "牛",
+            "鼠"
+          ]
+        },
+        "cold": {
+          "2": [
+            "龙",
+            "羊"
+          ],
+          "3": [
+            "龙",
+            "羊",
+            "马"
+          ],
+          "4": [
+            "龙",
+            "羊",
+            "马",
+            "鼠"
+          ],
+          "5": [
+            "龙",
+            "羊",
+            "马",
+            "鼠",
+            "牛"
+          ],
+          "6": [
+            "龙",
+            "羊",
+            "马",
+            "鼠",
+            "牛",
+            "狗"
+          ]
+        },
+        "meta": {
+          "2": [
+            "狗",
+            "龙"
+          ],
+          "3": [
+            "狗",
+            "龙",
+            "鸡"
+          ],
+          "4": [
+            "狗",
+            "龙",
+            "鸡",
+            "猴"
+          ],
+          "5": [
+            "狗",
+            "龙",
+            "鸡",
+            "猴",
+            "牛"
+          ],
+          "6": [
+            "狗",
+            "龙",
+            "鸡",
+            "猴",
+            "牛",
+            "鼠"
+          ]
+        },
+        "optimized": {
+          "2": [
+            "龙",
+            "羊"
+          ],
+          "3": [
+            "狗",
+            "龙",
+            "鸡"
+          ],
+          "4": [
+            "狗",
+            "龙",
+            "鸡",
+            "猴"
+          ],
+          "5": [
+            "狗",
+            "龙",
+            "鸡",
+            "猴",
+            "牛"
+          ],
+          "6": [
+            "狗",
+            "龙",
+            "鸡",
+            "猴",
+            "牛",
+            "鼠"
+          ]
+        }
+      },
       "resolved": null
     }
   ],
-  "updatedAt": "2026-10-17T16:30:40.345Z",
-  "latestArchived": "2026290",
-  "nextTarget": "2026291",
+  "updatedAt": "2026-10-18T16:36:42.388Z",
+  "latestArchived": "2026291",
+  "nextTarget": "2026292",
   "summary": {
     "baseline": {
       "2": {
-        "resolved": 17,
-        "hits": 4,
-        "hitRate": 0.23529411764705882
+        "resolved": 18,
+        "hits": 5,
+        "hitRate": 0.2777777777777778
       },
       "3": {
-        "resolved": 17,
-        "hits": 6,
-        "hitRate": 0.35294117647058826
+        "resolved": 18,
+        "hits": 7,
+        "hitRate": 0.3888888888888889
       },
       "4": {
-        "resolved": 17,
-        "hits": 8,
-        "hitRate": 0.47058823529411764
+        "resolved": 18,
+        "hits": 9,
+        "hitRate": 0.5
       },
       "5": {
-        "resolved": 17,
-        "hits": 9,
-        "hitRate": 0.5294117647058824
+        "resolved": 18,
+        "hits": 10,
+        "hitRate": 0.5555555555555556
       },
       "6": {
-        "resolved": 17,
-        "hits": 9,
-        "hitRate": 0.5294117647058824
+        "resolved": 18,
+        "hits": 10,
+        "hitRate": 0.5555555555555556
       }
     },
     "cold": {
       "2": {
-        "resolved": 17,
+        "resolved": 18,
         "hits": 5,
-        "hitRate": 0.29411764705882354
+        "hitRate": 0.2777777777777778
       },
       "3": {
-        "resolved": 17,
+        "resolved": 18,
         "hits": 7,
-        "hitRate": 0.4117647058823529
+        "hitRate": 0.3888888888888889
       },
       "4": {
-        "resolved": 17,
+        "resolved": 18,
         "hits": 7,
-        "hitRate": 0.4117647058823529
+        "hitRate": 0.3888888888888889
       },
       "5": {
-        "resolved": 17,
-        "hits": 8,
-        "hitRate": 0.47058823529411764
+        "resolved": 18,
+        "hits": 9,
+        "hitRate": 0.5
       },
       "6": {
-        "resolved": 17,
-        "hits": 10,
-        "hitRate": 0.5882352941176471
+        "resolved": 18,
+        "hits": 11,
+        "hitRate": 0.6111111111111112
       }
     },
     "meta": {
       "2": {
-        "resolved": 17,
-        "hits": 4,
-        "hitRate": 0.23529411764705882
+        "resolved": 18,
+        "hits": 5,
+        "hitRate": 0.2777777777777778
       },
       "3": {
-        "resolved": 17,
-        "hits": 6,
-        "hitRate": 0.35294117647058826
+        "resolved": 18,
+        "hits": 7,
+        "hitRate": 0.3888888888888889
       },
       "4": {
-        "resolved": 17,
-        "hits": 7,
-        "hitRate": 0.4117647058823529
+        "resolved": 18,
+        "hits": 8,
+        "hitRate": 0.4444444444444444
       },
       "5": {
-        "resolved": 17,
-        "hits": 9,
-        "hitRate": 0.5294117647058824
+        "resolved": 18,
+        "hits": 10,
+        "hitRate": 0.5555555555555556
       },
       "6": {
-        "resolved": 17,
-        "hits": 9,
-        "hitRate": 0.5294117647058824
+        "resolved": 18,
+        "hits": 10,
+        "hitRate": 0.5555555555555556
       }
     },
     "optimized": {
       "2": {
-        "resolved": 17,
+        "resolved": 18,
         "hits": 5,
-        "hitRate": 0.29411764705882354
+        "hitRate": 0.2777777777777778
       },
       "3": {
-        "resolved": 17,
-        "hits": 6,
-        "hitRate": 0.35294117647058826
+        "resolved": 18,
+        "hits": 7,
+        "hitRate": 0.3888888888888889
       },
       "4": {
-        "resolved": 17,
-        "hits": 8,
-        "hitRate": 0.47058823529411764
+        "resolved": 18,
+        "hits": 9,
+        "hitRate": 0.5
       },
       "5": {
-        "resolved": 17,
-        "hits": 9,
-        "hitRate": 0.5294117647058824
+        "resolved": 18,
+        "hits": 10,
+        "hitRate": 0.5555555555555556
       },
       "6": {
-        "resolved": 17,
-        "hits": 9,
-        "hitRate": 0.5294117647058824
+        "resolved": 18,
+        "hits": 10,
+        "hitRate": 0.5555555555555556
       }
     }
   }
