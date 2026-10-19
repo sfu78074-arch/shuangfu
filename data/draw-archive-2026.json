@@ -5,10 +5,10 @@
   "sourceHistory": "https://history.macaumarksix.com/history/macaujc2/y/2026",
   "sourceLatest": "https://macaumarksix.com/api/macaujc2.com",
   "createdAt": "2026-09-30T15:43:54.299Z",
-  "checkedAt": "2026-10-18T16:36:41.784Z",
-  "latestExpect": "2026291",
-  "count": 291,
-  "sha256": "504ff3d616469abb91107181a49f62cba6b195f9de7f335711bf3ee499ccb316",
+  "checkedAt": "2026-10-19T19:22:29.645Z",
+  "latestExpect": "2026292",
+  "count": 292,
+  "sha256": "8f4fab37849f446b6614b727640efc2b165d2981fa911892b3b897bef0aecbd8",
   "draws": [
     {
       "schema": 1,
@@ -13104,6 +13104,51 @@
         "green"
       ],
       "archivedAt": "2026-10-18T16:36:41.784Z"
+    },
+    {
+      "schema": 1,
+      "year": 2026,
+      "expect": "2026292",
+      "period": 292,
+      "openTime": "2026-10-19T13:32:32.000Z",
+      "openTimeLocal": "2026-10-19 21:32:32",
+      "regular": [
+        39,
+        10,
+        18,
+        23,
+        16,
+        4
+      ],
+      "special": 36,
+      "regularZodiac": [
+        "龍",
+        "雞",
+        "牛",
+        "猴",
+        "兔",
+        "兔"
+      ],
+      "specialZodiac": "羊",
+      "zodiac": [
+        "龍",
+        "雞",
+        "牛",
+        "猴",
+        "兔",
+        "兔",
+        "羊"
+      ],
+      "wave": [
+        "green",
+        "blue",
+        "red",
+        "red",
+        "green",
+        "blue",
+        "blue"
+      ],
+      "archivedAt": "2026-10-19T19:22:29.645Z"
     }
   ]
 }

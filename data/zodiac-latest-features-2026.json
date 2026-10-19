@@ -1,22 +1,22 @@
 {
   "schema": 2,
   "year": 2026,
-  "targetPeriod": 292,
-  "targetExpect": "2026292",
-  "dataThroughExpect": "2026291",
-  "dataThroughPeriod": 291,
-  "sampleSize": 291,
+  "targetPeriod": 293,
+  "targetExpect": "2026293",
+  "dataThroughExpect": "2026292",
+  "dataThroughPeriod": 292,
+  "sampleSize": 292,
   "mappingEra": "2026-horse",
-  "previousSpecial": 17,
-  "previousSpecialZodiac": "虎",
+  "previousSpecial": 36,
+  "previousSpecialZodiac": "羊",
   "currentSameZodiacRun": {
-    "zodiac": "虎",
+    "zodiac": "羊",
     "length": 1
   },
   "perZodiac": {
     "鼠": {
-      "omission": 6,
-      "normalizedOmissionScore": 24,
+      "omission": 7,
+      "normalizedOmissionScore": 28,
       "numberCount": 4,
       "rank": 6,
       "freq5": 0,
@@ -26,21 +26,21 @@
       "previousGap": 15
     },
     "牛": {
-      "omission": 8,
-      "normalizedOmissionScore": 32,
+      "omission": 9,
+      "normalizedOmissionScore": 36,
       "numberCount": 4,
       "rank": 5,
       "freq5": 0,
       "freq10": 1,
       "freq20": 1,
-      "freq30": 2,
+      "freq30": 1,
       "previousGap": 21
     },
     "虎": {
-      "omission": 0,
-      "normalizedOmissionScore": 0,
+      "omission": 1,
+      "normalizedOmissionScore": 4,
       "numberCount": 4,
-      "rank": 12,
+      "rank": 11,
       "freq5": 1,
       "freq10": 1,
       "freq20": 3,
@@ -48,10 +48,10 @@
       "previousGap": 16
     },
     "兔": {
-      "omission": 1,
-      "normalizedOmissionScore": 4,
+      "omission": 2,
+      "normalizedOmissionScore": 8,
       "numberCount": 4,
-      "rank": 11,
+      "rank": 10,
       "freq5": 1,
       "freq10": 1,
       "freq20": 1,
@@ -59,8 +59,8 @@
       "previousGap": 22
     },
     "龙": {
-      "omission": 11,
-      "normalizedOmissionScore": 44,
+      "omission": 12,
+      "normalizedOmissionScore": 48,
       "numberCount": 4,
       "rank": 2,
       "freq5": 0,
@@ -70,21 +70,21 @@
       "previousGap": 40
     },
     "蛇": {
-      "omission": 2,
-      "normalizedOmissionScore": 8,
+      "omission": 3,
+      "normalizedOmissionScore": 12,
       "numberCount": 4,
-      "rank": 10,
+      "rank": 9,
       "freq5": 1,
       "freq10": 1,
-      "freq20": 4,
+      "freq20": 3,
       "freq30": 4,
       "previousGap": 11
     },
     "马": {
-      "omission": 3,
-      "normalizedOmissionScore": 15,
+      "omission": 4,
+      "normalizedOmissionScore": 20,
       "numberCount": 5,
-      "rank": 9,
+      "rank": 8,
       "freq5": 1,
       "freq10": 1,
       "freq20": 1,
@@ -92,30 +92,30 @@
       "previousGap": 23
     },
     "羊": {
-      "omission": 5,
-      "normalizedOmissionScore": 20,
+      "omission": 0,
+      "normalizedOmissionScore": 0,
       "numberCount": 4,
-      "rank": 7,
-      "freq5": 0,
-      "freq10": 1,
-      "freq20": 1,
-      "freq30": 1,
-      "previousGap": 25
+      "rank": 12,
+      "freq5": 1,
+      "freq10": 2,
+      "freq20": 2,
+      "freq30": 2,
+      "previousGap": 6
     },
     "猴": {
-      "omission": 9,
-      "normalizedOmissionScore": 36,
+      "omission": 10,
+      "normalizedOmissionScore": 40,
       "numberCount": 4,
       "rank": 4,
       "freq5": 0,
-      "freq10": 1,
+      "freq10": 0,
       "freq20": 2,
       "freq30": 3,
       "previousGap": 5
     },
     "鸡": {
-      "omission": 10,
-      "normalizedOmissionScore": 40,
+      "omission": 11,
+      "normalizedOmissionScore": 44,
       "numberCount": 4,
       "rank": 3,
       "freq5": 0,
@@ -125,8 +125,8 @@
       "previousGap": 2
     },
     "狗": {
-      "omission": 17,
-      "normalizedOmissionScore": 68,
+      "omission": 18,
+      "normalizedOmissionScore": 72,
       "numberCount": 4,
       "rank": 1,
       "freq5": 0,
@@ -136,11 +136,11 @@
       "previousGap": 10
     },
     "猪": {
-      "omission": 4,
-      "normalizedOmissionScore": 16,
+      "omission": 5,
+      "normalizedOmissionScore": 20,
       "numberCount": 4,
-      "rank": 8,
-      "freq5": 1,
+      "rank": 7,
+      "freq5": 0,
       "freq10": 2,
       "freq20": 2,
       "freq30": 3,
@@ -150,72 +150,72 @@
   "ranked": [
     {
       "zodiac": "狗",
-      "omission": 17,
+      "omission": 18,
       "numberCount": 4,
-      "score": 68
+      "score": 72
     },
     {
       "zodiac": "龙",
+      "omission": 12,
+      "numberCount": 4,
+      "score": 48
+    },
+    {
+      "zodiac": "鸡",
       "omission": 11,
       "numberCount": 4,
       "score": 44
     },
     {
-      "zodiac": "鸡",
+      "zodiac": "猴",
       "omission": 10,
       "numberCount": 4,
       "score": 40
     },
     {
-      "zodiac": "猴",
+      "zodiac": "牛",
       "omission": 9,
       "numberCount": 4,
       "score": 36
     },
     {
-      "zodiac": "牛",
-      "omission": 8,
-      "numberCount": 4,
-      "score": 32
-    },
-    {
       "zodiac": "鼠",
-      "omission": 6,
+      "omission": 7,
       "numberCount": 4,
-      "score": 24
+      "score": 28
     },
     {
-      "zodiac": "羊",
+      "zodiac": "猪",
       "omission": 5,
       "numberCount": 4,
       "score": 20
     },
     {
-      "zodiac": "猪",
-      "omission": 4,
-      "numberCount": 4,
-      "score": 16
-    },
-    {
       "zodiac": "马",
-      "omission": 3,
+      "omission": 4,
       "numberCount": 5,
-      "score": 15
+      "score": 20
     },
     {
       "zodiac": "蛇",
+      "omission": 3,
+      "numberCount": 4,
+      "score": 12
+    },
+    {
+      "zodiac": "兔",
       "omission": 2,
       "numberCount": 4,
       "score": 8
     },
     {
-      "zodiac": "兔",
+      "zodiac": "虎",
       "omission": 1,
       "numberCount": 4,
       "score": 4
     },
     {
-      "zodiac": "虎",
+      "zodiac": "羊",
       "omission": 0,
       "numberCount": 4,
       "score": 0
@@ -253,6 +253,6 @@
       "鼠"
     ]
   },
-  "builtAt": "2026-10-18T16:36:41.947Z",
-  "archiveSha256": "553c1e3f415838a0f09a47725fa40876a3d3b0248d58c7a6e9b8a381a98af5ac"
+  "builtAt": "2026-10-19T19:22:29.786Z",
+  "archiveSha256": "e00a120025acc63d5ae5ef6904fd559840940027335166be58ee5144b4b5e662"
 }
