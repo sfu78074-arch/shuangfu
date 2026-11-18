@@ -12863,10 +12863,23 @@
       ],
       "special": 20,
       "openTime": "2026-11-16T13:32:32.000Z"
+    },
+    {
+      "period": 321,
+      "regular": [
+        15,
+        45,
+        23,
+        8,
+        47,
+        49
+      ],
+      "special": 41,
+      "openTime": "2026-11-17T13:32:32.000Z"
     }
   ],
-  "checkedAt": "2026-11-17T13:19:33.572Z",
-  "latest": 320,
-  "status": "recorded",
+  "checkedAt": "2026-11-18T13:05:33.551Z",
+  "latest": 321,
+  "status": "cutoff-missed",
   "startedAt": "2026-09-28T13:49:56.589Z"
 }
