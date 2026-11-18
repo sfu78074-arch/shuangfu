@@ -5,10 +5,10 @@
   "sourceHistory": "https://history.macaumarksix.com/history/macaujc2/y/2026",
   "sourceLatest": "https://macaumarksix.com/api/macaujc2.com",
   "createdAt": "2026-09-30T15:43:54.299Z",
-  "checkedAt": "2026-11-16T22:56:13.077Z",
-  "latestExpect": "2026320",
-  "count": 320,
-  "sha256": "ea7a079b91baba6343dba244b1d3747f726a5a1e9d56a12b22fa51af5c66d91a",
+  "checkedAt": "2026-11-18T21:28:36.370Z",
+  "latestExpect": "2026322",
+  "count": 322,
+  "sha256": "519206e5847902a5ad90e63633b99875b825bd1a65c674dad305e0692be4e1c2",
   "draws": [
     {
       "schema": 1,
@@ -14409,6 +14409,96 @@
         "blue"
       ],
       "archivedAt": "2026-11-16T22:56:13.077Z"
+    },
+    {
+      "schema": 1,
+      "year": 2026,
+      "expect": "2026321",
+      "period": 321,
+      "openTime": "2026-11-17T13:32:32.000Z",
+      "openTimeLocal": "2026-11-17 21:32:32",
+      "regular": [
+        15,
+        45,
+        23,
+        8,
+        47,
+        49
+      ],
+      "special": 41,
+      "regularZodiac": [
+        "龍",
+        "狗",
+        "猴",
+        "豬",
+        "猴",
+        "馬"
+      ],
+      "specialZodiac": "虎",
+      "zodiac": [
+        "龍",
+        "狗",
+        "猴",
+        "豬",
+        "猴",
+        "馬",
+        "虎"
+      ],
+      "wave": [
+        "blue",
+        "red",
+        "red",
+        "red",
+        "blue",
+        "green",
+        "blue"
+      ],
+      "archivedAt": "2026-11-18T21:28:36.370Z"
+    },
+    {
+      "schema": 1,
+      "year": 2026,
+      "expect": "2026322",
+      "period": 322,
+      "openTime": "2026-11-18T13:32:32.000Z",
+      "openTimeLocal": "2026-11-18 21:32:32",
+      "regular": [
+        47,
+        31,
+        43,
+        17,
+        8,
+        30
+      ],
+      "special": 7,
+      "regularZodiac": [
+        "猴",
+        "鼠",
+        "鼠",
+        "虎",
+        "豬",
+        "牛"
+      ],
+      "specialZodiac": "鼠",
+      "zodiac": [
+        "猴",
+        "鼠",
+        "鼠",
+        "虎",
+        "豬",
+        "牛",
+        "鼠"
+      ],
+      "wave": [
+        "blue",
+        "blue",
+        "green",
+        "green",
+        "red",
+        "red",
+        "red"
+      ],
+      "archivedAt": "2026-11-18T21:28:36.370Z"
     }
   ]
 }
